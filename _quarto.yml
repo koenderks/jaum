@@ -1,15 +1,13 @@
 project:
   type: book
   output-dir: _book
-author-meta: Koen Derks
-editor: visual
+author-meta: Statistical Auditing Group
 bibliography: references.bib
 csl: apa.csl
 book:
   title: JASP for Audit User Manual
   author:
-    - name: Koen Derks
-      orcid: 0000-0002-5533-9349
+    - name: Statistical Auditing Group
       corresponding: true
   date: today
   page-footer:
@@ -33,6 +31,7 @@ book:
     - introduction.qmd
     - part: Audit Sampling
       chapters:
+      - chap-workflow.qmd
       - chap-planning.qmd
       - chap-selection.qmd
       - chap-evaluation.qmd

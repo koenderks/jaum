@@ -1,0 +1,37 @@
+# Sampling Workflow {#chap-workflow}
+
+The goal of statistical audit sampling is to infer the misstatement in a population based on a representative sample. This can be challenging, but the Audit module simplifies the process into four stages: planning, selection, execution, and evaluation.
+
+![](img/workflow.png){fig-align="center" width=100%}
+
+## Theory behind the audit sampling workflow
+
+More detailed information about the individual stages in the audit sampling workflow is provided below.
+
+### Stage 1: Planning
+
+In the planning stage, you determine the sample size needed to support the assertion that the population's misstatement is below the performance materiality. This involves using prior audit outcomes and information about inherent risk and control risk. Expectations about error rates also influence the sample size required to maintain statistical confidence.
+
+### Stage 2: Selection
+
+Using the sample size from the planning stage, you select a statistically representative sample. Each sampling unit receives an inclusion probability, and units are selected based on these probabilities. Monetary unit sampling assigns probabilities to individual monetary units, making higher-value items more likely to be selected. Record sampling assigns equal probabilities to all items.
+
+### Stage 3: Execution
+
+In the execution stage, you assess the correctness of selected items. The simplest method categorizes items as correct or incorrect, while a more accurate method considers the true value (audit value) of items. Annotating samples with audit values provides a more precise estimate of misstatement. If book values are unavailable, use the correct/incorrect method.
+
+### Stage 4: Evaluation
+
+In the evaluation stage, you use the annotated sample to infer the total misstatement in the population. Statistical techniques calculate a projected maximum misstatement, and the population is approved if this is below the performance materiality.
+
+## The audit sampling workflow in JASP
+
+The Audit module in JASP offers two ways to navigate the audit sampling workflow: the Sampling Workflow analysis, which guides you through all four stages, and individual analyses for Planning, Selection, and Evaluation. This chapter uses the Sampling Workflow analysis to explain the Audit module's core functionality.
+
+Find the Sampling Workflow analysis in JASP by clicking the Audit module icon and selecting Sampling Workflow. The interface is interactive, reflecting JASP's and JfA's philosophies, with advanced options hidden under the Advanced Options section. Information is progressively disclosed as you move through the workflow.
+
+In the interactive layouts, select the corresponding data and options to plan your audit. Upon completing a stage, request a report by clicking Download Report. Each stage produces output in tables and plots to clarify statistical results.
+
+### Example
+
+
