@@ -34,4 +34,25 @@ In the interactive layouts, select the corresponding data and options to plan yo
 
 ### Example
 
+Let's explore an example of the audit sampling workflow. To follow along, open the 'Testing for Overstatements' dataset from the JASP Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Testing for Overstatements' (not the green JASP-icon button).
+
+![](img/workflow-1.png){fig-align="center" width=100%}
+
+This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.
+
+![](img/workflow-2.png){fig-align="center" width=100%}
+
+The auditor can start the sampling workflow by clicking on the Audit module icon and then selection 'Sampling Workflow'. Upon clicking this analysis, the following interface appears. In this interface, the auditor will need to fill in the options for the statistical analysis.
+
+![](img/workflow-3.png){fig-align="center" width=100%}
+
+The first step is to fill in the variable indicating the identifcation numbers of the items in the corresponding box (indicated with a 1). Optionally, if the auditor has access to the book values of the items, they can fill in this variable as well.
+
+In order for the Audit module to know what audit question is currently being investigated, you will first be asked to formulate your sampling objectives (indicated with a 2). Enable the 'Performance materiality' objective if you want to test whether the total misstatement in the population exceeds a certain limit (i.e., the performance materiality). This approach allows you to plan a sample such that, when the sample meets your expectations, the maximum error is said to be below performance materiality. Enable the 'Minimum precision' objective if you want to obtain a required minimum precision when estimating the total misstatement in the population. This approach allows you to plan a sample such that, when the sample meets expectations, the uncertainty of your estimate is within a tolerable percentage. In the example, we chooses a performance materiality of 3.5%.
+
+Next, you need to indicate how many misstatements are tolerable in the sample (indicated with a 3). In the example, we choose to tolerate one full misstatement in the sample.
+
+Furthermore, you need to indicate the risks of material misstatement via the audit risk model (indicated with a 4). According to the Audit Risk Model, the audit risk as a whole can be divided into three constituents: inherent risk, control risk, and detection risk. Inherent risk is the risk posed by an error in a financial statement due to a factor other than a failure of internal controls. Control risk is defined as the probability that a material misstatement is not prevented or detected by the internal control systems of the company (e.g., computer-managed databases). Both these risks are commonly assessed by the auditor on a 3-point scale consisting of the categories low, medium, and high. Detection risk is the probability that an auditor will fail to find material misstatements that exist in an organization's financial statements. For a given level of audit risk, the tolerable level of detection risk bears an inverse relationship to the other two assessed risks. Intuitively, a greater risk of material misstatement should require a lower tolerable detection risk and, accordingly, more persuasive audit evidence. Here, we choose to set all risks to 'High'.
+
+Finally, you can progress to the selection stage by clicking the button 'To Selection' (indicated with a 5).
 
