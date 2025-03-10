@@ -1,3 +1,3 @@
 # Preface {.unnumbered}
 
-The **JASP for Audit User Manual** is a practical guide for auditors who wish to use JASP for Audit.
+The **JASP for Audit User Manual** is a practical guide for auditors who wish to use JASP for Audit [@JASP].
