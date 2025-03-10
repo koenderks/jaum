@@ -1,0 +1,120 @@
+project:
+  type: book
+  output-dir: _book
+author-meta: Koen Derks
+editor: visual
+bibliography: references.bib
+csl: apa.csl
+book:
+  title: JASP for Audit User Manual
+  author:
+    - name: Koen Derks
+      orcid: 0000-0002-5533-9349
+      corresponding: true
+  date: today
+  page-footer:
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  cover-image: front-page.svg
+  favicon: front-page.png
+  site-url: https://github.com/koenderks/JASP-Audit-User-Manual
+  repo-url: https://github.com/koenderks/JASP-Audit-User-Manual
+  repo-branch: master
+  repo-actions: [edit, issue]
+  downloads: [pdf]
+  open-graph: true
+  page-navigation: true
+  reader-mode: true
+  search: false
+  twitter-card:
+    image: "front-page.svg"
+  chapters:
+    - index.qmd
+    - introduction.qmd
+    - part: Audit Sampling
+      chapters:
+      - chap-planning.qmd
+      - chap-selection.qmd
+      - chap-evaluation.qmd
+    - part: Data Auditing
+      chapters:
+      - chap-benford.qmd
+      - chap-bunching.qmd
+    - part: Algorithm Auditing
+      chapters:
+      - chap-fairness.qmd
+    - references.qmd
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: On this page
+    smooth-scroll: true
+    code-link: true
+    code-overflow: wrap
+    code-tools: true
+    theme:
+      - cosmo
+      - jaum.scss
+  pdf:
+    documentclass: book
+    include-in-header:
+      text: |
+        \pagenumbering{arabic}
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+          \usepackage{tikz}
+          \renewcommand{\frontmatter}{%
+              \thispagestyle{empty}%
+              \begin{tikzpicture}[remember picture,overlay]
+              \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{front-page.pdf}};
+              \end{tikzpicture}%
+              \newpage
+              \vspace*{5cm}
+              \begin{center}
+              \textit{``The best things in life are free."}
+              \end{center}
+              \vspace*{\fill}
+          }
+          \renewcommand{\backmatter}{%
+              \thispagestyle{empty}%
+              \begin{tikzpicture}[remember picture,overlay]
+              \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{back-page.pdf}};
+              \end{tikzpicture}%
+          }
+          \renewcommand{\mainmatter}{\clearpage}
+          \renewcommand{\maketitle}{}
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhead{}
+          \fancyhead[RO,LE]{\nouppercase{\leftmark}}
+          \fancyfoot{}
+          \fancyfoot[C]{\thepage}
+          \renewcommand{\chaptermark}[1]{\markboth{\thechapter\ | #1}{}}
+          \setkeys{Gin}{width=0.65\textwidth}
+          \usepackage[labelsep=period, labelfont=bf]{caption}
+          \usepackage{newunicodechar}
+          \newunicodechar{α}{$\alpha$}
+          \newunicodechar{β}{$\beta$}
+          \newunicodechar{Θ}{$\theta$}
+          \newunicodechar{μ}{$\mu$}
+          \newunicodechar{σ}{$\sigma$}
+          \newunicodechar{≠}{$\neq$}
+    keep-tex: false
+    classoption: [10pt,twoside]
+    pagestyle: headings
+    geometry:
+      - twoside
+      - left=25mm
+      - right=25mm
+      - bottom=19.05mm
+      - top=12.7mm
+      - paperwidth=180mm
+      - paperheight=254mm
+      - includehead
+      - includefoot
+    # fontfamily: libertinus
+    toc-title: Contents
+    toc-depth: 2
+    toc: true
+    number-sections: true
