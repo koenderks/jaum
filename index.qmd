@@ -1,23 +1,3 @@
 # Preface {.unnumbered}
 
-The **JASP for Audit User Manual** is a practical guide for auditors who wish to use JASP for Audit [@JASP]. Statistical theory lies at the core of many auditing guidelines and procedures. Auditors therefore need easy-to-use software that implements the required statistical analyses as well as sufficient knowledge to interpret the results of these analyses. JASP is an open-source, free-of-charge, cross-platform statistical software program that facilitates statistical auditing through the Audit module, a downloadable add-on module that is built to support the statistical aspects of an audit. 
-
-With the Audit module you, as the auditor, are able to plan, perform and interpret most statistical audit sampling procedures using the correct statistical methods and without being at risk of making any programming errors. The module is designed with the auditor in mind. This means that the interface is user-friendly and directly relates to audit processes and International Standards on Auditing. In order to create the easiest experience for auditors, the Audit module separates the standard audit sampling workflow into four stages: planning, selection, execution and evaluation. In the module's main feature, the sampling workflow analysis, you are guided through these four stages in terms of statistical techniques and the interpretation of their results.
-
-![The audit sampling workflow](img/workflow.png){#fig-workflow fig-align="center" width=100%}
-
-Next to the frequentist methods that are standard in the audit practice, the Audit module incorporates Bayesian counterparts of these methods that can improve the transparency and efficiency of your audit. These Bayesian methods allow you to utilize the advantages of knowledge updating by incorporating your existing information.
-
-In sum, the Audit performs all the required statistical heavy lifting and enables you to plan, evaluate and interpret your statistical analysis in terms of auditing standards and using state-of-the-art classical and Bayesian techniques. 
-
-## How to download JASP
-
-The Audit module is a part of JASP, which can be downloaded freely from <www.jasp-stats.org>. Upon clicking the Download JASP button on the website's home page you will be directed to the download page, where you are able to choose your preferred installation. JASP is available for Windows, MacOS, Linux, and Chrome OS. The installation of the software proceeds as you are used to.
-
-# How to enable the Audit module in JASP
-
-Once you open JASP you should see the following menu bar at the top of the program.
-
-![The JASP menu bar](img/menubar.png){#fig-menubar fig-align="center" width=100%}
-
-To locate the Audit, navigate to the modules menu by clicking the \texttt{+} icon to the right of the menu bar. A second menu should pop up from the right side which shows all available modules that JASP has to offer. To make the Audit (in)visible in the main menu bar, click the checkbox next to 'Audit'. The Audit module and its analyses can now be accessed in JASP by clicking the module icon in the menu bar.
+The **JASP for Audit User Manual** is a practical guide for auditors who wish to use JASP for Audit [@JASP]. 
