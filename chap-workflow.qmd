@@ -40,7 +40,7 @@ This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'
 
 To start the sampling workflow, click on the Audit module icon and select 'Sampling Workflow'. This will open the following interface, where you need to fill in the options for the statistical analysis.
 
-![](img/workflow-3.png){fig-align="center" width=50%}
+![](img/workflow-3.png){fig-align="center" width=60%}
 
 First, enter the variable indicating the identification numbers of the items in the corresponding box (indicated with a 1). Optionally, if you have access to the book values of the items, you can enter this variable as well.
 
@@ -52,12 +52,22 @@ Additionally, indicate the risks of material misstatement via the audit risk mod
 
 The output below shows that the required sample size for these options is 134 items.
 
-![](img/workflow-4.png){fig-align="center" width=25%}
+![](img/workflow-4.png){fig-align="center" width=35%}
 
 Finally, progress to the selection stage by clicking the 'To Selection' button (indicated with a 5).
 
 ### Stage 2: Selection
 
+![](img/workflow-5.png){fig-align="center" width=60%}
+
+![](img/workflow-6.png){fig-align="center" width=100%}
+
 ### Stage 3: Execution
 
+![](img/workflow-7.png){fig-align="center" width=50%}
+
 ### Stage 4: Evaluation
+
+![](img/workflow-8.png){fig-align="center" width=60%}
+
+![](img/workflow-9.png){fig-align="center" width=65%}

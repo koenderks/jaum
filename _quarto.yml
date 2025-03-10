@@ -5,7 +5,8 @@ author-meta: Statistical Auditing Group
 bibliography: references.bib
 csl: apa.csl
 book:
-  title: JASP for Audit User Manual
+  title: JASP for Audit
+  subtitle: User Manual
   author:
     - name: Statistical Auditing Group
       corresponding: true

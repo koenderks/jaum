@@ -1,6 +1,6 @@
 # Getting Started {.unnumbered}
 
-Statistical theory is fundamental to many auditing guidelines and procedures. Auditors need user-friendly software for statistical analyses and the knowledge to interpret these results. JASP\index{JASP} is an open-source, free, cross-platform statistical software that supports statistical auditing through its Audit module.
+Statistical theory is fundamental to many auditing guidelines and procedures. Auditors need user-friendly software for statistical analyses and the knowledge to interpret these results. JASP [@JASP] is an open-source, free, cross-platform statistical software that supports statistical auditing through its Audit module [@Derks2021_jasp].
 
 The Audit module allows auditors to plan, perform, and interpret most statistical auditing procedures using correct methods, minimizing programming errors. Designed with auditors in mind, it features a user-friendly interface aligned with audit processes and International Standards on Auditing. Besides standard frequentist methods, the module includes Bayesian methods to enhance audit transparency and efficiency by incorporating existing information. In summary, the Audit module handles the statistical heavy lifting, enabling you to plan, evaluate, and interpret your analyses using both classical and Bayesian techniques.
 
