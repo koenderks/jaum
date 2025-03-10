@@ -9,7 +9,7 @@
 <meta name="author" content="Statistical Auditing Group">
 <meta name="dcterms.date" content="2025-03-10">
 
-<title>JASP for Audit User Manual</title>
+<title>JASP for Audit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,27 +56,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -111,12 +91,12 @@ div.csl-indent {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="JASP for Audit User Manual">
-<meta property="og:description" content="">
+<meta property="og:title" content="JASP for Audit">
+<meta property="og:description" content="User Manual">
 <meta property="og:image" content="https://github.com/koenderks/JASP-Audit-User-Manual/front-page.svg">
-<meta property="og:site_name" content="JASP for Audit User Manual">
-<meta name="twitter:title" content="JASP for Audit User Manual">
-<meta name="twitter:description" content="">
+<meta property="og:site_name" content="JASP for Audit">
+<meta name="twitter:title" content="JASP for Audit">
+<meta name="twitter:description" content="User Manual">
 <meta name="twitter:image" content="https://github.com/koenderks/JASP-Audit-User-Manual/front-page.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -142,10 +122,10 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">JASP for Audit User Manual</a> 
+      <a href="./">JASP for Audit</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/koenderks/JASP-Audit-User-Manual" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./JASP-for-Audit-User-Manual.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./JASP-for-Audit.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -268,7 +248,8 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">JASP for Audit User Manual</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">JASP for Audit</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">User Manual</p>
 </div>
 
 
@@ -299,20 +280,12 @@ div.csl-indent {
 
 
 <section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="front-page.svg" title="JASP for Audit User Manual" class="quarto-cover-image img-fluid"></p>
-<p>The <strong>JASP for Audit User Manual</strong> is a guide for practitioners who wish to use the Audit module <span class="citation" data-cites="Derks2021_jasp">(<a href="references.html#ref-Derks2021_jasp" role="doc-biblioref">Derks et al., 2021</a>)</span> in JASP <span class="citation" data-cites="JASP">(<a href="references.html#ref-JASP" role="doc-biblioref">JASP Team, 2025</a>)</span>.</p>
+<h1 class="unnumbered">Preface</h1><p><img src="front-page.svg" title="JASP for Audit" class="quarto-cover-image img-fluid"></p>
+<p>The <strong>JASP for Audit User Manual</strong> is the go-to guide for practitioners who wish to work with the Audit module in JASP.</p>
 
 
 <!-- -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-Derks2021_jasp" class="csl-entry" role="listitem">
-Derks, K., de Swart, J., Wagenmakers, E., Wille, J., &amp; Wetzels, R. (2021). <span>JASP</span> for <span>A</span>udit: <span>B</span>ayesian tools for the auditing practice. <em>Journal of Open Source Software</em>, <em>6</em>(68), 2733.
-</div>
-<div id="ref-JASP" class="csl-entry" role="listitem">
-JASP Team. (2025). <em><span class="nocase">JASP (Version 0.19.3)[Computer software]</span></em>. <a href="https://jasp-stats.org/">https://jasp-stats.org/</a>
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -795,7 +768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {.unnumbered}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>The **JASP for Audit User Manual** is a guide for practitioners who wish to use the Audit module <span class="co">[</span><span class="ot">@Derks2021_jasp</span><span class="co">]</span> in JASP <span class="co">[</span><span class="ot">@JASP</span><span class="co">]</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>The **JASP for Audit User Manual** is the go-to guide for practitioners who wish to work with the Audit module in JASP.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
