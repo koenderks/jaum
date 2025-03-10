@@ -1,4 +1,4 @@
-# Sampling Workflow {#chap-workflow}
+# Sampling Workflow {#sec-workflow}
 
 The goal of statistical audit sampling is to infer the misstatement in a population based on a representative sample. This can be challenging, but the Audit module simplifies the process into four stages: planning, selection, execution, and evaluation.
 
@@ -48,13 +48,13 @@ Next, formulate your sampling objectives (indicated with a 2). Enable the 'Perfo
 
 Then, indicate how many misstatements are tolerable in the sample (indicated with a 3). In the example, we choose to tolerate one full misstatement in the sample.
 
-Additionally, indicate the risks of material misstatement via the audit risk model (indicated with a 4). According to the Audit Risk Model, audit risk can be divided into three constituents: inherent risk, control risk, and detection risk. Inherent risk is the risk posed by an error in a financial statement due to a factor other than a failure of internal controls. Control risk is the probability that a material misstatement is not prevented or detected by the internal control systems of the company (e.g., computer-managed databases). Both these risks are commonly assessed by the auditor on a 3-point scale consisting of low, medium, and high categories. Detection risk is the probability that an auditor will fail to find material misstatements in an organization's financial statements. For a given level of audit risk, the tolerable level of detection risk bears an inverse relationship to the other two assessed risks. Intuitively, a greater risk of material misstatement should require a lower tolerable detection risk and, accordingly, more persuasive audit evidence. Here, we choose to set all risks to 'High'.
+Additionally, indicate the risks of material misstatement via the audit risk model (indicated with a 4). According to the Audit Risk Model, audit risk can be divided into three constituents: inherent risk, control risk, and detection risk. Inherent risk is the risk posed by an error in a financial statement due to a factor other than a failure of internal controls. Control risk is the probability that a material misstatement is not prevented or detected by the internal control systems of the company (e.g., computer-managed databases). Both these risks are commonly assessed by the auditor on a 3-point scale consisting of low, medium, and high. Detection risk is the probability that an auditor will fail to find material misstatements in an organization's financial statements. For a given level of audit risk, the tolerable level of detection risk bears an inverse relationship to the other two assessed risks. Intuitively, a greater risk of material misstatement should require a lower tolerable detection risk and, accordingly, more persuasive audit evidence. In this example, we choose to set all risks to 'High' and solely rely on evidence from substantive testing.
 
-The output below shows that the required sample size for these options is 134 items.
+The primary output from the planning stage, shown below, indicates that a minimum sample size of 134 items is required to achieve 95% assurance that the misstatement in the population is below 3.5%, while allowing for one misstatement in the sample.
 
 ![](img/workflow-4.png){fig-align="center" width=35%}
 
-Finally, progress to the selection stage by clicking the 'To Selection' button (indicated with a 5).
+Finally, progress to the selection stage by clicking the 'To Selection' button (indicated with a 5). For a more detailed explanation of the options and output in the planning stage, see @sec-planning.
 
 ### Stage 2: Selection
 
@@ -62,9 +62,13 @@ Finally, progress to the selection stage by clicking the 'To Selection' button (
 
 ![](img/workflow-6.png){fig-align="center" width=100%}
 
+Finally, progress to the execution stage by clicking the 'To Execution' button (indicated with a 4).
+
 ### Stage 3: Execution
 
 ![](img/workflow-7.png){fig-align="center" width=50%}
+
+Finally, progress to the evaluation stage by clicking the 'To Evaluation' button (indicated with a 4). For a more detailed explanation of the options and output in the evaluation stage, see @sec-evaluation.
 
 ### Stage 4: Evaluation
 

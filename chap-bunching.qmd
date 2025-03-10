@@ -1,1 +1,1 @@
-# Number Bunching {#chap-bunching}
+# Number Bunching {#sec-bunching}

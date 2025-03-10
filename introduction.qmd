@@ -1,37 +1,37 @@
 # Getting Started {.unnumbered}
 
-Statistical theory is fundamental to many auditing guidelines and procedures. Auditors need user-friendly software for statistical analyses and the knowledge to interpret these results. JASP [@JASP] is an open-source, free, cross-platform statistical software that supports statistical auditing through its Audit module [@Derks2021_jasp].
+Statistical theory is fundamental to many auditing procedures. To perform these procedures effectively, auditors need user-friendly software for statistical analyses and the knowledge to interpret the results. JASP [@JASP] is an open-source, free-of-charge, cross-platform statistical software program that supports statistical auditing through its Audit module [@Derks2021_jasp].
 
-The Audit module allows auditors to plan, perform, and interpret most statistical auditing procedures using correct methods, minimizing programming errors. Designed with auditors in mind, it features a user-friendly interface aligned with audit processes and International Standards on Auditing. Besides standard frequentist methods, the module includes Bayesian methods to enhance audit transparency and efficiency by incorporating existing information. In summary, the Audit module handles the statistical heavy lifting, enabling you to plan, evaluate, and interpret your analyses using both classical and Bayesian techniques.
+The Audit module (i.e., JASP for Audit) allows auditors to plan, execute, and interpret a wide range of statistical auditing procedures using state-of-the-art statistical methods, thereby reducing programming errors and simplifying the process. Tailored for auditors, the module features an intuitive interface that aligns with audit processes and international standards on auditing. In addition to standard frequentist methods, the Audit module incorporates Bayesian methods to enhance audit transparency and efficiency by utilizing existing information.
+
+In summary, the Audit module takes care of the complex statistical work, allowing you to concentrate on interpreting the results of your analysis. The remaining paragraphs in this chapter discuss how to get started using JASP for Audit.
 
 ## Downloading JASP
 
-The Audit module is a part of JASP, which can be freely downloaded from [www.jasp-stats.org](www.jasp-stats.org). Click the 'Download JASP' button on the homepage to access the download page and choose your preferred installation. JASP is available for Windows, macOS, Linux, and Chrome OS. Installation follows standard procedures.
+JASP for Audit is part of JASP, which can be freely downloaded from [www.jasp-stats.org](www.jasp-stats.org). Click the 'Download JASP' button on the homepage to access the download page and choose your preferred installation. JASP is available for Windows, MacOS, Linux, and Chrome OS.
 
 ![](img/jasp-site.png){fig-align="center" width=100%}
 
 ## Enabling the Audit module in JASP
 
-After opening JASP, you will see the main menu bar at the top.
+After opening JASP, you will see the following main menu bar at the top of the screen.
 
 ![](img/menubar.png){fig-align="center" width=100%}
 
-To find the Audit module, click the '+'-icon on the right of the menu bar. A menu will appear showing all available modules. Check the box next to 'Audit' to make it visible in the main menu bar. You can now access the Audit module and its analyses by clicking the module icon in the menu bar.
+To find the Audit module, click the '+' icon on the right of this menu bar. A different menu will appear on the right side which shows all available modules. Check the box next to 'Audit' to make the module visible in the main menu bar. You can now access the Audit module and its analyses by clicking its module icon in the menu bar (see image below).
 
 ![](img/auditmenubar.png){fig-align="center" width=20%}
 
-You are now ready to perform statistical audit analyses using the Audit module.
-
 ## Working with the Audit module
 
-The Audit module is a powerful tool for statistical analysis in auditing. The following sections cover its accessibility features, including help files and result validation using the R package jfa.
+The Audit module is a robust tool for statistical auditing. The following paragraphs detail its accessibility features, including where to locate help files and how to the reliability of the statistical results is ensured.
 
 ### Help files
 
-After opening an analysis in the Audit module, click the blue 'i' icon next to the analysis title to access a help file describing its functionality. For some options, like sampling units and algorithms, additional help files are available, indicated by a blue 'i' icon next to the option.
+Once you open an analysis in the Audit module, you can click the blue 'i' icon next to the analysis title to access a help file that explains its functionality. Additional help files for certain options can be accessed by clicking the blue 'i' icon next to those options.
 
 ![](img/help.png){fig-align="center" width=100%}
 
 ### Validation of statistical results
 
-The Audit module's statistical results are derived from the R package jfa [@jfa]. For complete documentation and benchmarks, visit the package website at [https://koenderks.github.io/jfa/](https://koenderks.github.io/jfa/).
+The statistical results generated by the Audit module are based on the R package jfa [@jfa]. For comprehensive documentation and information on the benchmarks used for validation, please visit the package website at [https://koenderks.github.io/jfa/](https://koenderks.github.io/jfa/).

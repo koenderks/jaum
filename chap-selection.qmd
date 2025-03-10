@@ -1,1 +1,1 @@
-# Selection {#chap-selection}
+# Selection {#sec-selection}

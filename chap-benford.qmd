@@ -1,1 +1,1 @@
-# Benford's Law {#chap-benford}
+# Benford's Law {#sec-benford}
