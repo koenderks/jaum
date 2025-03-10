@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "JASP for Audit User Manual",
+    "section": "",
+    "text": "Preface\nThe JASP for Audit User Manual is a practical guide for auditors who wish to use JASP for Audit (JASP Team, 2025).\n\n\n\n\n\n\nJASP Team. (2025). JASP (Version 0.19.3)[Computer software]. https://jasp-stats.org/",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Downloading JASP\nThe Audit module is a part of JASP, which can be downloaded freely from www.jasp-stats.org. Upon clicking the Download JASP button on the website’s home page (Figure 1) you will be directed to the download page, where you are able to choose your preferred installation. JASP is available for Windows, MacOS, Linux, and Chrome OS. The installation of the software proceeds as you are used to.",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "introduction.html#downloading-jasp",
+    "href": "introduction.html#downloading-jasp",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Figure 1: The JASP website",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "introduction.html#enabling-the-audit-module-in-jasp",
+    "href": "introduction.html#enabling-the-audit-module-in-jasp",
+    "title": "Getting Started",
+    "section": "Enabling the Audit module in JASP",
+    "text": "Enabling the Audit module in JASP\nOnce you open JASP you should see the main menu bar in Figure 2 at the top of the program.\n\n\n\n\n\n\nFigure 2: The JASP menu bar\n\n\n\nTo locate the Audit, navigate to the modules menu by clicking the icon to the right of the menu bar. A second menu should pop up from the right side which shows all available modules that JASP has to offer. To make the Audit (in)visible in the main menu bar, click the checkbox next to ‘Audit’. The Audit module and its analyses can now be accessed in JASP by clicking the module icon in the menu bar, see Figure 3.\n\n\n\n\n\n\nFigure 3: The JASP audit menu bar\n\n\n\nYou are now ready to perform your statistical audit analyses using the Audit module.",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "JASP Team. (2025). JASP (Version\n0.19.3)[Computer software]. https://jasp-stats.org/",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

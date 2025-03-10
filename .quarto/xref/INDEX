@@ -1,0 +1,29 @@
+{
+  "index.qmd": {
+    "index.html": "14cbd0bd"
+  },
+  "introduction.qmd": {
+    "introduction.html": "85e5e422"
+  },
+  "chap-planning.qmd": {
+    "chap-planning.html": "112864ca"
+  },
+  "chap-selection.qmd": {
+    "chap-selection.html": "67e3d7df"
+  },
+  "chap-evaluation.qmd": {
+    "chap-evaluation.html": "17e250ea"
+  },
+  "chap-benford.qmd": {
+    "chap-benford.html": "9bec93cc"
+  },
+  "chap-bunching.qmd": {
+    "chap-bunching.html": "2104bc0b"
+  },
+  "chap-fairness.qmd": {
+    "chap-fairness.html": "d40e9d87"
+  },
+  "references.qmd": {
+    "references.html": "627e0cce"
+  }
+}
