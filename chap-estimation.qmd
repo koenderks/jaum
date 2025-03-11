@@ -1,7 +1,5 @@
 # Ture Value Estimation {#sec-estimation}
 
-This page is currently under construction...
-
 Let's explore an example analysis of true value estimation. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).
 
 ![](img/estimation/estimation-1.png){fig-align="center" width=100%}
@@ -25,7 +23,7 @@ These are the main settings for the analysis.
 
 ## Report
 
-These following settings enable you to expand the report with additional output, such as tables and figures.
+The following settings enable you to expand the report with additional output, such as tables and figures.
 
 ![](img/estimation/estimation-4.png){fig-align="center" width=75%}
 

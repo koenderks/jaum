@@ -28,7 +28,7 @@ These are the main settings for the analysis.
 
 ## Report
 
-These following settings enable you to expand the report with additional output, such as tables and figures.
+The following settings enable you to expand the report with additional output, such as tables and figures.
 
 ![](img/bunching/bunching-4.png){fig-align="center" width=75%}
 

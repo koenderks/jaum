@@ -31,7 +31,7 @@ Note that non-conformity to Benford's law does not necessarily indicate fraud. A
 
 ## Report
 
-These following settings enable you to expand the report with additional output, such as tables and figures.
+The following settings enable you to expand the report with additional output, such as tables and figures.
 
 ![](img/benford/benford-4.png){fig-align="center" width=75%}
 
