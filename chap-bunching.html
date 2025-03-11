@@ -113,7 +113,10 @@ div.csl-indent {
 
 <meta property="og:title" content="7&nbsp; Repeated Values – JASP for Audit">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://github.com/koenderks/jaum/img/bunching/bunching-1.png">
 <meta property="og:site_name" content="JASP for Audit">
+<meta property="og:image:height" content="1654">
+<meta property="og:image:width" content="3020">
 <meta name="twitter:title" content="7&nbsp; Repeated Values – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
@@ -203,7 +206,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap-estimation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Estimation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ture Value Estimation</span></span></a>
   </div>
 </li>
       </ul>
@@ -264,7 +267,13 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-practical-example-in-jasp" id="toc-a-practical-example-in-jasp" class="nav-link active" data-scroll-target="#a-practical-example-in-jasp"><span class="header-section-number">7.1</span> A practical example in JASP</a></li>
+  <li><a href="#a-practical-example-in-jasp" id="toc-a-practical-example-in-jasp" class="nav-link active" data-scroll-target="#a-practical-example-in-jasp"><span class="header-section-number">7.1</span> A practical example in JASP</a>
+  <ul class="collapse">
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">7.1.1</span> Main settings</a></li>
+  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">7.1.2</span> Main output</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">7.1.3</span> Report</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">7.1.4</span> Advanced</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/koenderks/jaum/edit/master/chap-bunching.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/koenderks/jaum/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -294,6 +303,91 @@ div.csl-indent {
 <p>To determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.</p>
 <section id="a-practical-example-in-jasp" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="a-practical-example-in-jasp"><span class="header-section-number">7.1</span> A practical example in JASP</h2>
+<p>Let’s explore an example analysis of repeated values. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<section id="main-settings" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">7.1.1</span> Main settings</h3>
+<p>The interface …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>These are the main settings for the analysis.</p>
+<ul>
+<li><strong>Variable:</strong> …</li>
+<li><strong>Tests:</strong> …</li>
+<li><strong>Shuffle decimal digits:</strong> …</li>
+<li><strong>Explanatory text:</strong> …
+<ul>
+<li><strong>Confidence:</strong> …</li>
+</ul></li>
+</ul>
+</section>
+<section id="main-output" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">7.1.2</span> Main output</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="report" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="report"><span class="header-section-number">7.1.3</span> Report</h3>
+<p>These following settings enable you to expand the report with additional output, such as tables and figures.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<section id="tables" class="level4" data-number="7.1.3.1">
+<h4 data-number="7.1.3.1" class="anchored" data-anchor-id="tables"><span class="header-section-number">7.1.3.1</span> Tables</h4>
+<p>The following tables are available.</p>
+<ul>
+<li><p><strong>Assumption checks:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div></li>
+<li><p><strong>Frequency table:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="plots" class="level4" data-number="7.1.3.2">
+<h4 data-number="7.1.3.2" class="anchored" data-anchor-id="plots"><span class="header-section-number">7.1.3.2</span> Plots</h4>
+<p>The following figures are available.</p>
+<ul>
+<li><p><strong>Observed vs.&nbsp;expected:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div></li>
+<li><p><strong>Histogram:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bunching/bunching-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div></li>
+</ul>
+</section>
+</section>
+<section id="advanced" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">7.1.4</span> Advanced</h3>
+<p>These following advanced settings enable you to tailor the analysis to your liking.</p>
+<ul>
+<li><strong>Number of samples:</strong> …</li>
+<li><strong>Seed:</strong> …</li>
+</ul>
 
 
 <!-- -->
@@ -303,6 +397,7 @@ div.csl-indent {
 Simohnsohn, U. (2019). <em>Number-bunching: A new tool for forensic data analysis</em>. <a href="http://datacolada.org/77">http://datacolada.org/77</a>
 </div>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -792,7 +887,66 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>To determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## A practical example in JASP</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## A practical example in JASP</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of repeated values. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-1.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>The interface ...</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-2.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable:** ...</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests:** ...</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Shuffle decimal digits:** ...</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Explanatory text:** ...</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>**Confidence:** ...</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-3.png)</span>{fig-align="center" width=50%}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>These following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Tables</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>The following tables are available.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Assumption checks:** ...</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Frequency table:** ...</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-6.png)</span>{fig-align="center" width=40%}</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Plots</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>The following figures are available.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Observed vs. expected:** ...</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-7.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Histogram:** ...</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-8.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>These following advanced settings enable you to tailor the analysis to your liking.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Number of samples:** ...</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Seed:** ...</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
