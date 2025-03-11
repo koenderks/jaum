@@ -1,5 +1,15 @@
 # Ture Value Estimation {#sec-estimation}
 
-::: {.callout-note appearance="simple" .content-visible when-format="html"}
-This page is currently under construction.
-:::
+This page is currently under construction...
+
+## Main settings
+
+## Main output
+
+## Report
+
+### Tables
+
+### Figures
+
+## Advanced

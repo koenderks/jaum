@@ -60,5 +60,7 @@ The following figures can be requested in the 'Report' section of the interface.
 
 The following advanced settings allow you to customize the statistical computations according to your preferences.
 
+![](img/bunching/bunching-9.png){fig-align="center" width=75%}
+
 - **Number of samples:** ...
 - **Seed:** ...
