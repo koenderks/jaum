@@ -8,21 +8,16 @@ book:
   title: JASP for Audit
   subtitle: User Manual
   author:
-    - name: Koen Derks
-      orcid: 0000-0002-5533-9349
+    - name: Statistical Auditing Group
       corresponding: true
-    - name: Lotte Mensink
-      orcid: 0009-0001-8321-4690
-    - name: Federica Picogna
-      orcid: 0009-0005-5587-6119
   date: today
   page-footer:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   cover-image: front-page.svg
   favicon: front-page.png
-  site-url: https://github.com/koenderks/JASP-Audit-User-Manual
-  repo-url: https://github.com/koenderks/JASP-Audit-User-Manual
+  site-url: https://github.com/koenderks/jaum
+  repo-url: https://github.com/koenderks/jaum
   repo-branch: master
   repo-actions: [edit, issue]
   downloads: [pdf]
