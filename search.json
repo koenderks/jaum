@@ -198,7 +198,18 @@
     "href": "chap-estimation.html",
     "title": "5  Ture Value Estimation",
     "section": "",
-    "text": "5.1 Main settings\nThis page is currently under construction…",
+    "text": "5.1 Main settings\nThis page is currently under construction…\nLet’s explore an example analysis of true value estimation. To follow along, open the ‘Evaluating a Stratified Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Stratified Sample’ (not the green JASP-icon button).\nThese are the main settings for the analysis.",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
+    ]
+  },
+  {
+    "objectID": "chap-estimation.html#main-settings",
+    "href": "chap-estimation.html#main-settings",
+    "title": "5  Ture Value Estimation",
+    "section": "",
+    "text": "Population: …\n\nNo. items: …\nNo. units: …\n\nMethod: …\nExplanatory text: …\n\nConfidence: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
@@ -220,18 +231,7 @@
     "href": "chap-estimation.html#report",
     "title": "5  Ture Value Estimation",
     "section": "5.3 Report",
-    "text": "5.3 Report\n\n5.3.1 Tables\n\n\n5.3.2 Figures",
-    "crumbs": [
-      "Audit Sampling",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
-    ]
-  },
-  {
-    "objectID": "chap-estimation.html#advanced",
-    "href": "chap-estimation.html#advanced",
-    "title": "5  Ture Value Estimation",
-    "section": "5.4 Advanced",
-    "text": "5.4 Advanced",
+    "text": "5.3 Report\nThese following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\n5.3.1 Tables\nThe following tables can be requested in the ‘Report’ section of the interface.\n\nRequired sample size: …\n\n\n\n\n\n\n\n\n5.3.2 Plots\nThe following figures can be requested in the ‘Report’ section of the interface.\n\nScatter plot: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
