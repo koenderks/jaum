@@ -8,29 +8,24 @@ Let's explore an example analysis of Benford's law. To follow along, open the 'A
 
 ![](img/benford/benford-1.png){fig-align="center" width=100%}
 
-The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, $H_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, $H_1$, states that it does not.
+### Main settings
+
+The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.
 
 ![](img/benford/benford-2.png){fig-align="center" width=75%}
 
-### Main settings
-
 These are the main settings for the analysis.
 
-- **Variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box.
-
-- **Confidence:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis.
-
-- **Reference:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution.
-
-- **Digits:** Finally, choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits.
-
-- **Bayes factor:** ...
-
-- **Explanatory text:** ...
+- **Variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable 'value', so we drag this variable to the field on the right.
+- **Confidence:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.
+- **Reference:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution. In the example, we select 'Benford's law'.
+- **Digits:** Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford's law.
+- **Bayes factor:** Select which Bayes factor is displayed in the main output table. 'BF$_{10}$' represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, 'BF$_{01}$' represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and 'Log(BF$_{10}$)' represents the logarithm of BF$_{10}$.
+- **Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ### Main output
 
-The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). dditionally, the table shows a p-value of 0.478, indicating that $H_0$ should not be rejected at a 5% significance level. The table also presents the Bayes factor in favor of the null hypothesis, $BF_{01}$, which is 6.9$\times$10$^6$. This suggests that the data provide very strong evidence supporting $H_0$ over $H_1$.
+The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). The table shows a p-value of 0.478, indicating that H$_0$ should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF$_{01}$, which is 6.9x10$^6$. This suggests that the data provide very strong evidence supporting H$_0$ over H$_1$.
 
 ![](img/benford/benford-3.png){fig-align="center" width=75%}
 
@@ -44,8 +39,9 @@ These following settings enable you to expand the report with additional output,
 
 #### Tables
 
-- **Frequency table:** Check this box in the 'Report' section to display a table of the observed and expected frequencies of the digits.
-    + **Confidence interval:** ...
+The following tables are available.
+
+- **Frequency table:** Check this box in the 'Report' section to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.
 
   The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.
 
@@ -56,6 +52,8 @@ These following settings enable you to expand the report with additional output,
   ![](img/benford/benford-6.png){fig-align="center" width=40%}
 
 #### Plots
+
+The following figures are available.
 
 - **Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.
 
@@ -77,4 +75,4 @@ These following advanced settings enable you to tailor the analysis to your liki
 
 ![](img/benford/benford-10.png){fig-align="center" width=75%}
 
-- **Concentration:** ...
+- **Concentration:** Specify the concentration parameter for the Dirichlet prior distribution used to compute the Bayes factor.
