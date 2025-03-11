@@ -1,1 +1,1 @@
-Sitemap: https://github.com/koenderks/JASP-Audit-User-Manual/sitemap.xml
+Sitemap: https://github.com/koenderks/jaum/sitemap.xml
