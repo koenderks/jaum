@@ -8,8 +8,13 @@ book:
   title: JASP for Audit
   subtitle: User Manual
   author:
-    - name: Statistical Auditing Group
+    - name: Koen Derks
+      orcid: 0000-0002-5533-9349
       corresponding: true
+    - name: Lotte Mensink
+      orcid: 0009-0001-8321-4690
+    - name: Federica Picogna
+      orcid: 0009-0005-5587-6119
   date: today
   page-footer:
     right: |

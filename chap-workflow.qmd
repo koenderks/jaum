@@ -2,7 +2,7 @@
 
 The goal of statistical audit sampling is to infer the misstatement in a population based on a representative sample. This can be challenging, but the Audit module simplifies the process into four stages: planning, selection, execution, and evaluation.
 
-![](img/workflow.png){fig-align="center" width=100%}
+![](img/workflow/workflow-1.png){fig-align="center" width=100%}
 
 ## Theory behind the audit sampling workflow
 
@@ -30,17 +30,17 @@ The Audit module in JASP offers two ways to navigate the audit sampling workflow
 
 Let's explore an example of the audit sampling workflow. To follow along, open the 'Testing for Overstatements' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Testing for Overstatements' (not the green JASP-icon button).
 
-![](img/workflow-1.png){fig-align="center" width=100%}
+![](img/workflow/workflow-2.png){fig-align="center" width=100%}
 
 This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.
 
-![](img/workflow-2.png){fig-align="center" width=100%}
+![](img/workflow/workflow-3.png){fig-align="center" width=100%}
 
 ### Stage 1: Planning
 
 To start the sampling workflow, click on the Audit module icon and select 'Sampling Workflow'. This will open the following interface, where you need to fill in the options for the statistical analysis.
 
-![](img/workflow-3.png){fig-align="center" width=60%}
+![](img/workflow/workflow-4.png){fig-align="center" width=60%}
 
 First, enter the variable indicating the identification numbers of the items in the corresponding box (indicated with a 1). Optionally, if you have access to the book values of the items, you can enter this variable as well.
 
@@ -52,26 +52,26 @@ Additionally, indicate the risks of material misstatement via the audit risk mod
 
 The primary output from the planning stage, shown below, indicates that a minimum sample size of 134 items is required to achieve 95% assurance that the misstatement in the population is below 3.5%, while allowing for one misstatement in the sample.
 
-![](img/workflow-4.png){fig-align="center" width=35%}
+![](img/workflow/workflow-5.png){fig-align="center" width=35%}
 
 Finally, progress to the selection stage by clicking the 'To Selection' button (indicated with a 5). For a more detailed explanation of the options and output in the planning stage, see @sec-planning.
 
 ### Stage 2: Selection
 
-![](img/workflow-5.png){fig-align="center" width=60%}
+![](img/workflow/workflow-6.png){fig-align="center" width=60%}
 
-![](img/workflow-6.png){fig-align="center" width=100%}
+![](img/workflow/workflow-7.png){fig-align="center" width=100%}
 
 Finally, progress to the execution stage by clicking the 'To Execution' button (indicated with a 4).
 
 ### Stage 3: Execution
 
-![](img/workflow-7.png){fig-align="center" width=50%}
+![](img/workflow/workflow-8.png){fig-align="center" width=50%}
 
 Finally, progress to the evaluation stage by clicking the 'To Evaluation' button (indicated with a 4). For a more detailed explanation of the options and output in the evaluation stage, see @sec-evaluation.
 
 ### Stage 4: Evaluation
 
-![](img/workflow-8.png){fig-align="center" width=60%}
+![](img/workflow/workflow-9.png){fig-align="center" width=60%}
 
-![](img/workflow-9.png){fig-align="center" width=65%}
+![](img/workflow/workflow-10.png){fig-align="center" width=65%}

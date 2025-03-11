@@ -10,17 +10,17 @@ In summary, the Audit module takes care of the complex statistical work, allowin
 
 JASP for Audit is part of JASP, which can be freely downloaded from [www.jasp-stats.org](www.jasp-stats.org). Click the 'Download JASP' button on the homepage to access the download page and choose your preferred installation. JASP is available for Windows, MacOS, Linux, and Chrome OS.
 
-![](img/jasp-site.png){fig-align="center" width=100%}
+![](img/introduction/intro-1.png){fig-align="center" width=100%}
 
 ## Enabling the Audit module in JASP
 
 After opening JASP, you will see the following main menu bar at the top of the screen.
 
-![](img/menubar.png){fig-align="center" width=100%}
+![](img/introduction/intro-2.png){fig-align="center" width=100%}
 
 To find the Audit module, click the '+' icon on the right of this menu bar. A different menu will appear on the right side which shows all available modules. Check the box next to 'Audit' to make the module visible in the main menu bar. You can now access the Audit module and its analyses by clicking its module icon in the menu bar (see image below).
 
-![](img/auditmenubar.png){fig-align="center" width=20%}
+![](img/introduction/intro-3.png){fig-align="center" width=20%}
 
 ## Working with the Audit module
 
@@ -30,7 +30,7 @@ The Audit module is a robust tool for statistical auditing. The following paragr
 
 Once you open an analysis in the Audit module, you can click the blue 'i' icon next to the analysis title to access a help file that explains its functionality. Additional help files for certain options can be accessed by clicking the blue 'i' icon next to those options.
 
-![](img/help.png){fig-align="center" width=100%}
+![](img/introduction/intro-4.png){fig-align="center" width=100%}
 
 ### Validation of statistical results
 
