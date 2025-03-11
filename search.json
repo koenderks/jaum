@@ -44,7 +44,7 @@
     "href": "chap-workflow.html",
     "title": "1  Sampling Workflow",
     "section": "",
-    "text": "1.1 The four states of the sampling workflow\nThe goal of statistical audit sampling is to infer the misstatement in a population based on a representative sample. This can be challenging, but the Audit module simplifies the process into four stages: planning, selection, execution, and evaluation.\nMore detailed information about the individual stages in the audit sampling workflow is provided below.\nIn the planning stage, you determine the sample size needed to support the assertion that the population’s misstatement is below the performance materiality. This involves using prior audit outcomes and information about inherent risk and control risk. Expectations about error rates also influence the sample size required to maintain statistical confidence.\nUsing the sample size from the planning stage, you select a statistically representative sample. Each sampling unit receives an inclusion probability, and units are selected based on these probabilities. Monetary unit sampling assigns probabilities to individual monetary units, making higher-value items more likely to be selected. Record sampling assigns equal probabilities to all items.\nIn the execution stage, you assess the correctness of selected items. The simplest method categorizes items as correct or incorrect, while a more accurate method considers the true value (audit value) of items. Annotating samples with audit values provides a more precise estimate of misstatement. If book values are unavailable, use the correct/incorrect method.\nIn the evaluation stage, you use the annotated sample to infer the total misstatement in the population. Statistical techniques calculate a projected maximum misstatement, and the population is approved if this is below the performance materiality.",
+    "text": "1.1 The four stages of the sampling workflow\nThe goal of statistical audit sampling is to infer the misstatement in a population based on a representative sample. This can be challenging, but the Audit module simplifies the process into four stages: planning, selection, execution, and evaluation.\nMore detailed information about the individual stages in the audit sampling workflow is provided below.\nIn the planning stage, you determine the sample size needed to support the assertion that the population’s misstatement is below the performance materiality. This involves using prior audit outcomes and information about inherent risk and control risk. Expectations about error rates also influence the sample size required to maintain statistical confidence.\nUsing the sample size from the planning stage, you select a statistically representative sample. Each sampling unit receives an inclusion probability, and units are selected based on these probabilities. Monetary unit sampling assigns probabilities to individual monetary units, making higher-value items more likely to be selected. Record sampling assigns equal probabilities to all items.\nIn the execution stage, you assess the correctness of selected items. The simplest method categorizes items as correct or incorrect, while a more accurate method considers the true value (audit value) of items. Annotating samples with audit values provides a more precise estimate of misstatement. If book values are unavailable, use the correct/incorrect method.\nIn the evaluation stage, you use the annotated sample to infer the total misstatement in the population. Statistical techniques calculate a projected maximum misstatement, and the population is approved if this is below the performance materiality.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sampling Workflow</span>"
@@ -62,11 +62,44 @@
     ]
   },
   {
+    "objectID": "chap-benford.html",
+    "href": "chap-benford.html",
+    "title": "5  Benford’s Law",
+    "section": "",
+    "text": "5.1 A practical example in JASP\nBenford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford’s law may provide additional evidence that the transactions in the population might need further investigation. Non-conformity to Benford’s law does not necessarily indicate fraud. A Benford’s law analysis should therefore only be used to acquire insight into whether a population might need further investigation.\nLet’s explore an example analysis of Benford’s law. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).\nThe interface…\nThe first table in the output…\nThe second table in the output…\nThe figure in the output…",
+    "crumbs": [
+      "Data Auditing",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Benford's Law</span>"
+    ]
+  },
+  {
+    "objectID": "chap-bunching.html",
+    "href": "chap-bunching.html",
+    "title": "6  Repeated Values",
+    "section": "",
+    "text": "6.1 A practical example in JASP\nThe repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit (Simohnsohn, 2019).\nTo determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.",
+    "crumbs": [
+      "Data Auditing",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Repeated Values</span>"
+    ]
+  },
+  {
+    "objectID": "chap-bunching.html#a-practical-example-in-jasp",
+    "href": "chap-bunching.html#a-practical-example-in-jasp",
+    "title": "6  Repeated Values",
+    "section": "",
+    "text": "Simohnsohn, U. (2019). Number-bunching: A new tool for forensic data analysis. http://datacolada.org/77",
+    "crumbs": [
+      "Data Auditing",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Repeated Values</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Derks, K. (2025). jfa: Statistical\nmethods for auditing. https://doi.org/10.32614/CRAN.package.jfa\n\n\nDerks, K., de Swart, J., Wagenmakers, E., Wille, J., & Wetzels, R.\n(2021). JASP for Audit: Bayesian\ntools for the auditing practice. Journal of Open Source\nSoftware, 6(68), 2733.\n\n\nJASP Team. (2025). JASP (Version\n0.19.3)[Computer software]. https://jasp-stats.org/",
+    "text": "Derks, K. (2025). jfa: Statistical\nmethods for auditing. https://doi.org/10.32614/CRAN.package.jfa\n\n\nDerks, K., de Swart, J., Wagenmakers, E., Wille, J., & Wetzels, R.\n(2021). JASP for Audit: Bayesian\ntools for the auditing practice. Journal of Open Source\nSoftware, 6(68), 2733.\n\n\nJASP Team. (2025). JASP (Version\n0.19.3)[Computer software]. https://jasp-stats.org/\n\n\nSimohnsohn, U. (2019). Number-bunching: A new tool for forensic data\nanalysis. http://datacolada.org/77",
     "crumbs": [
       "References"
     ]
