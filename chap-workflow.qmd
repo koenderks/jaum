@@ -6,7 +6,7 @@ The goal of statistical audit sampling is to infer the misstatement in a populat
 
 More detailed information about the individual stages in the audit sampling workflow is provided below.
 
-## The four states of the sampling workflow
+## The four stages of the sampling workflow
 
 In the planning stage, you determine the sample size needed to support the assertion that the population's misstatement is below the performance materiality. This involves using prior audit outcomes and information about inherent risk and control risk. Expectations about error rates also influence the sample size required to maintain statistical confidence.
 

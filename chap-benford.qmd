@@ -1,1 +1,25 @@
 # Benford's Law {#sec-benford}
+
+Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford's law may provide additional evidence that the transactions in the population might need further investigation. Non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.
+
+## A practical example in JASP
+
+Let's explore an example analysis of Benford's law. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).
+
+![](img/benford/benford-1.png){fig-align="center" width=100%}
+
+The interface...
+
+![](img/benford/benford-2.png){fig-align="center" width=60%}
+
+The first table in the output...
+
+![](img/benford/benford-3.png){fig-align="center" width=60%}
+
+The second table in the output...
+
+![](img/benford/benford-4.png){fig-align="center" width=60%}
+
+The figure in the output...
+
+![](img/benford/benford-5.png){fig-align="center" width=60%}
