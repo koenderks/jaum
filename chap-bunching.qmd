@@ -4,13 +4,11 @@ The repeated values analysis analyzes the frequency with which values get repeat
 
 To determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.
 
-## A practical example in JASP
-
 Let's explore an example analysis of repeated values. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).
 
 ![](img/bunching/bunching-1.png){fig-align="center" width=100%}
 
-### Main settings
+## Main settings
 
 The interface ...
 
@@ -24,19 +22,19 @@ These are the main settings for the analysis.
 - **Explanatory text:** ...
   + **Confidence:** ...
 
-### Main output
+## Main output
 
 ![](img/bunching/bunching-3.png){fig-align="center" width=50%}
 
-### Report
+## Report
 
 These following settings enable you to expand the report with additional output, such as tables and figures.
 
 ![](img/bunching/bunching-4.png){fig-align="center" width=75%}
 
-#### Tables
+### Tables
 
-The following tables are available.
+The following tables can be requested in the 'Report' section of the interface.
 
 - **Assumption checks:** ...
 
@@ -46,9 +44,9 @@ The following tables are available.
 
   ![](img/bunching/bunching-6.png){fig-align="center" width=40%}
 
-#### Plots
+### Plots
 
-The following figures are available.
+The following figures can be requested in the 'Report' section of the interface.
 
 - **Observed vs. expected:** ...
 
@@ -58,9 +56,9 @@ The following figures are available.
 
   ![](img/bunching/bunching-8.png){fig-align="center" width=75%}
 
-### Advanced
+## Advanced
 
-These following advanced settings enable you to tailor the analysis to your liking.
+The following advanced settings allow you to customize the statistical computations according to your preferences.
 
 - **Number of samples:** ...
 - **Seed:** ...
