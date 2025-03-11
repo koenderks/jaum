@@ -20,7 +20,7 @@ After opening JASP, you will see the following main menu bar at the top of the s
 
 To find the Audit module, click the '+' icon on the right of this menu bar. A different menu will appear on the right side which shows all available modules. Check the box next to 'Audit' to make the module visible in the main menu bar. You can now access the Audit module and its analyses by clicking its module icon in the menu bar (see image below).
 
-![](img/introduction/intro-3.png){fig-align="center" width=20%}
+![](img/introduction/intro-3.png){fig-align="center" width=100%}
 
 ## Accessibility
 
