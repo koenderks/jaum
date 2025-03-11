@@ -28,7 +28,7 @@ The Audit module is a robust tool for statistical auditing. The following paragr
 
 ### Help files
 
-Once you open an analysis in the Audit module, you can click the blue 'i' icon next to the analysis title to access a help file that explains its functionality. Additional help files for certain options can be accessed by clicking the blue 'i' icon next to those options.
+Once you open an analysis in the Audit module, you can click the blue 'i' icon next to the analysis title to access a help file that explains its functionality. Additional help files for certain settings can be accessed by clicking the blue 'i' icon next to those settings.
 
 ![](img/introduction/intro-4.png){fig-align="center" width=100%}
 

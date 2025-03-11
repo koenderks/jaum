@@ -1,6 +1,6 @@
 # Benford's Law {#sec-benford}
 
-Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford's law may provide additional evidence that the transactions in the population might need further investigation. Non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.
+Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford's law may provide additional evidence that the items or transactions in a population might need further investigation.
 
 ## A practical example in JASP
 
@@ -8,18 +8,36 @@ Let's explore an example analysis of Benford's law. To follow along, open the 'A
 
 ![](img/benford/benford-1.png){fig-align="center" width=100%}
 
-The interface...
+The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, $H_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, $H_1$, states that it does not.
 
 ![](img/benford/benford-2.png){fig-align="center" width=60%}
 
-The first table in the output...
+The following two settings are required:
+
+1. **Indicate the variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box.
+
+2. **Confidence level:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis.
+
+3. **Reference distribution:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution.
+
+4. **Digits:** Finally, choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits.
+
+The following two settings are optional:
+
+5. **Frequency table:** Check this box in the 'Report' section to display a table of the observed and expected frequencies of the digits.
+
+6. **Observed vs. expected figure:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.
+
+The first table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). dditionally, the table shows a p-value of 0.478, indicating that $H_0$ should not be rejected at a 5% significance level. The table also presents the Bayes factor in favor of the null hypothesis, $BF_{01}$, which is very small. This suggests that the data provide very strong evidence supporting $H_0$ over $H_1$.
 
 ![](img/benford/benford-3.png){fig-align="center" width=60%}
 
-The second table in the output...
+The second table in the output displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.
 
 ![](img/benford/benford-4.png){fig-align="center" width=60%}
 
-The figure in the output...
+The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.
 
 ![](img/benford/benford-5.png){fig-align="center" width=60%}
+
+Note that non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.

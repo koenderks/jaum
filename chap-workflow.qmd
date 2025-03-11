@@ -32,11 +32,11 @@ This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'
 
 ### Stage 1: Planning
 
-To start the sampling workflow, click on the Audit module icon and select 'Sampling Workflow'. This will open the following interface, where you need to fill in the options for the statistical analysis.
+To start the sampling workflow, click on the Audit module icon and select 'Sampling Workflow'. This will open the following interface, where you need to specify the settings for the statistical analysis.
 
 ![](img/workflow/workflow-4.png){fig-align="center" width=60%}
 
-The following steps are required:
+The following five settings are required:
 
 1. **Indicate the variables:** First, enter the variable indicating the identification numbers of the items in the corresponding box. Optionally, if you have access to the book values of the items, you can enter this variable as well.
 
@@ -52,7 +52,7 @@ The primary output from the planning stage, shown below, indicates that a minimu
 
 5. **Next stage:** Finally, progress to the selection stage by clicking the 'To Selection' button.
 
-For a more detailed explanation of the options and output in the planning stage, see @sec-planning.
+For a more detailed explanation of the settings and output in the planning stage, see @sec-planning.
 
 ### Stage 2: Selection
 
@@ -60,9 +60,9 @@ In the selection stage, you must select the 134 sampling units from the populati
 
 ![](img/workflow/workflow-6.png){fig-align="center" width=60%}
 
-The following steps are required:
+The following four settings are required:
 
-1. **Randomness options:** Begin by selecting the options related to randomness in the selection procedure. The seed option is important as it ensures that random procedures are reproducible, allowing for consistent results across multiple runs. A random number will be chosen each time you start the analysis. Additionally, the 'Randomize item order' option is available to randomly shuffle the rows in the dataset, which can help mitigate any biases that might arise from the original order of the data.
+1. **Randomness:** Begin by selecting the settings related to randomness in the selection procedure. The seed setting is important as it ensures that random procedures are reproducible, allowing for consistent results across multiple runs. A random number will be chosen each time you start the analysis. Additionally, the 'Randomize item order' setting is available to randomly shuffle the rows in the dataset, which can help mitigate any biases that might arise from the original order of the data.
 
 2. **Sampling units:** Next, specify the sampling units for the selection process. These units can either be items or monetary units. If no book value variable is provided, the sampling units default to 'Items', enabling attribute sampling. Conversely, if a book value variable was indicated during the planning stage, the sampling units default to 'Monetary units', facilitating monetary unit sampling (MUS). MUS is particularly useful for auditing financial data as it considers the monetary value of each unit.
 
@@ -83,13 +83,13 @@ In the execution stage, you must judge the fairness of the 134 sampled items. On
 
 ![](img/workflow/workflow-8.png){fig-align="center" width=50%}
 
-The following steps are required:
+The following four settings are required:
 
-1. **Annotation method:** First, decide how to annotate the selected items. You have two options:
+1. **Annotation method:** First, decide how to annotate the selected items. You have two choices:
     - Audit value: Annotate the items with their audit (true) values. This method is recommended (and automatically selected) when the items have a monetary value.
     - Correct / Incorrect: Annotate the items as correct (0) or incorrect (1). This method is recommended (and automatically selected) when the items do not have a monetary value.
 
-2. **Column names:** Next, specify the names of the two columns that will be added to the dataset. The first column name will indicate the result of the selection, while the second column name will contain the annotation of the items. Click the 'Continue' button to confirm the options and open the data viewer.
+2. **Column names:** Next, specify the names of the two columns that will be added to the dataset. The first column name will indicate the result of the selection, while the second column name will contain the annotation of the items. Click the 'Continue' button to confirm the settings and open the data viewer.
 
 3. **Annotating items:** Then, use the data viewer to annotate the selected items with their book value. For example, in this case, item 50826 (row 25, highlighted in red) had a book value of €333.03 but a true value of €200. The remaining items have correctly reported book values.
 
@@ -101,11 +101,13 @@ In the evaluation stage, you assess the misstatement in the sample and extrapola
 
 ![](img/workflow/workflow-9.png){fig-align="center" width=60%}
 
-The following steps are required:
+The following setting is required:
 
 1. **Annotation variable:** Specify the variable that contains the annotation of the items in the corresponding box.
 
-2. **Additional tablaes:** It is recommended to request the 'Misstated items' table from the 'Report' section. This table displays the items in the sample where the book value did not match the true value. Additional tables and figures to clarify the output, which will be discussed in @sec-evaluation, can be requested here as well.
+The following setting is optional:
+
+2. **Additional tables:** It is recommended to request the 'Misstated items' table from the 'Report' section. This table displays the items in the sample where the book value did not match the true value. Additional tables and figures to clarify the output, which will be discussed in @sec-evaluation, can be requested here as well.
 
 The primary output from the evaluation stage, as shown in the first table below, indicates that the most likely misstatement in the population is estimated to be 0.003, or 0.3%. The 95% upper bound for this estimate is 0.027, or 2.7%. This upper bound is lower than the performance materiality of 3.5%, meaning the auditor has achieved at least 95% assurance that the population misstatement is below the performance materiality.
 
