@@ -2,14 +2,45 @@
 
 This page is currently under construction...
 
+Let's explore an example analysis of true value estimation. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).
+
+![](img/estimation/estimation-1.png){fig-align="center" width=100%}
+
 ## Main settings
+
+![](img/estimation/estimation-2.png){fig-align="center" width=75%}
+
+These are the main settings for the analysis.
+
+- **Population:** ...
+  + **No. items:** ...
+  + **No. units:** ...
+- **Method:** ...
+- **Explanatory text:** ...
+  + **Confidence:** ...
 
 ## Main output
 
+![](img/estimation/estimation-3.png){fig-align="center" width=75%}
+
 ## Report
+
+These following settings enable you to expand the report with additional output, such as tables and figures.
+
+![](img/estimation/estimation-4.png){fig-align="center" width=75%}
 
 ### Tables
 
-### Figures
+The following tables can be requested in the 'Report' section of the interface.
 
-## Advanced
+- **Required sample size:** ...
+
+  ![](img/estimation/estimation-5.png){fig-align="center" width=75%}
+
+### Plots
+
+The following figures can be requested in the 'Report' section of the interface.
+
+- **Scatter plot:** ...
+
+  ![](img/estimation/estimation-6.png){fig-align="center" width=75%}
