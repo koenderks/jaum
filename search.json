@@ -95,58 +95,69 @@
     ]
   },
   {
+    "objectID": "chap-estimation.html",
+    "href": "chap-estimation.html",
+    "title": "5  Estimation",
+    "section": "",
+    "text": "This page is currently under construction.",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Estimation</span>"
+    ]
+  },
+  {
     "objectID": "chap-benford.html",
     "href": "chap-benford.html",
-    "title": "5  Benford’s Law",
+    "title": "6  Benford’s Law",
     "section": "",
-    "text": "5.1 A practical example in JASP\nBenford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford’s law may provide additional evidence that the items or transactions in a population might need further investigation.\nLet’s explore an example analysis of Benford’s law. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).\nThe interface of the Benford’s law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable ‘value’, which represents the recorded values of transactions in a financial population, adheres to Benford’s law. That is, the null hypothesis, \\(H_0\\), states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, \\(H_1\\), states that it does not.\nThe following two settings are required:\nThe following two settings are optional:\nThe first table in the output, shown below, shows the sample size (n), the mean absolute deviation (MAD), the chi-square value (\\(X^2\\)) and its degrees of freedom (df). dditionally, the table shows a p-value of 0.478, indicating that \\(H_0\\) should not be rejected at a 5% significance level. The table also presents the Bayes factor in favor of the null hypothesis, \\(BF_{01}\\), which is very small. This suggests that the data provide very strong evidence supporting \\(H_0\\) over \\(H_1\\).\nThe second table in the output displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford’s law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford’s law.\nThe figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.\nNote that non-conformity to Benford’s law does not necessarily indicate fraud. A Benford’s law analysis should therefore only be used to acquire insight into whether a population might need further investigation.",
+    "text": "6.1 A practical example in JASP\nBenford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford’s law may provide additional evidence that the items or transactions in a population might need further investigation.\nLet’s explore an example analysis of Benford’s law. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).\nThe interface of the Benford’s law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable ‘value’, which represents the recorded values of transactions in a financial population, adheres to Benford’s law. That is, the null hypothesis, \\(H_0\\), states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, \\(H_1\\), states that it does not.\nThe following two settings are required:\nThe following two settings are optional:\nThe first table in the output, shown below, shows the sample size (n), the mean absolute deviation (MAD), the chi-square value (\\(X^2\\)) and its degrees of freedom (df). dditionally, the table shows a p-value of 0.478, indicating that \\(H_0\\) should not be rejected at a 5% significance level. The table also presents the Bayes factor in favor of the null hypothesis, \\(BF_{01}\\), which is very small. This suggests that the data provide very strong evidence supporting \\(H_0\\) over \\(H_1\\).\nThe second table in the output displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford’s law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford’s law.\nThe figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.\nNote that non-conformity to Benford’s law does not necessarily indicate fraud. A Benford’s law analysis should therefore only be used to acquire insight into whether a population might need further investigation.",
     "crumbs": [
       "Data Auditing",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Benford's Law</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
     ]
   },
   {
     "objectID": "chap-benford.html#a-practical-example-in-jasp",
     "href": "chap-benford.html#a-practical-example-in-jasp",
-    "title": "5  Benford’s Law",
+    "title": "6  Benford’s Law",
     "section": "",
     "text": "Indicate the variable: Begin by entering the variable whose digit distribution you wish to test in the designated box.\nConfidence level: Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis.\nReference distribution: Select a reference distribution to compare the chosen digits against. By default, this is set to ‘Benford’s law,’ but you can also opt for a uniform distribution.\nDigits: Finally, choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford’s law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits.\n\n\n\nFrequency table: Check this box in the ‘Report’ section to display a table of the observed and expected frequencies of the digits.\nObserved vs. expected figure: Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.",
     "crumbs": [
       "Data Auditing",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Benford's Law</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
     ]
   },
   {
     "objectID": "chap-bunching.html",
     "href": "chap-bunching.html",
-    "title": "6  Repeated Values",
+    "title": "7  Repeated Values",
     "section": "",
-    "text": "6.1 A practical example in JASP\nThe repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit (Simohnsohn, 2019).\nTo determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.",
+    "text": "7.1 A practical example in JASP\nThe repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit (Simohnsohn, 2019).\nTo determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.",
     "crumbs": [
       "Data Auditing",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Repeated Values</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
     ]
   },
   {
     "objectID": "chap-bunching.html#a-practical-example-in-jasp",
     "href": "chap-bunching.html#a-practical-example-in-jasp",
-    "title": "6  Repeated Values",
+    "title": "7  Repeated Values",
     "section": "",
     "text": "Simohnsohn, U. (2019). Number-bunching: A new tool for forensic data analysis. http://datacolada.org/77",
     "crumbs": [
       "Data Auditing",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Repeated Values</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
     ]
   },
   {
     "objectID": "chap-fairness.html",
     "href": "chap-fairness.html",
-    "title": "7  Fairness",
+    "title": "8  Fairness",
     "section": "",
     "text": "This page is currently under construction.",
     "crumbs": [
       "Algorithm Auditing",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Fairness</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness</span>"
     ]
   },
   {
