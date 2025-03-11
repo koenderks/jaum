@@ -12,7 +12,7 @@ JASP for Audit is part of JASP, which can be freely downloaded from [www.jasp-st
 
 ![](img/introduction/intro-1.png){fig-align="center" width=100%}
 
-## Enabling the Audit module in JASP
+## Enabling the Audit module
 
 After opening JASP, you will see the following main menu bar at the top of the screen.
 
@@ -22,7 +22,7 @@ To find the Audit module, click the '+' icon on the right of this menu bar. A di
 
 ![](img/introduction/intro-3.png){fig-align="center" width=20%}
 
-## Working with the Audit module
+## Accessibility
 
 The Audit module is a robust tool for statistical auditing. The following paragraphs detail its accessibility features, including where to locate help files and how to the reliability of the statistical results is ensured.
 
