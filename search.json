@@ -121,7 +121,18 @@
     "href": "chap-selection.html",
     "title": "3  Selection",
     "section": "",
-    "text": "3.1 Main settings\nThis page is currently under construction…",
+    "text": "3.1 Main settings\nLet’s explore an example of the selection analysis To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (not the green JASP-icon button).\nThis will open a dataset with three columns: ‘ID’, ‘bookValue’, and ‘auditValue’. The ‘ID’ column represents the identification number of the items in the population. The ‘bookValue’ column shows the recorded values of the items, while the ‘auditValue’ column displays the true values. The ‘auditValue’ column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.\nThese are the main settings for the analysis.",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
+    ]
+  },
+  {
+    "objectID": "chap-selection.html#main-settings",
+    "href": "chap-selection.html#main-settings",
+    "title": "3  Selection",
+    "section": "",
+    "text": "Variables: …\nSample size …\nRandomize item order: …\nSampling units: …\nSelection method: …\n\nFixed interval sampling: Starting point: …\n\nDisplay: Explanatory text: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
@@ -143,7 +154,7 @@
     "href": "chap-selection.html#report",
     "title": "3  Selection",
     "section": "3.3 Report",
-    "text": "3.3 Report\n\n3.3.1 Tables\n\n\n3.3.2 Plots",
+    "text": "3.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nTables: Descriptive statistics: …\n\n\n\n\n\nTables: Selected items: …\n\nOrder by book value: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
@@ -154,7 +165,7 @@
     "href": "chap-selection.html#export",
     "title": "3  Selection",
     "section": "3.4 Export",
-    "text": "3.4 Export",
+    "text": "3.4 Export\nThe following settings enable you to export the sample to a .csv file.\n\n\n\n\n\n\nColumn name selection result: …\nFile name: …\nEnable synchronization: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
