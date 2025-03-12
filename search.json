@@ -121,7 +121,7 @@
     "href": "chap-selection.html",
     "title": "3  Selection",
     "section": "",
-    "text": "3.1 Main settings\nLet’s explore an example of the selection analysis To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (not the green JASP-icon button).\nThis will open a dataset with 3500 rows and three columns: ‘ID’, ‘bookValue’, and ‘auditValue’. The ‘ID’ column represents the identification number of the items in the population. The ‘bookValue’ column shows the recorded values of the items, while the ‘auditValue’ column displays the true values. The ‘auditValue’ column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.\nThese are the main settings for the analysis:",
+    "text": "3.1 Main settings\nLet’s explore an example of a selection analysis. To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (not the green JASP-icon button).\nThis will open a dataset with 3500 rows and three columns: ‘ID’, ‘bookValue’, and ‘auditValue’. The ‘ID’ column represents the identification number of the items in the population. The ‘bookValue’ column shows the recorded values of the items, while the ‘auditValue’ column displays the true values. The ‘auditValue’ column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.\nThese are the main settings for the analysis:",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
@@ -176,7 +176,7 @@
     "href": "chap-evaluation.html",
     "title": "4  Evaluation",
     "section": "",
-    "text": "4.1 Main settings\nLet’s explore an example analysis of an evaluation analysis. To follow along, open the ‘Evaluating a Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Sample’ (not the green JASP-icon button).\nThis will open a dataset with 90 rows and three columns: ‘ID’, ‘Book.value’, ‘Audit.value’. The ‘ID’ column represents the identification number of the items in the population. The ‘Book.value’ and ‘Audit.value’ columns show the recorded and true values of the items, respectively.\nThese are the main settings for the analysis:",
+    "text": "4.1 Main settings\nLet’s explore an example of an evaluation analysis. To follow along, open the ‘Evaluating a Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Sample’ (not the green JASP-icon button).\nThis will open a dataset with 90 rows and three columns: ‘ID’, ‘Book.value’, ‘Audit.value’. The ‘ID’ column represents the identification number of the items in the population. The ‘Book.value’ and ‘Audit.value’ columns show the recorded and true values of the items, respectively.\nThese are the main settings for the analysis:",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
