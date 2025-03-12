@@ -66,7 +66,18 @@
     "href": "chap-planning.html",
     "title": "2  Planning",
     "section": "",
-    "text": "2.1 Main settings\nThis page is currently under construction…",
+    "text": "2.1 Main settings\nThese are the main settings for the analysis.",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
+    ]
+  },
+  {
+    "objectID": "chap-planning.html#main-settings",
+    "href": "chap-planning.html#main-settings",
+    "title": "2  Planning",
+    "section": "",
+    "text": "Sampling objectives: Performance materiality: …\nSampling objectives: Minimum precision: …\nConfidence: …\nExpected misstatements: …\nPopulation: No. units: …\nAudit risk model: …\n\n\n\n\n\nDisplay: Explanatory text: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
@@ -88,7 +99,7 @@
     "href": "chap-planning.html#report",
     "title": "2  Planning",
     "section": "2.3 Report",
-    "text": "2.3 Report\n\n2.3.1 Tables\n\n\n2.3.2 Figures",
+    "text": "2.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nPlots: Compare sample sizes: …\n\n\n\n\n\nPlots: Presumed data distribution: …\n\n\n\n\n\nFormat output: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
@@ -99,7 +110,7 @@
     "href": "chap-planning.html#advanced",
     "title": "2  Planning",
     "section": "2.4 Advanced",
-    "text": "2.4 Advanced",
+    "text": "2.4 Advanced\n\n\n\n\n\n\nLikelihood: …\nIterations: Increment: …\nIterations: Maximum:",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
@@ -132,7 +143,7 @@
     "href": "chap-selection.html#report",
     "title": "3  Selection",
     "section": "3.3 Report",
-    "text": "3.3 Report\n\n3.3.1 Tables\n\n\n3.3.2 Figures",
+    "text": "3.3 Report\n\n3.3.1 Tables\n\n\n3.3.2 Plots",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
@@ -196,45 +207,45 @@
   {
     "objectID": "chap-estimation.html",
     "href": "chap-estimation.html",
-    "title": "5  Ture Value Estimation",
+    "title": "5  True Value Estimation",
     "section": "",
     "text": "5.1 Main settings\nLet’s explore an example analysis of true value estimation. To follow along, open the ‘Evaluating a Stratified Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Stratified Sample’ (not the green JASP-icon button).\nThese are the main settings for the analysis.",
     "crumbs": [
       "Audit Sampling",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"
     ]
   },
   {
     "objectID": "chap-estimation.html#main-settings",
     "href": "chap-estimation.html#main-settings",
-    "title": "5  Ture Value Estimation",
+    "title": "5  True Value Estimation",
     "section": "",
-    "text": "Population: …\n\nNo. items: …\nNo. units: …\n\nMethod: …\nExplanatory text: …\n\nConfidence: …",
+    "text": "Population: No. items: …\nPopulation: No. units: …\nMethod: …\nDisplay: Explanatory text: …\nDisplay: Confidence: …",
     "crumbs": [
       "Audit Sampling",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"
     ]
   },
   {
     "objectID": "chap-estimation.html#main-output",
     "href": "chap-estimation.html#main-output",
-    "title": "5  Ture Value Estimation",
+    "title": "5  True Value Estimation",
     "section": "5.2 Main output",
     "text": "5.2 Main output",
     "crumbs": [
       "Audit Sampling",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"
     ]
   },
   {
     "objectID": "chap-estimation.html#report",
     "href": "chap-estimation.html#report",
-    "title": "5  Ture Value Estimation",
+    "title": "5  True Value Estimation",
     "section": "5.3 Report",
-    "text": "5.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\n5.3.1 Tables\nThe following tables can be requested in the ‘Report’ section of the interface.\n\nRequired sample size: …\n\n\n\n\n\n\n\n\n5.3.2 Plots\nThe following figures can be requested in the ‘Report’ section of the interface.\n\nScatter plot: …",
+    "text": "5.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nTables: Required sample size: …\n\n\n\n\n\nPlots: Scatter plot: …",
     "crumbs": [
       "Audit Sampling",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ture Value Estimation</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"
     ]
   },
   {
@@ -253,7 +264,7 @@
     "href": "chap-benford.html#main-settings",
     "title": "6  Benford’s Law",
     "section": "",
-    "text": "Variable: Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable ‘value’, so we drag this variable to the field on the right.\nConfidence: Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.\nReference: Select a reference distribution to compare the chosen digits against. By default, this is set to ‘Benford’s law,’ but you can also opt for a uniform distribution. In the example, we select ‘Benford’s law’.\nDigits: Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford’s law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford’s law.\nBayes factor: Select which Bayes factor is displayed in the main output table. ‘BF\\(_{10}\\)’ represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, ‘BF\\(_{01}\\)’ represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and ‘Log(BF\\(_{10}\\))’ represents the logarithm of BF\\(_{10}\\).\nExplanatory text: Finally, select whether to show explanatory text in the output.",
+    "text": "Variable: Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable ‘value’, so we drag this variable to the field on the right.\nConfidence: Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.\nReference: Select a reference distribution to compare the chosen digits against. By default, this is set to ‘Benford’s law,’ but you can also opt for a uniform distribution. In the example, we select ‘Benford’s law’.\nDigits: Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford’s law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford’s law.\nBayes factor: Select which Bayes factor is displayed in the main output table. ‘BF\\(_{10}\\)’ represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, ‘BF\\(_{01}\\)’ represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and ‘Log(BF\\(_{10}\\))’ represents the logarithm of BF\\(_{10}\\).\nDisplay: Explanatory text: Finally, select whether to show explanatory text in the output.",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
@@ -275,7 +286,7 @@
     "href": "chap-benford.html#report",
     "title": "6  Benford’s Law",
     "section": "6.3 Report",
-    "text": "6.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\n6.3.1 Tables\nThe following tables can be requested in the ‘Report’ section of the interface.\n\nFrequency table: Check this box to display a table of the observed and expected frequencies of the digits. Clicking the ‘Confidence interval’ option shows confidence intervals for the observed relative frequencies in the table.\nThe frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford’s law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford’s law.\n\n\n\n\n\nMatched rows: Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).\nIn the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.\n\n\n\n\n\n\n\n\n6.3.2 Plots\nThe following tables can be requested in the ‘Report’ section of the interface.\n\nObserved vs. expected: Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.\nThe figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.\n\n\n\n\n\nBayes factor robustness check: Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.\nThe figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.\n\n\n\n\n\nSequential analysis: Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.\nIn the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H\\(_0\\) as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.",
+    "text": "6.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nTables: Frequency table: Check this box to display a table of the observed and expected frequencies of the digits. Clicking the ‘Confidence interval’ option shows confidence intervals for the observed relative frequencies in the table.\nThe frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford’s law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford’s law.\n\n\n\n\n\nTables: Matched rows: Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).\nIn the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.\n\n\n\n\n\nPlots: Observed vs. expected: Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.\nThe figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.\n\n\n\n\n\nPlots: Bayes factor robustness check: Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.\nThe figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.\n\n\n\n\n\nPlots: Sequential analysis: Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.\nIn the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H\\(_0\\) as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
@@ -286,7 +297,7 @@
     "href": "chap-benford.html#advanced",
     "title": "6  Benford’s Law",
     "section": "6.4 Advanced",
-    "text": "6.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nConcentration: Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H\\(_0\\). Conversely, when testing against Benford’s law, it indicates a stronger belief in H\\(_1\\).",
+    "text": "6.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nPrior distribution: Concentration: Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H\\(_0\\). Conversely, when testing against Benford’s law, it indicates a stronger belief in H\\(_1\\).",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
@@ -308,7 +319,7 @@
     "href": "chap-bunching.html#main-settings",
     "title": "7  Repeated Values",
     "section": "",
-    "text": "Variable: …\nTests: …\nShuffle decimal digits: …\nExplanatory text: …\n\nConfidence: …",
+    "text": "Variable: …\nTests: Average frequency …\nTests: Entropy …\nShuffle decimal digits: …\nDisplay: Explanatory text: …\nDisplay: Confidence: …",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
@@ -330,7 +341,7 @@
     "href": "chap-bunching.html#report",
     "title": "7  Repeated Values",
     "section": "7.3 Report",
-    "text": "7.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\n7.3.1 Tables\nThe following tables can be requested in the ‘Report’ section of the interface.\n\nAssumption checks: …\n\n\n\n\n\nFrequency table: …\n\n\n\n\n\n\n\n\n7.3.2 Plots\nThe following figures can be requested in the ‘Report’ section of the interface.\n\nObserved vs. expected: …\n\n\n\n\n\nHistogram: …",
+    "text": "7.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nTables: Assumption checks: …\n\n\n\n\n\nTables: Frequency table: …\n\n\n\n\n\nPlots: Observed vs. expected: …\n\n\n\n\n\nPlots: Histogram: …",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
@@ -341,7 +352,7 @@
     "href": "chap-bunching.html#advanced",
     "title": "7  Repeated Values",
     "section": "7.4 Advanced",
-    "text": "7.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nNumber of samples: …\nSeed: …\n\n\n\n\n\n\n\nSimohnsohn, U. (2019). Number-bunching: A new tool for forensic data analysis. http://datacolada.org/77",
+    "text": "7.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nBootstrap: Number of samples: …\nBootstrap: Seed: …\n\n\n\n\n\n\n\nSimohnsohn, U. (2019). Number-bunching: A new tool for forensic data analysis. http://datacolada.org/77",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
@@ -374,7 +385,7 @@
     "href": "chap-fairness.html#report",
     "title": "8  Fairness Evaluation",
     "section": "8.3 Report",
-    "text": "8.3 Report\n\n8.3.1 Tables\n\n\n8.3.2 Figures",
+    "text": "8.3 Report\n\n8.3.1 Tables\n\n\n8.3.2 Plots",
     "crumbs": [
       "Algorithm Auditing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Evaluation</span>"
