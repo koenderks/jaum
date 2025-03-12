@@ -1,6 +1,6 @@
 # True Value Estimation {#sec-estimation}
 
-Let's explore an example analysis of true value estimation. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).
+Let's explore an example analysis of a true value estimation analysis. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).
 
 ![](img/estimation/estimation-1.png){fig-align="center" width=100%}
 

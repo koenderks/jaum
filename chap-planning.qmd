@@ -39,6 +39,8 @@ The following settings enable you to expand the report with additional output, s
 
 ## Advanced
 
+The following advanced settings allow you to customize the statistical computations according to your preferences.
+
 ![](img/planning/planning-7.png){fig-align="center" width=75%}
 
 - **Likelihood:** ...
