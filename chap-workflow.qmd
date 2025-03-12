@@ -26,7 +26,7 @@ Let's explore an example of the audit sampling workflow. To follow along, open t
 
 ![](img/workflow/workflow-2.png){fig-align="center" width=100%}
 
-This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.
+This will open a dataset with 3500 rows and three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.
 
 ![](img/workflow/workflow-3.png){fig-align="center" width=100%}
 

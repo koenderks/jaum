@@ -6,7 +6,7 @@ Let's explore an example analysis of Benford's law. To follow along, open the 'A
 
 ![](img/benford/benford-1.png){fig-align="center" width=100%}
 
-This will open a dataset with two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
+This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
 
 ![](img/benford/benford-2.png){fig-align="center" width=100%}
 

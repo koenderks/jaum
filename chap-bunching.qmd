@@ -8,7 +8,7 @@ Let's explore an example analysis of repeated values. To follow along, open the 
 
 ![](img/bunching/bunching-1.png){fig-align="center" width=100%}
 
-This will open a dataset with two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
+This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
 
 ![](img/benford/benford-2.png){fig-align="center" width=100%}
 
@@ -29,7 +29,7 @@ These are the main settings for the analysis:
 
 ## Main output
 
-![](img/bunching/bunching-4.png){fig-align="center" width=50%}
+![](img/bunching/bunching-4.png){fig-align="center" width=40%}
 
 ## Report
 
@@ -39,7 +39,7 @@ The following settings enable you to expand the report with additional output, s
 
 - **Tables: Assumption checks:** ...
 
-  ![](img/bunching/bunching-6.png){fig-align="center" width=75%}
+  ![](img/bunching/bunching-6.png){fig-align="center" width=100%}
 
 - **Tables: Frequency table:** ...
 

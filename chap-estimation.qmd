@@ -4,9 +4,13 @@ Let's explore an example analysis of true value estimation. To follow along, ope
 
 ![](img/estimation/estimation-1.png){fig-align="center" width=100%}
 
+This will open a dataset with 1414 rows and five columns: 'ID', 'Stratum', 'BookValue', 'AuditValue', and 'Selected'. The 'ID' column represents the identification number of the items in the population. The 'Stratum' column shows the location from which the item was retrieved. The 'BookValue' and 'AuditValue' columns show the recorded and true values of the items, respectively. Finally, the 'Selected' column shows which items were selected to be included in the sample.
+
+![](img/estimation/estimation-2.png){fig-align="center" width=100%}
+
 ## Main settings
 
-![](img/estimation/estimation-2.png){fig-align="center" width=75%}
+![](img/estimation/estimation-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
@@ -18,18 +22,18 @@ These are the main settings for the analysis:
 
 ## Main output
 
-![](img/estimation/estimation-3.png){fig-align="center" width=75%}
+![](img/estimation/estimation-4.png){fig-align="center" width=75%}
 
 ## Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
 
-![](img/estimation/estimation-4.png){fig-align="center" width=75%}
+![](img/estimation/estimation-5.png){fig-align="center" width=75%}
 
 - **Tables: Required sample size:** ...
 
-  ![](img/estimation/estimation-5.png){fig-align="center" width=75%}
+  ![](img/estimation/estimation-6.png){fig-align="center" width=75%}
 
 - **Plots: Scatter plot:** ...
 
-  ![](img/estimation/estimation-6.png){fig-align="center" width=75%}
+  ![](img/estimation/estimation-7.png){fig-align="center" width=75%}
