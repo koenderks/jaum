@@ -1,6 +1,4 @@
-# Fairness Evaluation {#sec-fairness}
-
-This page is currently under construction...
+# Fairness Workflow {#sec-fairness}
 
 ## Main settings
 
@@ -8,8 +6,4 @@ This page is currently under construction...
 
 ## Report
 
-### Tables
-
-### Plots
-
-## Advanced
+The following settings enable you to expand the report with additional output, such as tables and figures.
