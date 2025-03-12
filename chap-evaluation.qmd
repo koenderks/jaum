@@ -1,6 +1,6 @@
 # Evaluation {#sec-evaluation}
 
-Let's explore an example analysis of an evaluation analysis. To follow along, open the 'Evaluating a Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Sample' (not the green JASP-icon button).
+Let's explore an example of an evaluation analysis. To follow along, open the 'Evaluating a Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Sample' (not the green JASP-icon button).
 
 ![](img/evaluation/evaluation-1.png){fig-align="center" width=100%}
 
@@ -10,7 +10,7 @@ This will open a dataset with 90 rows and three columns: 'ID', 'Book.value', 'Au
 
 ## Main settings
 
-![](img/evaluation/evaluation-3.png){fig-align="center" width=100%}
+![](img/evaluation/evaluation-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
