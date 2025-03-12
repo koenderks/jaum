@@ -383,45 +383,78 @@
   {
     "objectID": "chap-fairness.html",
     "href": "chap-fairness.html",
-    "title": "8  Fairness Evaluation",
+    "title": "8  Fairness Workflow",
     "section": "",
-    "text": "8.1 Main settings\nThis page is currently under construction…",
+    "text": "8.1 Main settings",
     "crumbs": [
       "Algorithm Auditing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Evaluation</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Workflow</span>"
     ]
   },
   {
     "objectID": "chap-fairness.html#main-output",
     "href": "chap-fairness.html#main-output",
-    "title": "8  Fairness Evaluation",
+    "title": "8  Fairness Workflow",
     "section": "8.2 Main output",
     "text": "8.2 Main output",
     "crumbs": [
       "Algorithm Auditing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Evaluation</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Workflow</span>"
     ]
   },
   {
     "objectID": "chap-fairness.html#report",
     "href": "chap-fairness.html#report",
-    "title": "8  Fairness Evaluation",
+    "title": "8  Fairness Workflow",
     "section": "8.3 Report",
-    "text": "8.3 Report\n\n8.3.1 Tables\n\n\n8.3.2 Plots",
+    "text": "8.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.",
     "crumbs": [
       "Algorithm Auditing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Evaluation</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Workflow</span>"
     ]
   },
   {
-    "objectID": "chap-fairness.html#advanced",
-    "href": "chap-fairness.html#advanced",
-    "title": "8  Fairness Evaluation",
-    "section": "8.4 Advanced",
-    "text": "8.4 Advanced",
+    "objectID": "chap-fairness-evaluation.html",
+    "href": "chap-fairness-evaluation.html",
+    "title": "9  Evaluation",
+    "section": "",
+    "text": "9.1 Main settings",
     "crumbs": [
       "Algorithm Auditing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Evaluation</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chap-fairness-evaluation.html#main-output",
+    "href": "chap-fairness-evaluation.html#main-output",
+    "title": "9  Evaluation",
+    "section": "9.2 Main output",
+    "text": "9.2 Main output",
+    "crumbs": [
+      "Algorithm Auditing",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chap-fairness-evaluation.html#report",
+    "href": "chap-fairness-evaluation.html#report",
+    "title": "9  Evaluation",
+    "section": "9.3 Report",
+    "text": "9.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.",
+    "crumbs": [
+      "Algorithm Auditing",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chap-fairness-evaluation.html#advanced",
+    "href": "chap-fairness-evaluation.html#advanced",
+    "title": "9  Evaluation",
+    "section": "9.4 Advanced",
+    "text": "9.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.",
+    "crumbs": [
+      "Algorithm Auditing",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Evaluation</span>"
     ]
   },
   {
