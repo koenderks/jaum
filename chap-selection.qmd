@@ -1,15 +1,56 @@
 # Selection {#sec-selection}
 
-This page is currently under construction...
+Let's explore an example of the selection analysis To follow along, open the 'Testing for Overstatements' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Testing for Overstatements' (not the green JASP-icon button).
+
+![](img/selection/selection-1.png){fig-align="center" width=100%}
+
+This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.
+
+![](img/selection/selection-2.png){fig-align="center" width=100%}
 
 ## Main settings
 
+![](img/selection/selection-3.png){fig-align="center" width=75%}
+
+These are the main settings for the analysis.
+
+- **Variables:** ...
+- **Sample size** ...
+- **Randomize item order:** ...
+- **Sampling units:** ...
+- **Selection method:** ...
+  + **Fixed interval sampling: Starting point:** ...
+- **Display: Explanatory text:** ...
+
 ## Main output
+
+![](img/selection/selection-4.png){fig-align="center" width=75%}
+
+![](img/selection/selection-5.png){fig-align="center" width=75%}
 
 ## Report
 
-### Tables
+The following settings enable you to expand the report with additional output, such as tables and figures.
 
-### Plots
+![](img/selection/selection-6.png){fig-align="center" width=75%}
+
+- **Tables: Descriptive statistics:** ...
+
+  ![](img/selection/selection-7.png){fig-align="center" width=75%}
+
+- **Tables: Selected items:** ...
+  + **Order by book value:** ...
+
+  ![](img/selection/selection-8.png){fig-align="center" width=75%}
 
 ## Export
+
+The following settings enable you to export the sample to a .csv file.
+
+![](img/selection/selection-9.png){fig-align="center" width=75%}
+
+- **Column name selection result:** ...
+- **File name:** ...
+- **Enable synchronization:** ...
+
+![](img/selection/selection-10.png){fig-align="center" width=100%}
