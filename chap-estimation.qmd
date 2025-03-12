@@ -1,6 +1,6 @@
 # True Value Estimation {#sec-estimation}
 
-This page is about the 'True Value Estimation' analysis in the 'Audit Sampling' section of the module.
+This chapter is about the 'True Value Estimation' analysis in the 'Audit Sampling' section of the module.
 
 ## Purpose of the analysis
 

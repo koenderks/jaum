@@ -1,6 +1,6 @@
 # Selection {#sec-selection}
 
-This page is about the 'Selection' analysis in the 'Audit Sampling' section of the module.
+This chapter is about the 'Selection' analysis in the 'Audit Sampling' section of the module.
 
 ## Purpose of the analysis
 

@@ -1,6 +1,6 @@
 # Repeated Values {#sec-bunching}
 
-This page is about the 'Repeated Values' analysis in the 'Data Auditing' section of the module.
+This chapter is about the 'Repeated Values' analysis in the 'Data Auditing' section of the module.
 
 ## Purpose of the analysis
 

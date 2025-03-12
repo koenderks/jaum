@@ -1,6 +1,6 @@
 # Planning {#sec-planning}
 
-This page is about the 'Planning' analysis in the 'Audit Sampling' section of the module.
+This chapter is about the 'Planning' analysis in the 'Audit Sampling' section of the module.
 
 ## Purpose of the analysis
 

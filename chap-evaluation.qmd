@@ -1,6 +1,6 @@
 # Evaluation {#sec-evaluation}
 
-This page is about the 'Evaluation' analysis in the 'Audit Sampling' section of the module.
+This chapter is about the 'Evaluation' analysis in the 'Audit Sampling' section of the module.
 
 ## Purpose of the analysis
 

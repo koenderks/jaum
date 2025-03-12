@@ -1,15 +1,7 @@
 # Fairness Workflow {#sec-fairness-workflow}
 
-This page is about the fairness workflow.
+The goal of fairness is ...
 
-## Purpose of the analysis
+## The X stages in the fairness workflow
 
 ## Practical example
-
-### Main settings
-
-### Main output
-
-### Report
-
-The following settings enable you to expand the report with additional output, such as tables and figures.
