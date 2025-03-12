@@ -110,7 +110,7 @@
     "href": "chap-planning.html#advanced",
     "title": "2  Planning",
     "section": "2.4 Advanced",
-    "text": "2.4 Advanced\n\n\n\n\n\n\nLikelihood: …\nIterations: Increment: …\nIterations: Maximum:",
+    "text": "2.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nLikelihood: …\nIterations: Increment: …\nIterations: Maximum:",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
@@ -176,7 +176,18 @@
     "href": "chap-evaluation.html",
     "title": "4  Evaluation",
     "section": "",
-    "text": "4.1 Main settings\nThis page is currently under construction…",
+    "text": "4.1 Main settings\nLet’s explore an example analysis of an evaluation analysis. To follow along, open the ‘Evaluating a Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Sample’ (not the green JASP-icon button).\nThis will open a dataset with 90 rows and three columns: ‘ID’, ‘Book.value’, ‘Audit.value’. The ‘ID’ column represents the identification number of the items in the population. The ‘Book.value’ and ‘Audit.value’ columns show the recorded and true values of the items, respectively.\nThese are the main settings for the analysis:",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chap-evaluation.html#main-settings",
+    "href": "chap-evaluation.html#main-settings",
+    "title": "4  Evaluation",
+    "section": "",
+    "text": "Sampling objectives: Performance materiality: …\nSampling objectives: Minimum precision: …\nConfidence: …\nData type: …\nPopulation: No. items: …\nPopulation: No. units: …\nAudit risk model: …\nDisplay: Explanatory text: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
@@ -198,7 +209,7 @@
     "href": "chap-evaluation.html#report",
     "title": "4  Evaluation",
     "section": "4.3 Report",
-    "text": "4.3 Report",
+    "text": "4.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.\n\n\n\n\n\n\nTables: Misstated items: …\n\n\n\n\n\nTables: Corrections to population: …\n\n\n\n\n\nPlots: Sampling objectives: …\n\n\n\n\n\nPlots: Estimates: …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
@@ -209,7 +220,7 @@
     "href": "chap-evaluation.html#advanced",
     "title": "4  Evaluation",
     "section": "4.4 Advanced",
-    "text": "4.4 Advanced",
+    "text": "4.4 Advanced\nThe following advanced settings allow you to customize the statistical computations according to your preferences.\n\n\n\n\n\n\nMethod: …\nCritical items: …\nConfidence interval (Alt. hypothesis): …",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
@@ -220,7 +231,7 @@
     "href": "chap-estimation.html",
     "title": "5  True Value Estimation",
     "section": "",
-    "text": "5.1 Main settings\nLet’s explore an example analysis of true value estimation. To follow along, open the ‘Evaluating a Stratified Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Stratified Sample’ (not the green JASP-icon button).\nThis will open a dataset with 1414 rows and five columns: ‘ID’, ‘Stratum’, ‘BookValue’, ‘AuditValue’, and ‘Selected’. The ‘ID’ column represents the identification number of the items in the population. The ‘Stratum’ column shows the location from which the item was retrieved. The ‘BookValue’ and ‘AuditValue’ columns show the recorded and true values of the items, respectively. Finally, the ‘Selected’ column shows which items were selected to be included in the sample.\nThese are the main settings for the analysis:",
+    "text": "5.1 Main settings\nLet’s explore an example analysis of a true value estimation analysis. To follow along, open the ‘Evaluating a Stratified Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Stratified Sample’ (not the green JASP-icon button).\nThis will open a dataset with 1414 rows and five columns: ‘ID’, ‘Stratum’, ‘BookValue’, ‘AuditValue’, and ‘Selected’. The ‘ID’ column represents the identification number of the items in the population. The ‘Stratum’ column shows the location from which the item was retrieved. The ‘BookValue’ and ‘AuditValue’ columns show the recorded and true values of the items, respectively. Finally, the ‘Selected’ column shows which items were selected to be included in the sample.\nThese are the main settings for the analysis:",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"

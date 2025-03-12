@@ -93,7 +93,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="4&nbsp; Evaluation – JASP for Audit">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://github.com/koenderks/jaum/img/evaluation/evaluation-1.png">
 <meta property="og:site_name" content="JASP for Audit">
+<meta property="og:image:height" content="1374">
+<meta property="og:image:width" content="3022">
 <meta name="twitter:title" content="4&nbsp; Evaluation – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
@@ -273,18 +276,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This page is currently under construction…</p>
+<p>Let’s explore an example analysis of an evaluation analysis. To follow along, open the ‘Evaluating a Sample’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Evaluating a Sample’ (not the green JASP-icon button).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>This will open a dataset with 90 rows and three columns: ‘ID’, ‘Book.value’, ‘Audit.value’. The ‘ID’ column represents the identification number of the items in the population. The ‘Book.value’ and ‘Audit.value’ columns show the recorded and true values of the items, respectively.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 <section id="main-settings" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">4.1</span> Main settings</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>These are the main settings for the analysis:</p>
+<ul>
+<li><strong>Sampling objectives: Performance materiality:</strong> …</li>
+<li><strong>Sampling objectives: Minimum precision:</strong> …</li>
+<li><strong>Confidence:</strong> …</li>
+<li><strong>Data type:</strong> …</li>
+<li><strong>Population: No.&nbsp;items:</strong> …</li>
+<li><strong>Population: No.&nbsp;units:</strong> …</li>
+<li><strong>Audit risk model:</strong> …</li>
+<li><strong>Display: Explanatory text:</strong> …</li>
+</ul>
 </section>
 <section id="main-output" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">4.2</span> Main output</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
 </section>
 <section id="report" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="report"><span class="header-section-number">4.3</span> Report</h2>
+<p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p><strong>Tables: Misstated items:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div></li>
+<li><p><strong>Tables: Corrections to population:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div></li>
+<li><p><strong>Plots: Sampling objectives:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div></li>
+<li><p><strong>Plots: Estimates:</strong> …</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div></li>
+</ul>
 </section>
 <section id="advanced" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">4.4</span> Advanced</h2>
+<p>The following advanced settings allow you to customize the statistical computations according to your preferences.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/evaluation/evaluation-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<ul>
+<li><strong>Method:</strong> …</li>
+<li><strong>Critical items:</strong> …</li>
+<li><strong>Confidence interval (Alt. hypothesis):</strong> …</li>
+</ul>
 
 
 <!-- -->
@@ -774,15 +852,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Evaluation {#sec-evaluation}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This page is currently under construction...</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of an evaluation analysis. To follow along, open the 'Evaluating a Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Sample' (not the green JASP-icon button).</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main settings</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-1.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main output</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 90 rows and three columns: 'ID', 'Book.value', 'Audit.value'. The 'ID' column represents the identification number of the items in the population. The 'Book.value' and 'Audit.value' columns show the recorded and true values of the items, respectively.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Report</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-2.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advanced</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main settings</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-3.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Performance materiality:** ...</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Minimum precision:** ...</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** ...</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data type:** ...</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. items:** ...</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. units:** ...</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Audit risk model:** ...</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** ...</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main output</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-4.png)</span>{fig-align="center" width=40%}</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Report</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Misstated items:** ...</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/evaluation/evaluation-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Corrections to population:** ...</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/evaluation/evaluation-7.png)</span>{fig-align="center" width=50%}</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Sampling objectives:** ...</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/evaluation/evaluation-8.png)</span>{fig-align="center" width=60%}</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Estimates:** ...</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/evaluation/evaluation-9.png)</span>{fig-align="center" width=60%}</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advanced</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The following advanced settings allow you to customize the statistical computations according to your preferences.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/evaluation/evaluation-10.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Method:** ...</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Critical items:** ...</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence interval (Alt. hypothesis):** ...</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
