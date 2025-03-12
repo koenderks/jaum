@@ -12,7 +12,7 @@ The interface of the Benford's law analysis in JASP is shown below. We will inve
 
 ![](img/benford/benford-2.png){fig-align="center" width=75%}
 
-These are the main settings for the analysis.
+These are the main settings for the analysis:
 
 - **Variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable 'value', so we drag this variable to the field on the right.
 - **Confidence:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.

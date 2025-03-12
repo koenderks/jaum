@@ -12,7 +12,7 @@ This will open a dataset with three columns: 'ID', 'bookValue', and 'auditValue'
 
 ![](img/selection/selection-3.png){fig-align="center" width=75%}
 
-These are the main settings for the analysis.
+These are the main settings for the analysis:
 
 - **Variables:** ...
 - **Sample size** ...
@@ -26,7 +26,7 @@ These are the main settings for the analysis.
 
 ![](img/selection/selection-4.png){fig-align="center" width=75%}
 
-![](img/selection/selection-5.png){fig-align="center" width=75%}
+![](img/selection/selection-5.png){fig-align="center" width=100%}
 
 ## Report
 
@@ -36,12 +36,12 @@ The following settings enable you to expand the report with additional output, s
 
 - **Tables: Descriptive statistics:** ...
 
-  ![](img/selection/selection-7.png){fig-align="center" width=75%}
+  ![](img/selection/selection-7.png){fig-align="center" width=60%}
 
 - **Tables: Selected items:** ...
   + **Order by book value:** ...
 
-  ![](img/selection/selection-8.png){fig-align="center" width=75%}
+  ![](img/selection/selection-8.png){fig-align="center" width=60%}
 
 ## Export
 

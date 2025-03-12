@@ -67,9 +67,9 @@ The following four settings are required:
 2. **Sampling units:** Next, specify the sampling units for the selection process. These units can either be items or monetary units. If no book value variable is provided, the sampling units default to 'Items', enabling attribute sampling. Conversely, if a book value variable was indicated during the planning stage, the sampling units default to 'Monetary units', facilitating monetary unit sampling (MUS). MUS is particularly useful for auditing financial data as it considers the monetary value of each unit.
 
 3. **Sampling method:** Then, choose the selection method to be used in the sampling process. The available algorithms include:
-    - **Fixed interval sampling:** This method selects units at regular intervals from the dataset, ensuring a systematic sampling approach.
-    - **Cell sampling:** This technique involves dividing the dataset into cells and randomly selecting units from each cell, promoting a systematic sampling approach with a bit of randomness.
-    - **Random sampling:** This approach randomly selects units from the entire dataset, providing a simple yet effective method for ensuring randomness.
+  - **Fixed interval sampling:** This method selects units at regular intervals from the dataset, ensuring a systematic sampling approach.
+  - **Cell sampling:** This technique involves dividing the dataset into cells and randomly selecting units from each cell, promoting a systematic sampling approach with a bit of randomness.
+  - **Random sampling:** This approach randomly selects units from the entire dataset, providing a simple yet effective method for ensuring randomness.
 
 The primary output from the selection stage, as shown in the first table below, reveals that 134 sampling units were selected from 134 items. The sample's total value amounts to €67,821.22, representing 4.8% of the total population value. The second table provides details specific to interval selection using monetary unit sampling. It indicates the number of items selected in the 'Top stratum', which includes all items larger than a single interval (for fixed interval selection). In this instance, there were 0 items in the top stratum.
 

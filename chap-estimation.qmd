@@ -8,7 +8,7 @@ Let's explore an example analysis of true value estimation. To follow along, ope
 
 ![](img/estimation/estimation-2.png){fig-align="center" width=75%}
 
-These are the main settings for the analysis.
+These are the main settings for the analysis:
 
 - **Population: No. items:** ...
 - **Population: No. units:** ...

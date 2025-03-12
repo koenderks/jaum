@@ -4,7 +4,7 @@
 
 ![](img/planning/planning-1.png){fig-align="center" width=100%}
 
-These are the main settings for the analysis.
+These are the main settings for the analysis:
 
 - **Sampling objectives: Performance materiality:** ...
 - **Sampling objectives: Minimum precision:** ...
