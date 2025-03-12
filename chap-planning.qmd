@@ -1,15 +1,46 @@
 # Planning {#sec-planning}
 
-This page is currently under construction...
-
 ## Main settings
+
+![](img/planning/planning-1.png){fig-align="center" width=100%}
+
+These are the main settings for the analysis.
+
+- **Sampling objectives: Performance materiality:** ...
+- **Sampling objectives: Minimum precision:** ...
+- **Confidence:** ...
+- **Expected misstatements:** ...
+- **Population: No. units:** ...
+- **Audit risk model:** ...
+
+  ![](img/planning/planning-2.png){fig-align="center" width=75%}
+
+- **Display: Explanatory text:** ...
 
 ## Main output
 
+![](img/planning/planning-3.png){fig-align="center" width=60%}
+
 ## Report
 
-### Tables
+The following settings enable you to expand the report with additional output, such as tables and figures.
 
-### Figures
+![](img/planning/planning-4.png){fig-align="center" width=75%}
+
+- **Plots: Compare sample sizes:** ...
+
+  ![](img/planning/planning-5.png){fig-align="center" width=75%}
+
+- **Plots: Presumed data distribution:** ... 
+
+  ![](img/planning/planning-6.png){fig-align="center" width=75%}
+
+- **Format output:** ...
 
 ## Advanced
+
+![](img/planning/planning-7.png){fig-align="center" width=75%}
+
+- **Likelihood:** ...
+- **Iterations: Increment:** ...
+- **Iterations: Maximum:**

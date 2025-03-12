@@ -19,7 +19,7 @@ These are the main settings for the analysis.
 - **Reference:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution. In the example, we select 'Benford's law'.
 - **Digits:** Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford's law.
 - **Bayes factor:** Select which Bayes factor is displayed in the main output table. 'BF$_{10}$' represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, 'BF$_{01}$' represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and 'Log(BF$_{10}$)' represents the logarithm of BF$_{10}$.
-- **Explanatory text:** Finally, select whether to show explanatory text in the output.
+- **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ## Main output
 
@@ -35,39 +35,31 @@ The following settings enable you to expand the report with additional output, s
 
 ![](img/benford/benford-4.png){fig-align="center" width=75%}
 
-### Tables
-
-The following tables can be requested in the 'Report' section of the interface.
-
-- **Frequency table:** Check this box to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.
+- **Tables: Frequency table:** Check this box to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.
 
   The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.
 
   ![](img/benford/benford-5.png){fig-align="center" width=75%}
 
-- **Matched rows:** Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).
+- **Tables: Matched rows:** Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).
 
   In the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.
 
   ![](img/benford/benford-6.png){fig-align="center" width=40%}
 
-### Plots
-
-The following tables can be requested in the 'Report' section of the interface.
-
-- **Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.
+- **Plots: Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.
 
   The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.
 
   ![](img/benford/benford-7.png){fig-align="center" width=75%}
 
-- **Bayes factor robustness check:** Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.
+- **Plots: Bayes factor robustness check:** Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.
 
   The figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.
 
   ![](img/benford/benford-8.png){fig-align="center" width=75%}
 
-- **Sequential analysis:** Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.
+- **Plots: Sequential analysis:** Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.
 
   In the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H$_0$ as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.
 
@@ -79,4 +71,4 @@ The following advanced settings allow you to customize the statistical computati
 
 ![](img/benford/benford-10.png){fig-align="center" width=75%}
 
-- **Concentration:** Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H$_0$. Conversely, when testing against Benford's law, it indicates a stronger belief in H$_1$.
+- **Prior distribution: Concentration:** Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H$_0$. Conversely, when testing against Benford's law, it indicates a stronger belief in H$_1$.
