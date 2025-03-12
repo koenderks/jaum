@@ -4,9 +4,11 @@ This chapter is about the 'Benford's Law' analysis in the 'Data Auditing' sectio
 
 ## Purpose of the analysis
 
-Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each digit d$_i$ are defined by p(d$_i$) = log$_{10}$(1 + $\frac{1}{d}$). This can be tested in a statistical manner. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not. The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford's law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.
+Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each digit d$_i$ are defined by *p*(d$_i$) = log$_{10}$(1 + $\frac{1}{d}$), see the figure below. For instance, the probablity of observing a 1 as a leading digit is 0.301, or 30.1%. This can be tested in a statistical manner. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.
 
 ![](img/benford/benford-1.png){fig-align="center" width=60%}
+
+The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford's law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.
 
 ## Practical example
 
