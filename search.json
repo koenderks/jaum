@@ -66,7 +66,7 @@
     "href": "chap-planning.html",
     "title": "2  Planning",
     "section": "",
-    "text": "2.1 Purpose of the analysis\nThis page is about the ‘Planning’ analysis in the ‘Audit Sampling’ section of the module.",
+    "text": "2.1 Purpose of the analysis\nThis chapter is about the ‘Planning’ analysis in the ‘Audit Sampling’ section of the module.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Planning</span>"
@@ -88,7 +88,7 @@
     "href": "chap-selection.html",
     "title": "3  Selection",
     "section": "",
-    "text": "3.1 Purpose of the analysis\nThis page is about the ‘Selection’ analysis in the ‘Audit Sampling’ section of the module.",
+    "text": "3.1 Purpose of the analysis\nThis chapter is about the ‘Selection’ analysis in the ‘Audit Sampling’ section of the module.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Selection</span>"
@@ -110,7 +110,7 @@
     "href": "chap-evaluation.html",
     "title": "4  Evaluation",
     "section": "",
-    "text": "4.1 Purpose of the analysis\nThis page is about the ‘Evaluation’ analysis in the ‘Audit Sampling’ section of the module.",
+    "text": "4.1 Purpose of the analysis\nThis chapter is about the ‘Evaluation’ analysis in the ‘Audit Sampling’ section of the module.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Evaluation</span>"
@@ -132,7 +132,7 @@
     "href": "chap-estimation.html",
     "title": "5  True Value Estimation",
     "section": "",
-    "text": "5.1 Purpose of the analysis\nThis page is about the ‘True Value Estimation’ analysis in the ‘Audit Sampling’ section of the module.",
+    "text": "5.1 Purpose of the analysis\nThis chapter is about the ‘True Value Estimation’ analysis in the ‘Audit Sampling’ section of the module.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>True Value Estimation</span>"
@@ -154,7 +154,7 @@
     "href": "chap-benford.html",
     "title": "6  Benford’s Law",
     "section": "",
-    "text": "6.1 Purpose of the analysis\nThis page is about the ‘Benford’s Law’ analysis in the ‘Data Auditing’ section of the module.\nBenford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford’s law may provide additional evidence that the items or transactions in a population might need further investigation.",
+    "text": "6.1 Purpose of the analysis\nThis chapter is about the ‘Benford’s Law’ analysis in the ‘Data Auditing’ section of the module.\nBenford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each digit d\\(_i\\) are defined by p(d\\(_i\\)) = log\\(_{10}\\)(1 + \\(\\frac{1}{d}\\)). This can be tested in a statistical manner. That is, the null hypothesis, H\\(_0\\), states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, H\\(_1\\), states that it does not. The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford’s law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Benford's Law</span>"
@@ -176,7 +176,7 @@
     "href": "chap-bunching.html",
     "title": "7  Repeated Values",
     "section": "",
-    "text": "7.1 Purpose of the analysis\nThis page is about the ‘Repeated Values’ analysis in the ‘Data Auditing’ section of the module.\nThe repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit (Simohnsohn, 2019).\nTo determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.",
+    "text": "7.1 Purpose of the analysis\nThis chapter is about the ‘Repeated Values’ analysis in the ‘Data Auditing’ section of the module.\nThe repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit (Simohnsohn, 2019).\nTo determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.",
     "crumbs": [
       "Data Auditing",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Repeated Values</span>"
@@ -198,7 +198,7 @@
     "href": "chap-fairness-workflow.html",
     "title": "8  Fairness Workflow",
     "section": "",
-    "text": "8.1 Purpose of the analysis\nThis page is about the fairness workflow.",
+    "text": "8.1 The X stages in the fairness workflow\nThe goal of fairness is …",
     "crumbs": [
       "Algorithm Auditing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Workflow</span>"
@@ -209,7 +209,7 @@
     "href": "chap-fairness-workflow.html#practical-example",
     "title": "8  Fairness Workflow",
     "section": "8.2 Practical example",
-    "text": "8.2 Practical example\n\n8.2.1 Main settings\n\n\n8.2.2 Main output\n\n\n8.2.3 Report\nThe following settings enable you to expand the report with additional output, such as tables and figures.",
+    "text": "8.2 Practical example",
     "crumbs": [
       "Algorithm Auditing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Fairness Workflow</span>"
@@ -220,7 +220,7 @@
     "href": "chap-fairness.html",
     "title": "9  Evaluation",
     "section": "",
-    "text": "9.1 Purpose of the analysis\nThis page is about the ‘Evaluation’ analysis in the ‘Algorithm Auditing’ section of the module.",
+    "text": "9.1 Purpose of the analysis\nThis chapter is about the ‘Evaluation’ analysis in the ‘Algorithm Auditing’ section of the module.",
     "crumbs": [
       "Algorithm Auditing",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Evaluation</span>"

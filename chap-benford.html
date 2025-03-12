@@ -124,8 +124,8 @@ window.Quarto = {
 <meta property="og:description" content="">
 <meta property="og:image" content="https://github.com/koenderks/jaum/img/benford/benford-1.png">
 <meta property="og:site_name" content="JASP for Audit">
-<meta property="og:image:height" content="1210">
-<meta property="og:image:width" content="3024">
+<meta property="og:image:height" content="690">
+<meta property="og:image:width" content="1074">
 <meta name="twitter:title" content="6&nbsp; Benford’s Law – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
@@ -315,23 +315,28 @@ window.Quarto = {
 </header>
 
 
-<p>This page is about the ‘Benford’s Law’ analysis in the ‘Data Auditing’ section of the module.</p>
+<p>This chapter is about the ‘Benford’s Law’ analysis in the ‘Data Auditing’ section of the module.</p>
 <section id="purpose-of-the-analysis" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">6.1</span> Purpose of the analysis</h2>
-<p>Benford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford’s law may provide additional evidence that the items or transactions in a population might need further investigation.</p>
+<p>Benford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each digit d<span class="math inline">\(_i\)</span> are defined by p(d<span class="math inline">\(_i\)</span>) = log<span class="math inline">\(_{10}\)</span>(1 + <span class="math inline">\(\frac{1}{d}\)</span>). This can be tested in a statistical manner. That is, the null hypothesis, H<span class="math inline">\(_0\)</span>, states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, H<span class="math inline">\(_1\)</span>, states that it does not. The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford’s law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/benford/benford-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 </section>
 <section id="practical-example" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">6.2</span> Practical example</h2>
 <p>Let’s explore an example analysis of Benford’s law. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="img/benford/benford-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>This will open a dataset with 772 rows and two columns: ‘ID’ and ‘value’. The ‘ID’ column represents the identification number of the items in the population. The ‘value’ column shows the recorded values of the items.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="img/benford/benford-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <section id="main-settings" class="level3" data-number="6.2.1">
@@ -339,7 +344,7 @@ window.Quarto = {
 <p>The interface of the Benford’s law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable ‘value’, which represents the recorded values of transactions in a financial population, adheres to Benford’s law. That is, the null hypothesis, H<span class="math inline">\(_0\)</span>, states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, H<span class="math inline">\(_1\)</span>, states that it does not.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <p>These are the main settings for the analysis:</p>
@@ -357,7 +362,7 @@ window.Quarto = {
 <p>The main table in the output, shown below, shows the sample size (<em>n</em>), the mean absolute deviation (MAD), the chi-square value (<span class="math inline">\(X^2\)</span>) and its degrees of freedom (<em>df</em>). The table shows a p-value of 0.478, indicating that H<span class="math inline">\(_0\)</span> should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF<span class="math inline">\(_{01}\)</span>, which is 6.9x10<span class="math inline">\(^6\)</span>. This suggests that the data provide very strong evidence supporting H<span class="math inline">\(_0\)</span> over H<span class="math inline">\(_1\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <p>Note that non-conformity to Benford’s law does not necessarily indicate fraud. A Benford’s law analysis should therefore only be used to acquire insight into whether a population might need further investigation.</p>
@@ -367,7 +372,7 @@ window.Quarto = {
 <p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <ul>
@@ -375,35 +380,35 @@ window.Quarto = {
 <p>The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford’s law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford’s law.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
 <li><p><strong>Tables: Matched rows:</strong> Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).</p>
 <p>In the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="img/benford/benford-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div></li>
 <li><p><strong>Plots: Observed vs.&nbsp;expected:</strong> Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.</p>
 <p>The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
 <li><p><strong>Plots: Bayes factor robustness check:</strong> Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.</p>
 <p>The figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
 <li><p><strong>Plots: Sequential analysis:</strong> Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.</p>
 <p>In the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H<span class="math inline">\(_0\)</span> as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
 </ul>
@@ -413,7 +418,7 @@ window.Quarto = {
 <p>The following advanced settings allow you to customize the statistical computations according to your preferences.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/benford/benford-11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/benford/benford-12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <ul>
@@ -909,88 +914,90 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Benford's Law {#sec-benford}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This page is about the 'Benford's Law' analysis in the 'Data Auditing' section of the module.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This chapter is about the 'Benford's Law' analysis in the 'Data Auditing' section of the module.</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of the analysis</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford's law may provide additional evidence that the items or transactions in a population might need further investigation.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each digit d$_i$ are defined by p(d$_i$) = log$_{10}$(1 + $\frac{1}{d}$). This can be tested in a statistical manner. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not. The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford's law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-1.png)</span>{fig-align="center" width=60%}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of Benford's law. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-1.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of Benford's law. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-2.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-2.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-3.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-4.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable 'value', so we drag this variable to the field on the right.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reference:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution. In the example, we select 'Benford's law'.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Digits:** Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford's law.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bayes factor:** Select which Bayes factor is displayed in the main output table. 'BF$_{10}$' represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, 'BF$_{01}$' represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and 'Log(BF$_{10}$)' represents the logarithm of BF$_{10}$.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable:** Begin by entering the variable whose digit distribution you wish to test in the designated box. In the example, this is the variable 'value', so we drag this variable to the field on the right.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** Indicate the confidence level for your analysis. This level, which complements the significance level, determines when to reject the null hypothesis. In the example, we use a confidence level of 95%.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reference:** Select a reference distribution to compare the chosen digits against. By default, this is set to 'Benford's law,' but you can also opt for a uniform distribution. In the example, we select 'Benford's law'.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Digits:** Choose which digits to compare against the reference distribution. You can select the first digits (default), the first two digits, or the last digits. Benford's law typically applies to the first or first two digits, while the uniform distribution is usually applied to the last digits. In the example, we choose to test the first digits against Benford's law.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bayes factor:** Select which Bayes factor is displayed in the main output table. 'BF$_{10}$' represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, 'BF$_{01}$' represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and 'Log(BF$_{10}$)' represents the logarithm of BF$_{10}$.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). The table shows a p-value of 0.478, indicating that H$_0$ should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF$_{01}$, which is 6.9x10$^6$. This suggests that the data provide very strong evidence supporting H$_0$ over H$_1$.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). The table shows a p-value of 0.478, indicating that H$_0$ should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF$_{01}$, which is 6.9x10$^6$. This suggests that the data provide very strong evidence supporting H$_0$ over H$_1$.</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Note that non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-5.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Note that non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Frequency table:** Check this box to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-6.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Frequency table:** Check this box to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Matched rows:** Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-7.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  In the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Matched rows:** Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-7.png)</span>{fig-align="center" width=40%}</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  In the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-8.png)</span>{fig-align="center" width=40%}</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.</span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-8.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.</span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Bayes factor robustness check:** Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-9.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  The figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Bayes factor robustness check:** Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-9.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  The figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Sequential analysis:** Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-10.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  In the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H$_0$ as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Sequential analysis:** Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-10.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  In the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H$_0$ as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/benford/benford-11.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>The following advanced settings allow you to customize the statistical computations according to your preferences.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-11.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>The following advanced settings allow you to customize the statistical computations according to your preferences.</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Prior distribution: Concentration:** Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H$_0$. Conversely, when testing against Benford's law, it indicates a stronger belief in H$_1$.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/benford/benford-12.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Prior distribution: Concentration:** Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H$_0$. Conversely, when testing against Benford's law, it indicates a stronger belief in H$_1$.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
