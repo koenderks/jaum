@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "JASP for Audit",
     "section": "",
-    "text": "Preface\nThe JASP for Audit User Manual provides detailed instructions and best practices for working with the Audit module in the free and open-source software JASP. It covers various aspects, including data import and export, analysis techniques, and interpretation of results. The Statistical Auditing Group at Nyenrode Business University, which develops and maintains JASP for Audit, curates the manual to ensure users have accurate and up-to-date information.",
+    "text": "Preface\nThe JASP for Audit User Manual provides detailed instructions and best practices for working with the Audit module in the free and open-source software JASP. It covers various aspects, including data import and export, analysis techniques, and interpretation of results.\nThe Statistical Auditing Group at Nyenrode Business University, which develops and maintains JASP for Audit, curates the manual to ensure users have accurate and up-to-date information.",
     "crumbs": [
       "Preface"
     ]
