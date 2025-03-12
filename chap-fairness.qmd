@@ -1,9 +1,19 @@
-# Fairness Workflow {#sec-fairness}
+# Evaluation {#sec-fairness}
 
-## Main settings
+This page is about the 'Evaluation' analysis in the 'Algorithm Auditing' section of the module.
 
-## Main output
+## Purpose of the analysis
 
-## Report
+## Practical example
+
+### Main settings
+
+### Main output
+
+### Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
+
+### Advanced
+
+The following advanced settings allow you to customize the statistical computations according to your preferences.

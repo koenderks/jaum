@@ -1,6 +1,12 @@
 # Benford's Law {#sec-benford}
 
+This page is about the 'Benford's Law' analysis in the 'Data Auditing' section of the module.
+
+## Purpose of the analysis
+
 Benford's law states that the distribution of leading digits in a population naturally follows a certain distribution. In auditing, assessing whether a distribution of digits in the population conforms to Benford's law may provide additional evidence that the items or transactions in a population might need further investigation.
+
+## Practical example
 
 Let's explore an example analysis of Benford's law. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).
 
@@ -10,7 +16,7 @@ This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'I
 
 ![](img/benford/benford-2.png){fig-align="center" width=100%}
 
-## Main settings
+### Main settings
 
 The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.
 
@@ -25,7 +31,7 @@ These are the main settings for the analysis:
 - **Bayes factor:** Select which Bayes factor is displayed in the main output table. 'BF$_{10}$' represents the Bayes factor in favor of the alternative hypothesis over the null hypothesis, 'BF$_{01}$' represents the Bayes factor in favor of the null hypothesis over the alternative hypothesis, and 'Log(BF$_{10}$)' represents the logarithm of BF$_{10}$.
 - **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
-## Main output
+### Main output
 
 The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). The table shows a p-value of 0.478, indicating that H$_0$ should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF$_{01}$, which is 6.9x10$^6$. This suggests that the data provide very strong evidence supporting H$_0$ over H$_1$.
 
@@ -33,7 +39,7 @@ The main table in the output, shown below, shows the sample size (*n*), the mean
 
 Note that non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.
 
-## Report
+### Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
 
@@ -69,7 +75,7 @@ The following settings enable you to expand the report with additional output, s
 
   ![](img/benford/benford-10.png){fig-align="center" width=75%}
 
-## Advanced
+### Advanced
 
 The following advanced settings allow you to customize the statistical computations according to your preferences.
 

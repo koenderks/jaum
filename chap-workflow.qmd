@@ -18,7 +18,7 @@ In the evaluation stage, you use the annotated sample to infer the total misstat
 
 This manual emphasizes the practical application of the audit sampling workflow in JASP. For a deeper understanding of the statistical theory behind the four stages of the audit sampling workflow, read the free online book [Statistical Audit Sampling with R](https://koenderks.github.io/sasr/).
 
-## A practical example in JASP
+## Practical example
 
 The Audit module in JASP offers two ways to navigate the audit sampling workflow: the Sampling Workflow analysis, which guides you through all four stages, and individual analyses for Planning, Selection, and Evaluation. This chapter uses the classical sampling workflow analysis to explain the Audit module's core functionality. Note that a Bayesian variant of the sampling workflow is also available.
 

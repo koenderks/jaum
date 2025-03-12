@@ -1,5 +1,11 @@
 # Evaluation {#sec-evaluation}
 
+This page is about the 'Evaluation' analysis in the 'Audit Sampling' section of the module.
+
+## Purpose of the analysis
+
+## Practical example
+
 Let's explore an example of an evaluation analysis. To follow along, open the 'Evaluating a Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Sample' (not the green JASP-icon button).
 
 ![](img/evaluation/evaluation-1.png){fig-align="center" width=100%}
@@ -8,7 +14,7 @@ This will open a dataset with 90 rows and three columns: 'ID', 'Book.value', 'Au
 
 ![](img/evaluation/evaluation-2.png){fig-align="center" width=100%}
 
-## Main settings
+### Main settings
 
 ![](img/evaluation/evaluation-3.png){fig-align="center" width=75%}
 
@@ -23,11 +29,11 @@ These are the main settings for the analysis:
 - **Audit risk model:** ...
 - **Display: Explanatory text:** ...
 
-## Main output
+### Main output
 
 ![](img/evaluation/evaluation-4.png){fig-align="center" width=40%}
 
-## Report
+### Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
 
@@ -49,7 +55,7 @@ The following settings enable you to expand the report with additional output, s
 
   ![](img/evaluation/evaluation-9.png){fig-align="center" width=60%}
 
-## Advanced
+### Advanced
 
 The following advanced settings allow you to customize the statistical computations according to your preferences.
 
