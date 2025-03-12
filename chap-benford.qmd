@@ -6,11 +6,15 @@ Let's explore an example analysis of Benford's law. To follow along, open the 'A
 
 ![](img/benford/benford-1.png){fig-align="center" width=100%}
 
+This will open a dataset with two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
+
+![](img/benford/benford-2.png){fig-align="center" width=100%}
+
 ## Main settings
 
 The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.
 
-![](img/benford/benford-2.png){fig-align="center" width=75%}
+![](img/benford/benford-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
@@ -25,7 +29,7 @@ These are the main settings for the analysis:
 
 The main table in the output, shown below, shows the sample size (*n*), the mean absolute deviation (MAD), the chi-square value ($X^2$) and its degrees of freedom (*df*). The table shows a p-value of 0.478, indicating that H$_0$ should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF$_{01}$, which is 6.9x10$^6$. This suggests that the data provide very strong evidence supporting H$_0$ over H$_1$.
 
-![](img/benford/benford-3.png){fig-align="center" width=75%}
+![](img/benford/benford-4.png){fig-align="center" width=75%}
 
 Note that non-conformity to Benford's law does not necessarily indicate fraud. A Benford's law analysis should therefore only be used to acquire insight into whether a population might need further investigation.
 
@@ -33,42 +37,42 @@ Note that non-conformity to Benford's law does not necessarily indicate fraud. A
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
 
-![](img/benford/benford-4.png){fig-align="center" width=75%}
+![](img/benford/benford-5.png){fig-align="center" width=75%}
 
 - **Tables: Frequency table:** Check this box to display a table of the observed and expected frequencies of the digits. Clicking the 'Confidence interval' option shows confidence intervals for the observed relative frequencies in the table.
 
   The frequency table displays the observed count for each leading digit in the second column. Adjacent to this, it shows the expected relative frequency under Benford's law alongside the observed relative frequency in the data. Additionally, p-values and Bayes factors are provided to test whether the observed relative frequencies differ from the expected ones. In this case, only the digit 8 has a p-value smaller than 0.05, indicating a significant deviation from the expected relative frequency under Benford's law.
 
-  ![](img/benford/benford-5.png){fig-align="center" width=75%}
+  ![](img/benford/benford-6.png){fig-align="center" width=75%}
 
 - **Tables: Matched rows:** Check this box to display a table showing the rows that have a certain number as their leading/last digit(s).
 
   In the example, we request a table of rows that match the digit 8. The first column displays the row number where the digit is found, and the second column shows the matched value. Using this table, you can identify the transactions that may warrant further investigation.
 
-  ![](img/benford/benford-6.png){fig-align="center" width=40%}
+  ![](img/benford/benford-7.png){fig-align="center" width=40%}
 
 - **Plots: Observed vs. expected:** Check this box to display a figure that illustrates the observed frequencies compared to the expected frequencies.
 
   The figure in the output visualizes the observed relative frequencies compared to the expected ones, with the digit 8 highlighted in red. From this figure, it is immediately clear that the transactions starting with the digit 8 may warrant further inspection.
 
-  ![](img/benford/benford-7.png){fig-align="center" width=75%}
+  ![](img/benford/benford-8.png){fig-align="center" width=75%}
 
 - **Plots: Bayes factor robustness check:** Check this box to display a figure that shows the Bayes factor under different specifications of the prior concentration parameter.
 
   The figure below is referred to as a robustness check. If the Bayes factor supports a particular hypothesis across all reasonable values of the prior concentration parameter, the result is considered robust regarding the choice of prior distribution. In this instance, the figure demonstrates that the Bayes factor consistently provides evidence in favor of the null hypothesis, regardless of the prior concentration parameter values.
 
-  ![](img/benford/benford-8.png){fig-align="center" width=75%}
+  ![](img/benford/benford-9.png){fig-align="center" width=75%}
 
 - **Plots: Sequential analysis:** Select this box to display a figure illustrating the Bayes factor as a function of sample size, across various prior specifications.
 
   In the example analysis, the sequential analysis plot demonstrates that the Bayes factor provides increasing evidence in favor of H$_0$ as the sample size grows. Additionally, this evidence is more pronounced when using a more concentrated prior distribution.
 
-  ![](img/benford/benford-9.png){fig-align="center" width=75%}
+  ![](img/benford/benford-10.png){fig-align="center" width=75%}
 
 ## Advanced
 
 The following advanced settings allow you to customize the statistical computations according to your preferences.
 
-![](img/benford/benford-10.png){fig-align="center" width=75%}
+![](img/benford/benford-11.png){fig-align="center" width=75%}
 
 - **Prior distribution: Concentration:** Specify the concentration parameter for the Dirichlet prior distribution. Adjusting this value will alter the Bayes factor in the main output table. A larger concentration parameter indicates a more concentrated prior distribution, suggesting that the population proportions are more similar. When testing against the uniform distribution, this implies a stronger belief in H$_0$. Conversely, when testing against Benford's law, it indicates a stronger belief in H$_1$.
