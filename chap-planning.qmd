@@ -2,7 +2,7 @@
 
 ## Main settings
 
-![](img/planning/planning-1.png){fig-align="center" width=100%}
+![](img/planning/planning-1.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
@@ -19,7 +19,7 @@ These are the main settings for the analysis:
 
 ## Main output
 
-![](img/planning/planning-3.png){fig-align="center" width=60%}
+![](img/planning/planning-3.png){fig-align="center" width=50%}
 
 ## Report
 

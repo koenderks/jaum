@@ -8,11 +8,15 @@ Let's explore an example analysis of repeated values. To follow along, open the 
 
 ![](img/bunching/bunching-1.png){fig-align="center" width=100%}
 
+This will open a dataset with two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
+
+![](img/benford/benford-2.png){fig-align="center" width=100%}
+
 ## Main settings
 
 The interface ...
 
-![](img/bunching/bunching-2.png){fig-align="center" width=75%}
+![](img/bunching/bunching-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
@@ -25,35 +29,35 @@ These are the main settings for the analysis:
 
 ## Main output
 
-![](img/bunching/bunching-3.png){fig-align="center" width=50%}
+![](img/bunching/bunching-4.png){fig-align="center" width=50%}
 
 ## Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
 
-![](img/bunching/bunching-4.png){fig-align="center" width=75%}
+![](img/bunching/bunching-5.png){fig-align="center" width=75%}
 
 - **Tables: Assumption checks:** ...
 
-  ![](img/bunching/bunching-5.png){fig-align="center" width=75%}
+  ![](img/bunching/bunching-6.png){fig-align="center" width=75%}
 
 - **Tables: Frequency table:** ...
 
-  ![](img/bunching/bunching-6.png){fig-align="center" width=40%}
+  ![](img/bunching/bunching-7.png){fig-align="center" width=40%}
 
 - **Plots: Observed vs. expected:** ...
 
-  ![](img/bunching/bunching-7.png){fig-align="center" width=75%}
+  ![](img/bunching/bunching-8.png){fig-align="center" width=75%}
 
 - **Plots: Histogram:** ...
 
-  ![](img/bunching/bunching-8.png){fig-align="center" width=75%}
+  ![](img/bunching/bunching-9.png){fig-align="center" width=75%}
 
 ## Advanced
 
 The following advanced settings allow you to customize the statistical computations according to your preferences.
 
-![](img/bunching/bunching-9.png){fig-align="center" width=75%}
+![](img/bunching/bunching-10.png){fig-align="center" width=75%}
 
 - **Bootstrap: Number of samples:** ...
 - **Bootstrap: Seed:** ...
