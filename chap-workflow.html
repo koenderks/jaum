@@ -225,13 +225,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chap-fairness.html" class="sidebar-item-text sidebar-link">
+  <a href="./chap-fairness-workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Fairness Workflow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chap-fairness-evaluation.html" class="sidebar-item-text sidebar-link">
+  <a href="./chap-fairness.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
   </div>
 </li>
@@ -254,7 +254,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#the-four-stages-of-the-sampling-workflow" id="toc-the-four-stages-of-the-sampling-workflow" class="nav-link active" data-scroll-target="#the-four-stages-of-the-sampling-workflow"><span class="header-section-number">1.1</span> The four stages of the sampling workflow</a></li>
-  <li><a href="#a-practical-example-in-jasp" id="toc-a-practical-example-in-jasp" class="nav-link" data-scroll-target="#a-practical-example-in-jasp"><span class="header-section-number">1.2</span> A practical example in JASP</a>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">1.2</span> Practical example</a>
   <ul class="collapse">
   <li><a href="#stage-1-planning" id="toc-stage-1-planning" class="nav-link" data-scroll-target="#stage-1-planning"><span class="header-section-number">1.2.1</span> Stage 1: Planning</a></li>
   <li><a href="#stage-2-selection" id="toc-stage-2-selection" class="nav-link" data-scroll-target="#stage-2-selection"><span class="header-section-number">1.2.2</span> Stage 2: Selection</a></li>
@@ -301,8 +301,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the evaluation stage, you use the annotated sample to infer the total misstatement in the population. Statistical techniques calculate a projected maximum misstatement, and the population is approved if this is below the performance materiality.</p>
 <p>This manual emphasizes the practical application of the audit sampling workflow in JASP. For a deeper understanding of the statistical theory behind the four stages of the audit sampling workflow, read the free online book <a href="https://koenderks.github.io/sasr/">Statistical Audit Sampling with R</a>.</p>
 </section>
-<section id="a-practical-example-in-jasp" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="a-practical-example-in-jasp"><span class="header-section-number">1.2</span> A practical example in JASP</h2>
+<section id="practical-example" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">1.2</span> Practical example</h2>
 <p>The Audit module in JASP offers two ways to navigate the audit sampling workflow: the Sampling Workflow analysis, which guides you through all four stages, and individual analyses for Planning, Selection, and Evaluation. This chapter uses the classical sampling workflow analysis to explain the Audit module’s core functionality. Note that a Bayesian variant of the sampling workflow is also available.</p>
 <p>Let’s explore an example of the audit sampling workflow. To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
@@ -922,7 +922,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>This manual emphasizes the practical application of the audit sampling workflow in JASP. For a deeper understanding of the statistical theory behind the four stages of the audit sampling workflow, read the free online book <span class="co">[</span><span class="ot">Statistical Audit Sampling with R</span><span class="co">](https://koenderks.github.io/sasr/)</span>.</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## A practical example in JASP</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>The Audit module in JASP offers two ways to navigate the audit sampling workflow: the Sampling Workflow analysis, which guides you through all four stages, and individual analyses for Planning, Selection, and Evaluation. This chapter uses the classical sampling workflow analysis to explain the Audit module's core functionality. Note that a Bayesian variant of the sampling workflow is also available.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
