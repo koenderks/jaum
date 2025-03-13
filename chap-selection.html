@@ -289,6 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This chapter is about the ‘Selection’ analysis in the ‘Audit Sampling’ section of the module.</p>
 <section id="purpose-of-the-analysis" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">3.1</span> Purpose of the analysis</h2>
+<p>The main goal of the selection analysis is to draw a representative sample of items from the population. These items can then be marked in the population file so they can be easily identified and tested. Particularly in an audit context, special sampling methods, such as monetary unit sampling, are used to ensure the sample has specific characteristics or meets certain criteria, such as always including items with a high book value.</p>
 </section>
 <section id="practical-example" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">3.2</span> Practical example</h2>
@@ -306,6 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="main-settings" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">3.2.1</span> Main settings</h3>
+<p>In this example, we aim to select a sample of 50 monetary units from the population using monetary unit sampling with a fixed interval. To draw this sample, we access the ‘Selection’ analysis within the Audit module. The interface for the selection analysis is displayed below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/selection/selection-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
@@ -313,24 +315,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>These are the main settings for the analysis:</p>
 <ul>
-<li><strong>Variables:</strong> …</li>
-<li><strong>Sample size</strong> …</li>
-<li><strong>Randomize item order:</strong> …</li>
-<li><strong>Sampling units:</strong> …</li>
-<li><strong>Selection method:</strong> …
+<li><strong>Variables:</strong> Start by entering the variable that holds the identification numbers for the items into the ‘Item ID’ field. Additionally, since we are performing monetary unit sampling, enter the variable ‘bookValue’ into the ‘Book Value’ field. Any variables you enter into the ‘Additional Variables’ field will be displayed along with the selected items in any output tables.</li>
+<li><strong>Sample size:</strong> Specify the number of sampling units you want to select from the population. In this example, we aim to test a sample of 100 monetary units, so we enter the value 50 in this field.</li>
+<li><strong>Seed:</strong> A seed in computing is a starting point for generating random numbers. By setting a seed, you ensure that the results of the selection procedure can be reproduced across computers, which is useful for sharing your analysis.</li>
+<li><strong>Randomize item order:</strong> Choose whether to randomly shuffle the items in the population before starting the selection process. This can help eliminate any patterns that may exist in the dataset. It’s generally a good idea to use this setting, so we enable it in this example.</li>
+<li><strong>Sampling units:</strong> Choose the type of sampling units you want to select. Selecting ‘Items’ will perform attribute sampling, while ‘Monetary units’ will perform monetary unit sampling. Since we have access to book values in this example, we select ‘Monetary units’.</li>
+<li><strong>Selection method:</strong> Choose the selection algorithm. Since we want to sample monetary units using a fixed interval, we select ‘Fixed interval sampling’.
 <ul>
-<li><strong>Fixed interval sampling: Starting point:</strong> …</li>
+<li><strong>Fixed interval sampling: Starting point:</strong> This setting determines the starting point in the first interval. To enhance randomness, we set it to ‘Random’. Alternatively, we could choose a specific starting point by selecting the ‘Custom’ option.</li>
 </ul></li>
-<li><strong>Display: Explanatory text:</strong> …</li>
+<li><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</li>
 </ul>
 </section>
 <section id="main-output" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">3.2.2</span> Main output</h3>
+<p>The first main table in the output, shown below, displays the number of selected units and the number of items from which these units were chosen. In this example, 50 sampling units have been selected across 50 items. Additionally, the table shows the total value of the items in the sample and the percentage of the population value that these sample items represent. The 50 items have a total value of €27,998.55, which is 2% of the total population value of €1,403,220.82, as calculated by 27,998.55 / 1,403,220.82 = 0.01995. The note under the table shows that the length of a single interval is €28,064.42.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/selection/selection-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/selection/selection-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
+<p>The second main table in the output provides details specific to interval selection methods. It divides the population into two strata: the top stratum, which includes all items with a book value greater than a single interval of €28,064.42 (the top stratum limit would be two interval lenghts for cell sampling), and the bottom stratum, which contains items with a book value smaller than €28,064.42. In this example, there are no items with a book value exceeding €28,064.42, so the top stratum is empty.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/selection/selection-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
@@ -346,15 +351,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ul>
-<li><p><strong>Tables: Descriptive statistics:</strong> …</p>
+<li><p><strong>Tables: Descriptive statistics:</strong> Checking this box generates a table of descriptive statistics (e.g., mean, median, standard deviation) for the variable in the ‘Book Value’ field and all variables in the ‘Additional Variables’ field. This can be used to gain insights into the distribution and characteristics of the sample.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/selection/selection-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div></li>
-<li><p><strong>Tables: Selected items:</strong> …</p>
+<li><p><strong>Tables: Selected items:</strong> Checking this box generates a table that lists all the selected items in the sample along with their corresponding book values, if this variable is provided.</p>
 <ul>
-<li><strong>Order by book value:</strong> …</li>
+<li><strong>Order by book value:</strong> This setting allows you to sort the items in the table based on their book value, with the option to arrange them in either ascending or descending order. In this example, we sorted the book values in descending order.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -365,17 +370,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="export" class="level3" data-number="3.2.4">
 <h3 data-number="3.2.4" class="anchored" data-anchor-id="export"><span class="header-section-number">3.2.4</span> Export</h3>
-<p>The following settings enable you to export the sample to a .csv file.</p>
+<p>The following settings enable you to isolate and export the selected items to a .csv file.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/selection/selection-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <ul>
-<li><strong>Column name selection result:</strong> …</li>
-<li><strong>File name:</strong> …</li>
-<li><strong>Enable synchronization:</strong> …</li>
+<li><strong>Column name selection result:</strong> Enter the name of the column that will be added to the population file. This column will contain the results of the selection procedure, indicating whether the item is selected for the sample and how many times it is included.</li>
+<li><strong>File name:</strong> Click ‘Browse’ to choose a location on your computer where you want to save the sample list.</li>
+<li><strong>Enable synchronization:</strong> Finally, click on this setting to create the .csv file on your computer. When this setting is enabled, any changes you make to the sample by adjusting settings in the interface will be immediately reflected in the .csv file. If you prefer not to have this automatic update, uncheck this box after enabling it initially.</li>
 </ul>
+<p>After applying these settings, you should find the resulting .csv file saved on your computer.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/selection/selection-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
@@ -875,62 +881,73 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of the analysis</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The main goal of the selection analysis is to draw a representative sample of items from the population. These items can then be marked in the population file so they can be easily identified and tested. Particularly in an audit context, special sampling methods, such as monetary unit sampling, are used to ensure the sample has specific characteristics or meets certain criteria, such as always including items with a high book value.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Let's explore an example of a selection analysis. To follow along, open the 'Testing for Overstatements' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Testing for Overstatements' (not the green JASP-icon button).</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-1.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Let's explore an example of a selection analysis. To follow along, open the 'Testing for Overstatements' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Testing for Overstatements' (not the green JASP-icon button).</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 3500 rows and three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-1.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-2.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 3500 rows and three columns: 'ID', 'bookValue', and 'auditValue'. The 'ID' column represents the identification number of the items in the population. The 'bookValue' column shows the recorded values of the items, while the 'auditValue' column displays the true values. The 'auditValue' column is included for illustrative purposes, as auditors typically know the true values only for the audited sample, not for all items in the population.</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-2.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>In this example, we aim to select a sample of 50 monetary units from the population using monetary unit sampling with a fixed interval. To draw this sample, we access the 'Selection' analysis within the Audit module. The interface for the selection analysis is displayed below.</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables:** ...</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sample size** ...</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Randomize item order:** ...</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling units:** ...</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Selection method:** ...</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>**Fixed interval sampling: Starting point:** ...</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** ...</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-4.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-5.png)</span>{fig-align="center" width=100%}</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-6.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Descriptive statistics:** ...</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/selection/selection-7.png)</span>{fig-align="center" width=60%}</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Selected items:** ...</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>**Order by book value:** ...</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables:** Start by entering the variable that holds the identification numbers for the items into the 'Item ID' field. Additionally, since we are performing monetary unit sampling, enter the variable 'bookValue' into the 'Book Value' field. Any variables you enter into the 'Additional Variables' field will be displayed along with the selected items in any output tables.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sample size:** Specify the number of sampling units you want to select from the population. In this example, we aim to test a sample of 100 monetary units, so we enter the value 50 in this field.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Seed:** A seed in computing is a starting point for generating random numbers. By setting a seed, you ensure that the results of the selection procedure can be reproduced across computers, which is useful for sharing your analysis.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Randomize item order:** Choose whether to randomly shuffle the items in the population before starting the selection process. This can help eliminate any patterns that may exist in the dataset. It's generally a good idea to use this setting, so we enable it in this example.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling units:** Choose the type of sampling units you want to select. Selecting 'Items' will perform attribute sampling, while 'Monetary units' will perform monetary unit sampling. Since we have access to book values in this example, we select 'Monetary units'.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Selection method:** Choose the selection algorithm. Since we want to sample monetary units using a fixed interval, we select 'Fixed interval sampling'.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>**Fixed interval sampling: Starting point:** This setting determines the starting point in the first interval. To enhance randomness, we set it to 'Random'. Alternatively, we could choose a specific starting point by selecting the 'Custom' option.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The first main table in the output, shown below, displays the number of selected units and the number of items from which these units were chosen. In this example, 50 sampling units have been selected across 50 items. Additionally, the table shows the total value of the items in the sample and the percentage of the population value that these sample items represent. The 50 items have a total value of €27,998.55, which is 2% of the total population value of €1,403,220.82, as calculated by 27,998.55 / 1,403,220.82 = 0.01995. The note under the table shows that the length of a single interval is €28,064.42.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-4.png)</span>{fig-align="center" width=60%}</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>The second main table in the output provides details specific to interval selection methods. It divides the population into two strata: the top stratum, which includes all items with a book value greater than a single interval of €28,064.42 (the top stratum limit would be two interval lenghts for cell sampling), and the bottom stratum, which contains items with a book value smaller than €28,064.42. In this example, there are no items with a book value exceeding €28,064.42, so the top stratum is empty.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-5.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/selection/selection-8.png)</span>{fig-align="center" width=60%}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-6.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Descriptive statistics:** Checking this box generates a table of descriptive statistics (e.g., mean, median, standard deviation) for the variable in the 'Book Value' field and all variables in the 'Additional Variables' field. This can be used to gain insights into the distribution and characteristics of the sample.</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The following settings enable you to export the sample to a .csv file.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/selection/selection-7.png)</span>{fig-align="center" width=60%}</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-9.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Column name selection result:** ...</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**File name:** ...</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Enable synchronization:** ...</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-10.png)</span>{fig-align="center" width=100%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Selected items:** Checking this box generates a table that lists all the selected items in the sample along with their corresponding book values, if this variable is provided.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">  + </span>**Order by book value:** This setting allows you to sort the items in the table based on their book value, with the option to arrange them in either ascending or descending order. In this example, we sorted the book values in descending order.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/selection/selection-8.png)</span>{fig-align="center" width=60%}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>The following settings enable you to isolate and export the selected items to a .csv file.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-9.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Column name selection result:** Enter the name of the column that will be added to the population file. This column will contain the results of the selection procedure, indicating whether the item is selected for the sample and how many times it is included.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**File name:** Click 'Browse' to choose a location on your computer where you want to save the sample list.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Enable synchronization:** Finally, click on this setting to create the .csv file on your computer. When this setting is enabled, any changes you make to the sample by adjusting settings in the interface will be immediately reflected in the .csv file. If you prefer not to have this automatic update, uncheck this box after enabling it initially.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>After applying these settings, you should find the resulting .csv file saved on your computer.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-10.png)</span>{fig-align="center" width=100%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
