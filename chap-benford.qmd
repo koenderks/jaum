@@ -22,7 +22,7 @@ This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'I
 
 ### Main settings
 
-The interface of the Benford's law analysis in JASP is shown below. We will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not.
+In this example, we will investigate whether the distribution of first digits in the variable 'value', which represents the recorded values of transactions in a financial population, adheres to Benford's law. That is, the null hypothesis, H$_0$, states that the distribution of first digits follows Benford's law, while the alternative hypothesis, H$_1$, states that it does not. To test this, we open the 'Benford's Law' analysis from the Audit module. The interface of the Benford's law analysis is shown below. 
 
 ![](img/benford/benford-4.png){fig-align="center" width=75%}
 
