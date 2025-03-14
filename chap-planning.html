@@ -289,11 +289,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This chapter is about the ‘Planning’ analysis in the ‘Audit Sampling’ section of the module.</p>
 <section id="purpose-of-the-analysis" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">2.1</span> Purpose of the analysis</h2>
+<p>The goal of the planning analysis is to determine the minimum sample size needed to meet the audit’s objectives. For example, a common audit objective is to obtain a specific level of confidence that the misstatement in the population is below the tolerable misstatement rate. This rate can be expressed as a monetary amount, known as performance materiality.</p>
 </section>
 <section id="practical-example" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">2.2</span> Practical example</h2>
+<p>Let’s consider an example of a planning analysis. Imagine we are auditing a population of 1,000 items with a total value of €1,000,000. In this scenario, we aim to determine the minimum sample size required to conclude, with 95% confidence, that the population does not contain misstatements exceeding the performance materiality of €30,000, which is 3% of the total value. Furthermore, we do not expect to find any misstatements in the sample.</p>
 <section id="main-settings" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">2.2.1</span> Main settings</h3>
+<p>To plan the minimum sample size for this audit objective, we open the ‘Planning’ analysis within the Audit module. The interface for the planning analysis is displayed below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/planning/planning-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
@@ -301,18 +304,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>These are the main settings for the analysis:</p>
 <ul>
-<li><p><strong>Sampling objectives: Performance materiality:</strong> …</p></li>
-<li><p><strong>Sampling objectives: Minimum precision:</strong> …</p></li>
-<li><p><strong>Confidence:</strong> …</p></li>
-<li><p><strong>Expected misstatements:</strong> …</p></li>
-<li><p><strong>Population: No.&nbsp;units:</strong> …</p></li>
-<li><p><strong>Audit risk model:</strong> …</p>
+<li><p><strong>Sampling objectives: Performance materiality:</strong> In this section, we can input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). If we choose to enter it as a monetary amount, we must also specify the number of units in the population. Here, we enter 3% as the relative performance materiality.</p></li>
+<li><p><strong>Sampling objectives: Minimum precision:</strong> We can choose this setting if we want to identify the misstatement in the population with a specified minimum uncertainty (i.e., the difference between the most likely misstatement and the upper limit for the misstatement). However, since this is not relevant to our audit objective, we leave this box unchecked.</p></li>
+<li><p><strong>Confidence:</strong> Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and, consequently, the amount of work needed to approve the population. A higher confidence level necessitates more audit evidence to conclude that the population is free of material misstatement. In this example, we use a confidence level of 95%.</p></li>
+<li><p><strong>Expected misstatements:</strong> Specify the number of misstatements tolerated in the sample. This means that if you find the specified number of misstatements in the sample, you can still approve the population. In this example, we do not anticipate any misstatements, so we leave this value at zero.</p></li>
+<li><p><strong>Population: No.&nbsp;units:</strong> Specify the number of sampling units in the population. If you intend to select monetary units, this represents the total value of the population. If you plan to select items, this refers to the number of items in the population. In this case, we intend to use attributes sampling and hence we fill in the value 1,000 here.</p></li>
+<li><p><strong>Audit risk model:</strong> Indicate the risks of material misstatement from the audit risk model here.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/planning/planning-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
-<li><p><strong>Display: Explanatory text:</strong> …</p></li>
+<li><p><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</p></li>
 </ul>
 </section>
 <section id="main-output" class="level3" data-number="2.2.2">
@@ -854,54 +857,60 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of the analysis</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The goal of the planning analysis is to determine the minimum sample size needed to meet the audit's objectives. For example, a common audit objective is to obtain a specific level of confidence that the misstatement in the population is below the tolerable misstatement rate. This rate can be expressed as a monetary amount, known as performance materiality.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-1.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Let's consider an example of a planning analysis. Imagine we are auditing a population of 1,000 items with a total value of €1,000,000. In this scenario, we aim to determine the minimum sample size required to conclude, with 95% confidence, that the population does not contain misstatements exceeding the performance materiality of €30,000, which is 3% of the total value. Furthermore, we do not expect to find any misstatements in the sample.</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Performance materiality:** ...</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Minimum precision:** ...</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** ...</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Expected misstatements:** ...</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. units:** ...</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Audit risk model:** ...</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-2.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** ...</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>To plan the minimum sample size for this audit objective, we open the 'Planning' analysis within the Audit module. The interface for the planning analysis is displayed below.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-1.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Performance materiality:** In this section, we can input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). If we choose to enter it as a monetary amount, we must also specify the number of units in the population. Here, we enter 3% as the relative performance materiality.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sampling objectives: Minimum precision:** We can choose this setting if we want to identify the misstatement in the population with a specified minimum uncertainty (i.e., the difference between the most likely misstatement and the upper limit for the misstatement). However, since this is not relevant to our audit objective, we leave this box unchecked.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and, consequently, the amount of work needed to approve the population. A higher confidence level necessitates more audit evidence to conclude that the population is free of material misstatement. In this example, we use a confidence level of 95%.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Expected misstatements:** Specify the number of misstatements tolerated in the sample. This means that if you find the specified number of misstatements in the sample, you can still approve the population. In this example, we do not anticipate any misstatements, so we leave this value at zero.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. units:** Specify the number of sampling units in the population. If you intend to select monetary units, this represents the total value of the population. If you plan to select items, this refers to the number of items in the population. In this case, we intend to use attributes sampling and hence we fill in the value 1,000 here.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Audit risk model:** Indicate the risks of material misstatement from the audit risk model here.</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-3.png)</span>{fig-align="center" width=50%}</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-2.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-3.png)</span>{fig-align="center" width=50%}</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Compare sample sizes:** ...</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Presumed data distribution:** ... </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-4.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Compare sample sizes:** ...</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Format output:** ...</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-5.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Presumed data distribution:** ... </span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The following advanced settings allow you to customize the statistical computations according to your preferences.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/planning/planning-6.png)</span>{fig-align="center" width=75%}</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-7.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Format output:** ...</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Likelihood:** ...</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterations: Increment:** ...</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterations: Maximum:**</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The following advanced settings allow you to customize the statistical computations according to your preferences.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/planning/planning-7.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Likelihood:** ...</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterations: Increment:** ...</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterations: Maximum:**</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
