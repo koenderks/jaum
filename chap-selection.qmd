@@ -18,7 +18,7 @@ This will open a dataset with 3500 rows and three columns: 'ID', 'bookValue', an
 
 ### Main settings
 
-In this example, we aim to select a sample of 50 monetary units from the population using monetary unit sampling with a fixed interval. To draw this sample, we access the 'Selection' analysis within the Audit module. The interface for the selection analysis is displayed below.
+In this example, we aim to select a sample of 50 monetary units from the population using monetary unit sampling with a fixed interval. To draw this sample, we open the 'Selection' analysis within the Audit module. The interface for the selection analysis is displayed below.
 
 ![](img/selection/selection-3.png){fig-align="center" width=75%}
 

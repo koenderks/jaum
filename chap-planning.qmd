@@ -4,24 +4,30 @@ This chapter is about the 'Planning' analysis in the 'Audit Sampling' section of
 
 ## Purpose of the analysis
 
+The goal of the planning analysis is to determine the minimum sample size needed to meet the audit's objectives. For example, a common audit objective is to obtain a specific level of confidence that the misstatement in the population is below the tolerable misstatement rate. This rate can be expressed as a monetary amount, known as performance materiality.
+
 ## Practical example
 
+Let's consider an example of a planning analysis. Imagine we are auditing a population of 1,000 items with a total value of €1,000,000. In this scenario, we aim to determine the minimum sample size required to conclude, with 95% confidence, that the population does not contain misstatements exceeding the performance materiality of €30,000, which is 3% of the total value. Furthermore, we do not expect to find any misstatements in the sample.
+
 ### Main settings
+
+To plan the minimum sample size for this audit objective, we open the 'Planning' analysis within the Audit module. The interface for the planning analysis is displayed below.
 
 ![](img/planning/planning-1.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
-- **Sampling objectives: Performance materiality:** ...
-- **Sampling objectives: Minimum precision:** ...
-- **Confidence:** ...
-- **Expected misstatements:** ...
-- **Population: No. units:** ...
-- **Audit risk model:** ...
+- **Sampling objectives: Performance materiality:** In this section, we can input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). If we choose to enter it as a monetary amount, we must also specify the number of units in the population. Here, we enter 3% as the relative performance materiality.
+- **Sampling objectives: Minimum precision:** We can choose this setting if we want to identify the misstatement in the population with a specified minimum uncertainty (i.e., the difference between the most likely misstatement and the upper limit for the misstatement). However, since this is not relevant to our audit objective, we leave this box unchecked.
+- **Confidence:** Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and, consequently, the amount of work needed to approve the population. A higher confidence level necessitates more audit evidence to conclude that the population is free of material misstatement. In this example, we use a confidence level of 95%.
+- **Expected misstatements:** Specify the number of misstatements tolerated in the sample. This means that if you find the specified number of misstatements in the sample, you can still approve the population. In this example, we do not anticipate any misstatements, so we leave this value at zero.
+- **Population: No. units:** Specify the number of sampling units in the population. If you intend to select monetary units, this represents the total value of the population. If you plan to select items, this refers to the number of items in the population. In this case, we intend to use attributes sampling and hence we fill in the value 1,000 here.
+- **Audit risk model:** Indicate the risks of material misstatement from the audit risk model here.
 
   ![](img/planning/planning-2.png){fig-align="center" width=75%}
 
-- **Display: Explanatory text:** ...
+- **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ### Main output
 
