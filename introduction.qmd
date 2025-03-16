@@ -22,9 +22,11 @@ To find the Audit module, click the '+' icon on the right of this menu bar. A di
 
 ![](img/introduction/intro-3.png){fig-align="center" width=100%}
 
-## Accessibility
+You can find detailed instructions for each analysis in the Audit module in the corresponding chapter of this manual.
 
-The Audit module is a robust tool for statistical auditing. The following paragraphs detail its accessibility features, including where to locate help files and how to the reliability of the statistical results is ensured.
+## Miscellaneous
+
+The following paragraphs detail miscellaneous features, including where to locate help files and how to the reliability of the statistical results is ensured.
 
 ### Help files
 

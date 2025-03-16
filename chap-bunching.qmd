@@ -4,9 +4,9 @@ This chapter is about the 'Repeated Values' analysis in the 'Data Auditing' sect
 
 ## Purpose of the analysis
 
-The repeated values analysis analyzes the frequency with which values get repeated within a dataset (called “number-bunching”) to statistically identify whether the data were likely tampered with. Unlike Benford’s law this approach examines the entire number at once, not only the first or last digit [@Simohnsohn2019].
+The repeated values analysis examines the frequency of value repetitions within a dataset (referred to as "number-bunching") to statistically determine if the data were likely tampered with [@Simohnsohn2019]. This can be tested statistically. The null hypothesis H$_0$ posits that the data do not contain an unexpected amount of repeated values, while the alternative hypothesis H$_1$ suggests they do. Unlike Benford’s law, this approach analyzes the entire number at once, not just the first or last digit.
 
-To determine whether the data show an excessive amount of bunching, the null hypothesis that the data do not contain an unexpected amount of repeated values is tested. To quantify what is expected, this test requires the assumption that the integer portions of the numbers are not associated with their decimal portions.
+The purpose of the analysis in JASP is to identify whether the data exhibit excessive repeated values. In auditing, this could indicate that certain items or transactions within a population may require further investigation.
 
 ## Practical example
 
@@ -16,24 +16,26 @@ Let's explore an example analysis of repeated values. To follow along, open the 
 
 This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.
 
-![](img/benford/benford-2.png){fig-align="center" width=100%}
+![](img/bunching/bunching-2.png){fig-align="center" width=100%}
 
 ### Main settings
 
-The interface ...
+In this example, we will test whether the values in the 'value' column show an excessive amount of repeated values. To test this, we open the 'Repeated Values' analysis from the Audit module. The interface of the repeated values analysis is shown below.
 
 ![](img/bunching/bunching-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
-- **Variable:** ...
-- **Tests: Average frequency** ...
-- **Tests: Entropy** ...
-- **Shuffle decimal digits:** ...
-- **Display: Explanatory text:** ...
-- **Display: Confidence:** ...
+- **Variable:** Start by entering the variable whose digits should be analyzed for repeated values in the designated box. In this example, the variable is 'value', so we drag this variable to the field on the right.
+- **Tests: Average frequency** Check this box to test if the average frequency of values differs from what is expected. In this example, we only examine the average frequency, so we check this box.
+- **Tests: Entropy** Check this box to test if the entropy of values differs from what is expected. In this example, we do not check this box as we are only looking at the average frequency.
+- **Shuffle decimal digits:** This setting determines which decimal digits are shuffled in the analysis. In this example, we select all decimal digits to be shuffled.
+- **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
+- **Display: Confidence:** Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.
 
 ### Main output
+
+The main table in the output below displays the sample size (n), the average frequency of 1.324, and the p-value for the test. This indicates that each unique value in the data occurs, on average, 1.324 times. The p-value is smaller than the significance level of 5%, leading us to reject the null hypothesis and conclude that there is an excessive amount of repeated values in the data.
 
 ![](img/bunching/bunching-4.png){fig-align="center" width=40%}
 
@@ -43,19 +45,19 @@ The following settings enable you to expand the report with additional output, s
 
 ![](img/bunching/bunching-5.png){fig-align="center" width=75%}
 
-- **Tables: Assumption checks:** ...
+- **Tables: Assumption checks:** To quantify expectations, this test assumes that the integer portions of the numbers are not correlated with their decimal portions. The table below tests this assumption and confirms it holds, as indicated by the non-significant p-value of 0.461.
 
   ![](img/bunching/bunching-6.png){fig-align="center" width=100%}
 
-- **Tables: Frequency table:** ...
+- **Tables: Frequency table:** The frequency table displays the occurrence of each unique value in the data, ordered from highest to lowest frequency. For example, it shows that the value 87,670 appeared five times, representing 0.6% of the total values.
 
   ![](img/bunching/bunching-7.png){fig-align="center" width=40%}
 
-- **Plots: Observed vs. expected:** ...
+- **Plots: Observed vs. expected:** Check this box to generate a histogram of the expected distribution of the average frequency or entropy, assuming the decimal portions of the numbers are random and not associated with their integer portions. The observed average frequency will be indicated in the figure.
 
   ![](img/bunching/bunching-8.png){fig-align="center" width=75%}
 
-- **Plots: Histogram:** ...
+- **Plots: Histogram:** The histogram visualizes the frequency table using bars to represent the values. Similar to the frequency table, the histogram indicates that the most frequently occurring value is 87,670, which appears five times.
 
   ![](img/bunching/bunching-9.png){fig-align="center" width=75%}
 
@@ -65,5 +67,5 @@ The following advanced settings allow you to customize the statistical computati
 
 ![](img/bunching/bunching-10.png){fig-align="center" width=75%}
 
-- **Bootstrap: Number of samples:** ...
-- **Bootstrap: Seed:** ...
+- **Bootstrap: Number of samples:** This setting specifies the number of bootstratp samples used to compute the expected distribution of the average frequency or the entropy. The default value for this setting is 500.
+- **Bootstrap: Seed:** A seed in computing is a starting point for generating random numbers. By setting a seed, you ensure that the results of the analysis can be reproduced across computers, which is useful for sharing your analysis.
