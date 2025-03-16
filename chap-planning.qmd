@@ -26,7 +26,7 @@ These are the main settings for the analysis:
 - **Audit risk model:** Indicate the risks of material misstatement using the audit risk model. This model helps reduce the required confidence level for the audit sampling procedure (1 - detection risk) by assessing inherent risk, control risk, and analytical risk.
 This results in less persuasive audit evidence being required. The model is expressed as: $$\text{Audit\,risk} = \text{Inherent\,risk} \times \text{Control\,risk} \times \text{Analytical\,risk} \times \text{Detection\,risk}$$. Inherent risk, control risk, and analytical risk are typically evaluated on a 3-point scale: high, medium, and low. These assessments are mapped onto percentages based on professional judgment. The standard percentages used by JASP for Audit are based on those used by the Dutch independent government auditor and are provided in the output table below.
 
-  ![](img/planning/planning-2.png){fig-align="center" width=75%}
+  ![](img/planning/planning-2.png){fig-align="center" width=60%}
 
   In this example, let's assume we have conducted internal control testing, enabling us to set the internal control risk to 'Medium', which corresponds to 52%. Consequently, the detection risk can be calculated as $\frac{0.05}{1 \times 0.52 \times 1}$ = 9.6%.
 
@@ -36,7 +36,7 @@ This results in less persuasive audit evidence being required. The model is expr
 
 The main table in the output below displays the performance materiality as a proportion, along with the probabilities for the audit risk model. In this scenario, the detection risk is 9.6%. The second-to-last row indicates the tolerable misstatements as a number, showing that only a single misstatement is allowed in the sample. The final row presents the minimum sample size required to meet the sampling objectives, which is 130 units in this case. The note below the table clarifies that this sample size is determined using the binomial distribution (check out the 'Advanced' section for alternative methods).
 
-![](img/planning/planning-3.png){fig-align="center" width=50%}
+![](img/planning/planning-3.png){fig-align="center" width=40%}
 
 ### Report
 
@@ -86,12 +86,12 @@ The following settings enable you to expand the report in the Bayesian planning 
 
 - **Tables: Prior and posterior:** Check this box to generate a table displaying descriptive statistics of the prior distribution and the expected posterior distribution, which represents the posterior distribution if the planned sample is observed.
 
-  ![](img/planning/planning-10.png){fig-align="center" width=60%}
+  ![](img/planning/planning-10.png){fig-align="center" width=75%}
 
 - **Plots: Prior (and posterior) distribution:** Check this box to generate a figure displaying the prior distribution. If the box for the posterior distribution is also checked, the figure will include the posterior distribution after observing the expected sample.
 
-  ![](img/planning/planning-11.png){fig-align="center" width=60%}
+  ![](img/planning/planning-11.png){fig-align="center" width=75%}
 
 - **Plots: Prior predictive distribution:** Check this box to generate a figure displaying the prior predictive distribution, which illustrates the probabilities of a certain number of misstatements in the sample based on the prior distribution. This can help you verify if the prior distribution is reasonable at the data level.
 
-  ![](img/planning/planning-12.png){fig-align="center" width=60%}
+  ![](img/planning/planning-12.png){fig-align="center" width=75%}

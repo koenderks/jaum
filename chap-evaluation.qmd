@@ -58,11 +58,11 @@ The following settings enable you to expand the report with additional output, s
 
 - **Plots: Sampling objectives:** Check this box to generate a figure displaying the sampling objectives, the most likely error, and the upper bound. In this case, the sole sampling objective was the performance materiality. Since the upper bound is lower than the performance materiality, it is highlighted in green.
 
-  ![](img/evaluation/evaluation-8.png){fig-align="center" width=60%}
+  ![](img/evaluation/evaluation-8.png){fig-align="center" width=75%}
 
 - **Plots: Estimates:** Check this box to generate a figure displaying the most likely misstatement along with the upper and lower limits. This figure is generally useful only if you have entered a variable in the 'Stratum' box, as it provides a quick visual overview of the magnitude of the misstatement in the various strata.
 
-  ![](img/evaluation/evaluation-9.png){fig-align="center" width=60%}
+  ![](img/evaluation/evaluation-9.png){fig-align="center" width=75%}
 
 ### Advanced
 
@@ -96,11 +96,11 @@ The following settings enable you to expand the report in the Bayesian evaluatio
 
 - **Tables: Prior and posterior:** Check this box to generate a table displaying descriptive statistics of the prior distribution and the realized posterior distribution.
 
-  ![](img/evaluation/evaluation-13.png){fig-align="center" width=60%}
+  ![](img/evaluation/evaluation-13.png){fig-align="center" width=75%}
 
-- **Plots: Prior (and posterior):** Check this box to generate a figure displaying the prior and posterior distribution. If the box for additional information distribution is also checked, the figure will include information about the posterior distribution and the Bayes factor.
+- **Plots: Prior and posterior:** Check this box to generate a figure displaying the prior and posterior distribution. If the box for additional information distribution is also checked, the figure will include information about the posterior distribution and the Bayes factor.
 
-  ![](img/evaluation/evaluation-14.png){fig-align="center" width=60%}
+  ![](img/evaluation/evaluation-14.png){fig-align="center" width=75%}
 
 ### Advanced
 
