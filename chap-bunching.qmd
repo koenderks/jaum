@@ -39,6 +39,8 @@ The main table in the output below displays the sample size (n), the average fre
 
 ![](img/bunching/bunching-4.png){fig-align="center" width=40%}
 
+Note that rejecting the null hypothesis does not necessarily indicate fraud. A repeated values analysis should therefore only be used to acquire insight into whether a population might need further investigation.
+
 ### Report
 
 The following settings enable you to expand the report with additional output, such as tables and figures.
