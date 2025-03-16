@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -288,6 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This chapter is about the ‘True Value Estimation’ analysis in the ‘Audit Sampling’ section of the module.</p>
 <section id="purpose-of-the-analysis" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">5.1</span> Purpose of the analysis</h2>
+<p>The objective of the true value estimation analysis is to estimate the true value of the population based on a sample. This procedure is commonly used when an audit sample contains many misstatements. In such cases, the auditor cannot conclude that the population is free of material misstatement but aims to estimate its true value. The estimation procedures in this analysis assume a minimum of 30 misstatements in the sample.</p>
 </section>
 <section id="practical-example" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">5.2</span> Practical example</h2>
@@ -297,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="img/estimation/estimation-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>This will open a dataset with 1414 rows and five columns: ‘ID’, ‘Stratum’, ‘BookValue’, ‘AuditValue’, and ‘Selected’. The ‘ID’ column represents the identification number of the items in the population. The ‘Stratum’ column shows the location from which the item was retrieved. The ‘BookValue’ and ‘AuditValue’ columns show the recorded and true values of the items, respectively. Finally, the ‘Selected’ column shows which items were selected to be included in the sample.</p>
+<p>This will open a dataset with 1414 rows and five columns: ‘ID’, ‘Stratum’, ‘BookValue’, ‘AuditValue’, and ‘Selected’, which represents a population. The ‘ID’ column represents the identification number of the items in the population. The ‘Stratum’ column shows the location from which the item was retrieved. The ‘BookValue’ and ‘AuditValue’ columns show the recorded and true values of the items, respectively. Finally, the ‘Selected’ column shows which items were selected to be included in the sample. The total value of the population (i.e., the sum of the ‘BookValue’ column) is €4,254,246,09. Note that the audit values of all items that were not selected in the sample (the value of ‘Selected’ is 0) are empty (NA).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/estimation/estimation-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
@@ -305,6 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="main-settings" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">5.2.1</span> Main settings</h3>
+<p>In this example, we want to estimate the true value of the population based on the audite sample. To do this, we open the ‘True Value Estimation’ analysis within the Audit module. The interface for this analysis is displayed below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/estimation/estimation-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
@@ -312,15 +334,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>These are the main settings for the analysis:</p>
 <ul>
-<li><strong>Population: No.&nbsp;items:</strong> …</li>
-<li><strong>Population: No.&nbsp;units:</strong> …</li>
-<li><strong>Method:</strong> …</li>
-<li><strong>Display: Explanatory text:</strong> …</li>
-<li><strong>Display: Confidence:</strong> …</li>
+<li><strong>Variables:</strong> First, enter the variables indicating the book values and audit (i.e., true) values of the sample items in the corresponding box.</li>
+<li><strong>Population: No.&nbsp;items:</strong> Enter the number of items in the population. In this example, the population consists of 1,414 items, so we input the value 1,414 here.</li>
+<li><strong>Population: No.&nbsp;units:</strong> Enter the total value of the population. In this example, the population has a total value of €4,254,246.09, so we input the value 4,254,246.09 here.</li>
+<li><strong>Method:</strong> Select the statistical method for estimating the true value <span class="citation" data-cites="Touw2012">(<a href="references.html#ref-Touw2012" role="doc-biblioref">Touw &amp; Hoogduin, 2012</a>)</span>. The regression estimator is typically the most accurate method, so we choose this method here.</li>
+<li><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</li>
+<li><strong>Display: Confidence:</strong> Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.</li>
 </ul>
 </section>
 <section id="main-output" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">5.2.2</span> Main output</h3>
+<p>The main table in the output below presents the point estimate for the true population value, along with the uncertainty of the estimate and its 95% confidence interval. In this example, the true value of the population is estimated to be €2,512,392.17, with an uncertainty of €551,398.32. Therefore, we can be 95% confident that the true value of the population lies between €1,960,993.85 and €3,063,790.49. The confidence interval does not include the recorded population value of €4,254,246.09.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/estimation/estimation-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
@@ -336,13 +360,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ul>
-<li><p><strong>Tables: Required sample size:</strong> …</p>
+<li><p><strong>Tables: Required sample size:</strong> Checking this box calculates the required sample size to achieve a specific level of uncertainty in the estimate. For example, the current uncertainty in the estimate is €551,398.32. The table below indicates that to reduce this uncertainty to €500,000, a total sample of 459 items is needed. Since we have already sampled 400 items, only 59 additional samples are required.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/estimation/estimation-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
-<li><p><strong>Plots: Scatter plot:</strong> …</p>
+<li><p><strong>Plots: Scatter plot:</strong> Checking this box generates a figure that compares the book values of the items in the sample against their true values. Points on the diagonal, shown in gray, represent items where the book value matches the true value. Points in red indicate items where the book value does not match the true value. The black line represents the Pearson correlation between the book values and audit values, which in this case is <em>r</em> = 0.7.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/estimation/estimation-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
@@ -353,6 +377,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Touw2012" class="csl-entry" role="listitem">
+Touw, P., &amp; Hoogduin, L. (2012). <em>Statistiek voor audit en controlling</em>. Boom.
+</div>
+</div>
 </section>
 </section>
 
@@ -843,45 +872,52 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of the analysis</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The objective of the true value estimation analysis is to estimate the true value of the population based on a sample. This procedure is commonly used when an audit sample contains many misstatements. In such cases, the auditor cannot conclude that the population is free of material misstatement but aims to estimate its true value. The estimation procedures in this analysis assume a minimum of 30 misstatements in the sample.</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of a true value estimation analysis. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-1.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of a true value estimation analysis. To follow along, open the 'Evaluating a Stratified Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Stratified Sample' (not the green JASP-icon button).</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 1414 rows and five columns: 'ID', 'Stratum', 'BookValue', 'AuditValue', and 'Selected'. The 'ID' column represents the identification number of the items in the population. The 'Stratum' column shows the location from which the item was retrieved. The 'BookValue' and 'AuditValue' columns show the recorded and true values of the items, respectively. Finally, the 'Selected' column shows which items were selected to be included in the sample.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-1.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-2.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 1414 rows and five columns: 'ID', 'Stratum', 'BookValue', 'AuditValue', and 'Selected', which represents a population. The 'ID' column represents the identification number of the items in the population. The 'Stratum' column shows the location from which the item was retrieved. The 'BookValue' and 'AuditValue' columns show the recorded and true values of the items, respectively. Finally, the 'Selected' column shows which items were selected to be included in the sample. The total value of the population (i.e., the sum of the 'BookValue' column) is €4,254,246,09. Note that the audit values of all items that were not selected in the sample (the value of 'Selected' is 0) are empty (NA).</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-2.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>In this example, we want to estimate the true value of the population based on the audite sample. To do this, we open the 'True Value Estimation' analysis within the Audit module. The interface for this analysis is displayed below.</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. items:** ...</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. units:** ...</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Method:** ...</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** ...</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Confidence:** ...</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-4.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-5.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Required sample size:** ...</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/estimation/estimation-6.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Scatter plot:** ...</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/estimation/estimation-7.png)</span>{fig-align="center" width=75%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables:** First, enter the variables indicating the book values and audit (i.e., true) values of the sample items in the corresponding box.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. items:** Enter the number of items in the population. In this example, the population consists of 1,414 items, so we input the value 1,414 here.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Population: No. units:** Enter the total value of the population. In this example, the population has a total value of €4,254,246.09, so we input the value 4,254,246.09 here.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Method:** Select the statistical method for estimating the true value <span class="co">[</span><span class="ot">@Touw2012</span><span class="co">]</span>. The regression estimator is typically the most accurate method, so we choose this method here.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Confidence:** Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>The main table in the output below presents the point estimate for the true population value, along with the uncertainty of the estimate and its 95% confidence interval. In this example, the true value of the population is estimated to be €2,512,392.17, with an uncertainty of €551,398.32. Therefore, we can be 95% confident that the true value of the population lies between €1,960,993.85 and €3,063,790.49. The confidence interval does not include the recorded population value of €4,254,246.09.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/estimation/estimation-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Required sample size:** Checking this box calculates the required sample size to achieve a specific level of uncertainty in the estimate. For example, the current uncertainty in the estimate is €551,398.32. The table below indicates that to reduce this uncertainty to €500,000, a total sample of 459 items is needed. Since we have already sampled 400 items, only 59 additional samples are required.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/estimation/estimation-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Scatter plot:** Checking this box generates a figure that compares the book values of the items in the sample against their true values. Points on the diagonal, shown in gray, represent items where the book value matches the true value. Points in red indicate items where the book value does not match the true value. The black line represents the Pearson correlation between the book values and audit values, which in this case is *r* = 0.7.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/estimation/estimation-7.png)</span>{fig-align="center" width=75%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
