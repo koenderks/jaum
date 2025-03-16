@@ -4,7 +4,7 @@ This chapter is about the 'Evaluation' analysis in the 'Audit Sampling' section 
 
 ## Purpose of the analysis
 
-The purpose of the evaluation analysis is to estimate the misstatement in the population from an audited sample and, if necessary, determine if the misstatement is below the performance materiality threshold. This allows auditors to conclude, with a certain level of assurance, whether the population is free of material misstatement.
+The purpose of the evaluation analysis is to estimate the misstatement in the population from an audited sample and, if necessary, determine if the misstatement is below the performance materiality threshold. This enables auditors to conclude, with a certain level of assurance, whether the population is free of material misstatement.
 
 ## Practical example
 
@@ -66,7 +66,7 @@ The following settings enable you to expand the report with additional output, s
 
 ### Advanced
 
-The following advanced settings allow you to customize the statistical computations according to your preferences.
+The following advanced settings enable you to customize the statistical computations according to your preferences.
 
 ![](img/evaluation/evaluation-10.png){fig-align="center" width=75%}
 

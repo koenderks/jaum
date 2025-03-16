@@ -28,13 +28,13 @@ This results in less persuasive audit evidence being required. The model is expr
 
   ![](img/planning/planning-2.png){fig-align="center" width=75%}
 
-  In this example, let's assume we have conducted internal control testing, allowing us to set the internal control risk to 'Medium', which corresponds to 52%. Consequently, the detection risk can be calculated as $\frac{0.05}{1 \times 0.52 \times 1}$ = 9.6%.
+  In this example, let's assume we have conducted internal control testing, enabling us to set the internal control risk to 'Medium', which corresponds to 52%. Consequently, the detection risk can be calculated as $\frac{0.05}{1 \times 0.52 \times 1}$ = 9.6%.
 
 - **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ### Main output
 
-The main table in the output below displays the performance materiality as a proportion, along with the probabilities for the audit risk model. In this scenario, the detection risk is 9.6%. The second-to-last row indicates the tolerable misstatements as a number, showing that no misstatements are allowed in the sample. The final row presents the minimum sample size required to meet the sampling objectives, which is 130 units in this case. The note below the table clarifies that this sample size is determined using the binomial distribution (check out the 'Advanced' section for alternative methods).
+The main table in the output below displays the performance materiality as a proportion, along with the probabilities for the audit risk model. In this scenario, the detection risk is 9.6%. The second-to-last row indicates the tolerable misstatements as a number, showing that only a single misstatement is allowed in the sample. The final row presents the minimum sample size required to meet the sampling objectives, which is 130 units in this case. The note below the table clarifies that this sample size is determined using the binomial distribution (check out the 'Advanced' section for alternative methods).
 
 ![](img/planning/planning-3.png){fig-align="center" width=50%}
 
@@ -56,10 +56,42 @@ The following settings enable you to expand the report with additional output, s
 
 ### Advanced
 
-The following advanced settings allow you to customize the statistical computations according to your preferences.
+The following advanced settings enable you to customize the statistical computations according to your preferences.
 
 ![](img/planning/planning-7.png){fig-align="center" width=75%}
 
 - **Likelihood:** The likelihood is the distribution used to calculate the probabilities of observing a certain number of misstatements. The hypergeometric likelihood (available only if 'No. units' is filled in) assumes a finite population and results in smaller sample sizes for small populations. The binomial and Poisson distributions yield similar sample sizes when the population is large.
 - **Iterations: Increment:** Select the step size for the sample sizes to be considered. For example, a value of 5 will include sample sizes of 5, 10, 15, etc., while a value of 20 will include sample sizes of 20, 40, 60. The default value for this setting is 1, which considers all possible sample sizes.
 - **Iterations: Maximum:** Choose the maximum sample size to be considered. The analysis will stop if the sample size exceeds this value. The default value is 5000.
+
+## Bayesian planning
+
+The Audit module includes an analysis called 'Bayesian Planning,' which is a variant of the planning analysis. This enhanced analysis offers additional options beyond those available in the classical planning analysis, emphasizing the integration of various types of pre-existing audit information.
+
+### Prior
+
+These settings enable you to customize how different types of pre-existing audit information are integrated into the statistical analysis. For more details on the theory behind Bayesian planning and the types of prior distributions, read the corresponding section in [Statistical Audit Sampling with R](https://koenderks.github.io/sasr/chap-planning.html).
+
+![](img/planning/planning-8.png){fig-align="center" width=75%}
+
+- **Distribution:** Select the functional form of the prior distribution. The default is the beta distribution, which is conjugate to the binomial likelihood. Other options include the gamma distribution (conjugate to the Poisson likelihood) and the beta-binomial prior distribution (conjugate to the hypergeometric likelihood).
+- **Elicitation: Method:** Choose the type of pre-existing information to be included in the prior distribution. By default, an 'uninformative' prior distribution is used, which incorporates negligible information. Alternatively, the prior distribution can be based on an earlier sample, risk assessments from the Audit Risk Model, or the assumption of impartiality.
+- **Most likely misstatement:** Indicate the mode of the prior distribution, which represents the expected most likely misstatement in the population. Keep in mind that this differs from the tolerable deviation rate in the sample. This option is necessary only when the 'Impartial' or 'Risk assessments' elicitation method is chosen.
+
+### Report
+
+The following settings enable you to expand the report in the Bayesian planning analysis with additional output, such as tables and figures.
+
+![](img/planning/planning-9.png){fig-align="center" width=75%}
+
+- **Tables: Prior and posterior:** Check this box to generate a table displaying descriptive statistics of the prior distribution and the expected posterior distribution, which represents the posterior distribution if the planned sample is observed.
+
+  ![](img/planning/planning-10.png){fig-align="center" width=60%}
+
+- **Plots: Prior (and posterior) distribution:** Check this box to generate a figure displaying the prior distribution. If the box for the posterior distribution is also checked, the figure will include the posterior distribution after observing the expected sample.
+
+  ![](img/planning/planning-10.png){fig-align="center" width=60%}
+
+- **Plots: Prior predictive distribution:** Check this box to generate a figure displaying the prior predictive distribution, which illustrates the probabilities of a certain number of misstatements in the sample based on the prior distribution. This can help you verify if the prior distribution is reasonable at the data level.
+
+  ![](img/planning/planning-10.png){fig-align="center" width=60%}

@@ -16,4 +16,4 @@ The following settings enable you to expand the report with additional output, s
 
 ### Advanced
 
-The following advanced settings allow you to customize the statistical computations according to your preferences.
+The following advanced settings enable you to customize the statistical computations according to your preferences.

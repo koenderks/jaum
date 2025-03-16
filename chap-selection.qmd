@@ -54,7 +54,7 @@ The following settings enable you to expand the report with additional output, s
   ![](img/selection/selection-7.png){fig-align="center" width=60%}
 
 - **Tables: Selected items:** Checking this box generates a table that lists all the selected items in the sample along with their corresponding book values, if this variable is provided.
-  + **Order by book value:** This setting allows you to sort the items in the table based on their book value, with the option to arrange them in either ascending or descending order. In this example, we sorted the book values in descending order.
+  + **Order by book value:** This setting enables you to sort the items in the table based on their book value, with the option to arrange them in either ascending or descending order. In this example, we sorted the book values in descending order.
 
   ![](img/selection/selection-8.png){fig-align="center" width=60%}
 
