@@ -31,7 +31,7 @@ These are the main settings for the analysis:
 - **Data type:** Indicate the type of data you are working with. The 'Population' data type assumes that the loaded data file is a full population, with selected items indicated via the 'Selection Counter' variable. This removes the need to manually enter the number of items and units in the population. The 'Sample' data type assumes that the loaded data file is a sample list and requires entering the number of items and units in the population manually. The 'Summary statistics' data type eliminates the need to load a data file and enter variables, assuming the data comes in the form of two values: the sample size and the number of misstatements.
 - **Population: No. items:** Enter the number of items in the population. In this example, the population consists of 1,414 items, so we input the value 1,414 here.
 - **Population: No. units:** Enter the total value of the population. In this example, the population has a total value of €4,254,246.09, so we input the value 4,254,246.09 here.
-- **Audit risk model:** Input the assessed risks of material misstatement into the Audit Risk Model here. For further details on this setting, refer to @chap-planning.
+- **Audit risk model:** Input the assessed risks of material misstatement into the Audit Risk Model here. For further details on this setting, refer to @sec-planning.
 - **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ### Main output
