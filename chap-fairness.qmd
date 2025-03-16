@@ -1,9 +1,5 @@
 # Evaluation {#sec-fairness}
 
-::: {.callout-note appearance="simple" .content-visible when-format="html"}
-This page is currently under construction.
-:::
-
 This chapter is about the 'Evaluation' analysis in the 'Algorithm Auditing' section of the module.
 
 ## Purpose of the analysis

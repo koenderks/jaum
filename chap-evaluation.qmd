@@ -4,34 +4,43 @@ This chapter is about the 'Evaluation' analysis in the 'Audit Sampling' section 
 
 ## Purpose of the analysis
 
+The purpose of the evaluation analysis is to estimate the misstatement in the population from an audited sample and, if necessary, determine if the misstatement is below the performance materiality threshold. This allows auditors to conclude, with a certain level of assurance, whether the population is free of material misstatement.
+
 ## Practical example
 
 Let's explore an example of an evaluation analysis. To follow along, open the 'Evaluating a Sample' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Evaluating a Sample' (not the green JASP-icon button).
 
 ![](img/evaluation/evaluation-1.png){fig-align="center" width=100%}
 
-This will open a dataset with 90 rows and three columns: 'ID', 'Book.value', 'Audit.value'. The 'ID' column represents the identification number of the items in the population. The 'Book.value' and 'Audit.value' columns show the recorded and true values of the items, respectively.
+This will open a dataset with 90 rows and three columns: 'ID', 'Book.value', 'Audit.value'. The 'ID' column represents the identification number of the items in the population. The 'Book.value' and 'Audit.value' columns show the recorded and true values of the items, respectively. The sample is drawn from a population of 1,414 items. In this scenario, we seek to determine, with 95% confidence, whether the population contains no misstatements exceeding the performance materiality threshold of 3.5% of the total population value, which amounts to €4,254,246.09.
 
 ![](img/evaluation/evaluation-2.png){fig-align="center" width=100%}
 
 ### Main settings
 
+To evaluate this audit sample, we open the 'Evaluation' analysis within the Audit module. The interface for the evaluation analysis is displayed below.
+
 ![](img/evaluation/evaluation-3.png){fig-align="center" width=75%}
 
 These are the main settings for the analysis:
 
-- **Sampling objectives: Performance materiality:** ...
-- **Sampling objectives: Minimum precision:** ...
-- **Confidence:** ...
-- **Data type:** ...
-- **Population: No. items:** ...
-- **Population: No. units:** ...
-- **Audit risk model:** ...
-- **Display: Explanatory text:** ...
+- **Variables:** Begin by entering the variable that contains the identification numbers for the items into the 'Item ID' field. Then, input the variables that hold the book values and audit (true) values of the items into their respective fields. If your data includes an indicator for which items are part of the sample, drag this to the 'Selection Counter' box. Similarly, if there's an indicator identifying the stratum to which an item belongs, drag this to the 'Stratum' box.
+- **Sampling objectives: Performance materiality:** In this section, you can input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). For this example, we enter the performance materiality as a relative value of 3.5%.
+- **Sampling objectives: Minimum precision:** This objective requires that the misstatement in the population is estimated with a specified minimum uncertainty (the difference between the most likely misstatement and the upper limit for the misstatement). Since this is not relevant to our audit objective, we leave this box unchecked.
+- **Confidence:** Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and the amount of work needed to approve the population. A higher confidence level requires more audit evidence to conclude that the population is free of material misstatement. In this example, we use a confidence level of 95%.
+- **Data type:** Indicate the type of data you are working with. The 'Population' data type assumes that the loaded data file is a full population, with selected items indicated via the 'Selection Counter' variable. This removes the need to manually enter the number of items and units in the population. The 'Sample' data type assumes that the loaded data file is a sample list and requires entering the number of items and units in the population manually. The 'Summary statistics' data type eliminates the need to load a data file and enter variables, assuming the data comes in the form of two values: the sample size and the number of misstatements.
+- **Population: No. items:** Enter the number of items in the population. In this example, the population consists of 1,414 items, so we input the value 1,414 here.
+- **Population: No. units:** Enter the total value of the population. In this example, the population has a total value of €4,254,246.09, so we input the value 4,254,246.09 here.
+- **Audit risk model:** Input the assessed risks of material misstatement into the Audit Risk Model here. For further details on this setting, refer to @chap-planning.
+- **Display: Explanatory text:** Finally, select whether to show explanatory text in the output.
 
 ### Main output
 
+The main table in the output below shows the performance materiality (and minimum precision if enabled), along with the sample size and the number of identified misstatements in the sample. The 'Taint' row displays the sum of the taints, which are the fractional misstatements of the items. Finally, the table presents the estimated most likely misstatement in the population, the 95% upper bound, and the associated precision (the difference between the most likely misstatement and the upper bound).
+
 ![](img/evaluation/evaluation-4.png){fig-align="center" width=40%}
+
+In this example, the sample consisted of 90 items, with one misstatement identified. This misstatement had a taint of 0.110. Consequently, the most likely misstatement in the population is estimated to be 0.001, or 0.1%. The 95% upper bound for this estimate is 0.035, or 3.5%, and the precision is 3.4%. This upper bound matches the performance materiality of 3.5%, indicating that the auditor has achieved at least 95% assurance that the population is free of material misstatement.
 
 ### Report
 
@@ -39,19 +48,19 @@ The following settings enable you to expand the report with additional output, s
 
 ![](img/evaluation/evaluation-5.png){fig-align="center" width=75%}
 
-- **Tables: Misstated items:** ...
+- **Tables: Misstated items:** Check this box to generate a table displaying the misstated items in the sample. In this instance, the single misstated item had a book value of €1,813.42 and an audit (true) value of €1,613.42, resulting in a misstatement of €200 and a taint of 0.110.
 
   ![](img/evaluation/evaluation-6.png){fig-align="center" width=75%}
 
-- **Tables: Corrections to population:** ...
+- **Tables: Corrections to population:** Check this box to generate a table indicating the necessary corrections to the population to meet a specific objective. For example, to ensure the population is free of misstatements with 95% confidence, a correction of the upper limit to 3.5% of the population value is required.
 
   ![](img/evaluation/evaluation-7.png){fig-align="center" width=50%}
 
-- **Plots: Sampling objectives:** ...
+- **Plots: Sampling objectives:** Check this box to generate a figure displaying the sampling objectives, the most likely error, and the upper bound. In this case, the sole sampling objective was the performance materiality. Since the upper bound is lower than the performance materiality, it is highlighted in green.
 
   ![](img/evaluation/evaluation-8.png){fig-align="center" width=60%}
 
-- **Plots: Estimates:** ...
+- **Plots: Estimates:** Check this box to generate a figure displaying the most likely misstatement along with the upper and lower limits. This figure is generally useful only if you have entered a variable in the 'Stratum' box, as it provides a quick visual overview of the magnitude of the misstatement in the various strata.
 
   ![](img/evaluation/evaluation-9.png){fig-align="center" width=60%}
 
@@ -61,6 +70,6 @@ The following advanced settings allow you to customize the statistical computati
 
 ![](img/evaluation/evaluation-10.png){fig-align="center" width=75%}
 
-- **Method:** ...
-- **Critical items:** ...
-- **Confidence interval (Alt. hypothesis):** ...
+- **Method:** Choose the statistical method to calculate the upper limit of the misstatement. In this example, we selected the Stringer bound as the evaluation method because it considers the taints of the items, making it less conservative than the Poisson, binomial, and hypergeometric distributions. Note that the default setting is 'Binomial', so you must manually select the Stringer bound if you wish to use it.
+- **Critical items:** Choose which items are excluded from the statistical evaluation and designated as critical items. Currently, the only option is to mark negative values as critical items, which are kept by default and subtracted from the most likely misstatement and upper bound.
+- **Confidence interval (Alt. hypothesis):** Choose whether to calculate a one-sided confidence interval (upper bound or lower bound) or a two-sided confidence interval for the population misstatement. This selection determines the alternative hypothesis being tested.
