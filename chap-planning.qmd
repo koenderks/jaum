@@ -66,7 +66,7 @@ The following advanced settings enable you to customize the statistical computat
 
 ## Bayesian planning
 
-The Audit module includes an analysis called 'Bayesian Planning,' which is a variant of the planning analysis. This enhanced analysis offers additional options beyond those available in the classical planning analysis, emphasizing the integration of various types of pre-existing audit information.
+The Audit module includes an analysis called 'Bayesian Planning,' which is the Bayesian variant of the planning analysis. This enhanced analysis offers additional options beyond those available in the classical planning analysis, emphasizing the integration of various types of pre-existing audit information.
 
 ### Prior
 
@@ -90,8 +90,8 @@ The following settings enable you to expand the report in the Bayesian planning 
 
 - **Plots: Prior (and posterior) distribution:** Check this box to generate a figure displaying the prior distribution. If the box for the posterior distribution is also checked, the figure will include the posterior distribution after observing the expected sample.
 
-  ![](img/planning/planning-10.png){fig-align="center" width=60%}
+  ![](img/planning/planning-11.png){fig-align="center" width=60%}
 
 - **Plots: Prior predictive distribution:** Check this box to generate a figure displaying the prior predictive distribution, which illustrates the probabilities of a certain number of misstatements in the sample based on the prior distribution. This can help you verify if the prior distribution is reasonable at the data level.
 
-  ![](img/planning/planning-10.png){fig-align="center" width=60%}
+  ![](img/planning/planning-12.png){fig-align="center" width=60%}

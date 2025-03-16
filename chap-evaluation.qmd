@@ -73,3 +73,40 @@ The following advanced settings enable you to customize the statistical computat
 - **Method:** Choose the statistical method to calculate the upper limit of the misstatement. In this example, we selected the Stringer bound as the evaluation method because it considers the taints of the items, making it less conservative than the Poisson, binomial, and hypergeometric distributions. Note that the default setting is 'Binomial', so you must manually select the Stringer bound if you wish to use it.
 - **Critical items:** Choose which items are excluded from the statistical evaluation and designated as critical items. Currently, the only option is to mark negative values as critical items, which are kept by default and subtracted from the most likely misstatement and upper bound.
 - **Confidence interval (Alt. hypothesis):** Choose whether to calculate a one-sided confidence interval (upper bound or lower bound) or a two-sided confidence interval for the population misstatement. This selection determines the alternative hypothesis being tested.
+
+## Bayesian evaluation
+
+The Audit module includes an analysis called 'Bayesian Evaluation,' which is the Bayesian variant of the evaluation analysis. This enhanced analysis offers additional options beyond those available in the classical evaluation analysis, emphasizing the integration of various types of pre-existing audit information.
+
+### Prior
+
+These settings enable you to customize how different types of pre-existing audit information are integrated into the statistical analysis. For more details on the theory behind Bayesian evaluation and the types of prior distributions, read the corresponding section in [Statistical Audit Sampling with R](https://koenderks.github.io/sasr/chap-evaluation.html).
+
+![](img/evaluation/evaluation-11.png){fig-align="center" width=75%}
+
+- **Distribution:** Select the functional form of the prior distribution. The default is the beta distribution, which is conjugate to the binomial likelihood. Other options include the gamma distribution (conjugate to the Poisson likelihood) and the beta-binomial prior distribution (conjugate to the hypergeometric likelihood).
+- **Elicitation: Method:** Choose the type of pre-existing information to be included in the prior distribution. By default, an 'uninformative' prior distribution is used, which incorporates negligible information. Alternatively, the prior distribution can be based on an earlier sample, risk assessments from the Audit Risk Model, or the assumption of impartiality.
+- **Most likely misstatement:** Indicate the mode of the prior distribution, which represents the expected most likely misstatement in the population. Keep in mind that this differs from the tolerable deviation rate in the sample. This option is necessary only when the 'Impartial' or 'Risk assessments' elicitation method is chosen.
+
+### Report
+
+The following settings enable you to expand the report in the Bayesian evaluation analysis with additional output, such as tables and figures.
+
+![](img/evaluation/evaluation-12.png){fig-align="center" width=75%}
+
+- **Tables: Prior and posterior:** Check this box to generate a table displaying descriptive statistics of the prior distribution and the realized posterior distribution.
+
+  ![](img/evaluation/evaluation-13.png){fig-align="center" width=60%}
+
+- **Plots: Prior (and posterior):** Check this box to generate a figure displaying the prior and posterior distribution. If the box for additional information distribution is also checked, the figure will include information about the posterior distribution and the Bayes factor.
+
+  ![](img/evaluation/evaluation-14.png){fig-align="center" width=60%}
+
+### Advanced
+
+The following advanced settings enable you to customize the statistical computations in the Bayesian evaluation analysis according to your preferences.
+
+![](img/evaluation/evaluation-15.png){fig-align="center" width=75%}
+
+- **Algorithm: Partial projection:** Check this box to separate the observed misstatement from the unobserved misstatement during evaluation, projecting the uncertainty only onto the unobserved portion of the population.
+- **Algorithm: Share information:** Check this box to apply a hierarchical model when analyzing a stratified sample. To enable this option, you must specify a variable in the 'Stratum' box.
