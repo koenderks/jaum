@@ -36,7 +36,7 @@ book:
       - chap-selection.qmd
       - chap-evaluation.qmd
       - chap-estimation.qmd
-      - chap-howto-sampling.md
+      - chap-howto-sampling.qmd
     - part: Data Auditing
       chapters:
       - chap-benford.qmd
