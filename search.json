@@ -194,11 +194,11 @@
     ]
   },
   {
-    "objectID": "chap-howto-sampling.html#how-to-launch-jasp-using-an-init-file",
-    "href": "chap-howto-sampling.html#how-to-launch-jasp-using-an-init-file",
+    "objectID": "chap-howto-sampling.html#customizing-default-options-for-your-organization",
+    "href": "chap-howto-sampling.html#customizing-default-options-for-your-organization",
     "title": "6  How-to’s",
-    "section": "6.2 How to launch JASP using an init file",
-    "text": "6.2 How to launch JASP using an init file\nJASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.\nIn the near future, this section will contain instructions on how to use an init file.",
+    "section": "6.2 Customizing default options for your organization",
+    "text": "6.2 Customizing default options for your organization\nJASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.\nIn the near future, this section will contain instructions on how to use an init file.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>How-to's</span>"
