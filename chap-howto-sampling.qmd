@@ -2,6 +2,37 @@
 
 This chapter contains various step-by-step instructions on how to perform best practices using the analyses in the 'Audit Sampling' section of the module.
 
+## Extending a sample selected with a fixed interval
+
+If you have selected a sample using a fixed interval and need to extend it because your population has become larger, follow these steps to manually create a selection counter column. Click the '+' icon next to the dataset and select 'Compute column'.
+
+![](img/howto/sampling/howto-1.png){fig-align="center" width=100%}
+
+Next, name the new column (for example, 'Selected_for_sample'), then click the R icon, followed by the 'scale' icon, and click on 'Create column'. This will open an editor where you can input the necessary R code.
+
+![](img/howto/sampling/howto-2.png){fig-align="center" width=40%}
+
+Copy and paste the following R script into the editor, ensuring that you replace the first three lines with the appropriate values for your dataset. The `interval` represents the fixed interval size, `start` defines the starting point within the first interval, and `book_values` should be replaced with the column name containing your book values.
+
+```r
+interval <- ... # Specify the size of the fixed interval
+start <- ... # Specify the starting point in the first interval
+book_values <- ... # Enter the name of the column containing book values
+
+# Do not change the code below
+size <- sum(book_values) %/% interval; units <- start + interval * (0:(size - 1)); cumsum_values <- cumsum(book_values)
+items <- rep(0, size)
+for (i in 1:size) items[i] <- which(units[i] <= cumsum_values)[1]
+result <- rep(0, length(book_values)); counts <- table(items); indices <- as.integer(dimnames(counts)[[1]]); result[indices] <- as.numeric(counts)
+result
+```
+
+For example, if you are selecting with an interval of €15,000 and a starting point of 1, you should enter the following values.
+
+![](img/howto/sampling/howto-3.png){fig-align="center" width=100%}
+
+If you later extend your dataset by adding new data, you must re-run the computed column to update the selection while maintaining the same interval (e.g., €15,000).
+
 ## How to launch JASP using an init file
 
 JASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.
