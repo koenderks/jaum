@@ -176,7 +176,29 @@
     "href": "chap-howto-sampling.html",
     "title": "6  How-to’s",
     "section": "",
-    "text": "6.1 How to launch JASP using an init file\nThis chapter contains various step-by-step instructions on how to perform best practices using the analyses in the ‘Audit Sampling’ section of the module.\nJASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.\nIn the near future, this section will contain instructions on how to use an init file.",
+    "text": "6.1 Extending a sample selected with a fixed interval\nThis chapter contains various step-by-step instructions on how to perform best practices using the analyses in the ‘Audit Sampling’ section of the module.\nIf you have selected a sample using a fixed interval and need to extend it because your population has become larger, follow these steps to manually create a selection counter column. Click the ‘+’ icon next to the dataset and select ‘Compute column’.\nNext, name the new column (for example, ‘Selected_for_sample’), then click the R icon, followed by the ‘scale’ icon, and click on ‘Create column’. This will open an editor where you can input the necessary R code.\nCopy and paste the following R script into the editor, ensuring that you replace the first three lines with the appropriate values for your dataset. The interval represents the fixed interval size, start defines the starting point within the first interval, and book_values should be replaced with the column name containing your book values.\nFor example, if you are selecting with an interval of €15,000 and a starting point of 1, you should enter the following values.\nIf you later extend your dataset by adding new data, you must re-run the computed column to update the selection while maintaining the same interval (e.g., €15,000).",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How-to's</span>"
+    ]
+  },
+  {
+    "objectID": "chap-howto-sampling.html#extending-a-sample-selected-with-a-fixed-interval",
+    "href": "chap-howto-sampling.html#extending-a-sample-selected-with-a-fixed-interval",
+    "title": "6  How-to’s",
+    "section": "",
+    "text": "interval &lt;- ... # Specify the size of the fixed interval\nstart &lt;- ... # Specify the starting point in the first interval\nbook_values &lt;- ... # Enter the name of the column containing book values\n\n# Do not change the code below\nsize &lt;- sum(book_values) %/% interval; units &lt;- start + interval * (0:(size - 1)); cumsum_values &lt;- cumsum(book_values)\nitems &lt;- rep(0, size)\nfor (i in 1:size) items[i] &lt;- which(units[i] &lt;= cumsum_values)[1]\nresult &lt;- rep(0, length(book_values)); counts &lt;- table(items); indices &lt;- as.integer(dimnames(counts)[[1]]); result[indices] &lt;- as.numeric(counts)\nresult",
+    "crumbs": [
+      "Audit Sampling",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How-to's</span>"
+    ]
+  },
+  {
+    "objectID": "chap-howto-sampling.html#how-to-launch-jasp-using-an-init-file",
+    "href": "chap-howto-sampling.html#how-to-launch-jasp-using-an-init-file",
+    "title": "6  How-to’s",
+    "section": "6.2 How to launch JASP using an init file",
+    "text": "6.2 How to launch JASP using an init file\nJASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.\nIn the near future, this section will contain instructions on how to use an init file.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>How-to's</span>"
