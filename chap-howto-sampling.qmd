@@ -33,7 +33,7 @@ For example, if you are selecting with an interval of €15,000 and a starting p
 
 If you later extend your dataset by adding new data, you must re-run the computed column to update the selection while maintaining the same interval (e.g., €15,000).
 
-## How to launch JASP using an init file
+## Customizing default options for your organization
 
 JASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.
 
