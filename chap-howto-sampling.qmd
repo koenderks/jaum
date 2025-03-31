@@ -1,0 +1,9 @@
+# How-to's {#sec-howto-sampling}
+
+This chapter contains various step-by-step instructions on how to perform best practices using the analyses in the 'Audit Sampling' section of the module.
+
+## How to launch JASP using an init file
+
+JASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.
+
+In the near future, this section will contain instructions on how to use an init file.
