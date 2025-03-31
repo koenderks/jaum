@@ -8,7 +8,7 @@
 
 <meta name="author" content="Statistical Auditing Group">
 
-<title>7&nbsp; Repeated Values – JASP for Audit</title>
+<title>8&nbsp; Repeated Values – JASP for Audit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,13 +140,13 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="7&nbsp; Repeated Values – JASP for Audit">
+<meta property="og:title" content="8&nbsp; Repeated Values – JASP for Audit">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://github.com/koenderks/jaum/img/bunching/bunching-1.png">
 <meta property="og:site_name" content="JASP for Audit">
 <meta property="og:image:height" content="1210">
 <meta property="og:image:width" content="3024">
-<meta name="twitter:title" content="7&nbsp; Repeated Values – JASP for Audit">
+<meta name="twitter:title" content="8&nbsp; Repeated Values – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -161,7 +161,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -238,6 +238,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">True Value Estimation</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap-howto-sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">How-to’s</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -252,13 +258,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap-benford.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap-bunching.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></a>
   </div>
 </li>
       </ul>
@@ -279,13 +285,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">7.1</span> Purpose of the analysis</a></li>
-  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">7.2</span> Practical example</a>
+  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">8.1</span> Purpose of the analysis</a></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">8.2</span> Practical example</a>
   <ul class="collapse">
-  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">7.2.1</span> Main settings</a></li>
-  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">7.2.2</span> Main output</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">7.2.3</span> Report</a></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">7.2.4</span> Advanced</a></li>
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">8.2.1</span> Main settings</a></li>
+  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">8.2.2</span> Main output</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">8.2.3</span> Report</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">8.2.4</span> Advanced</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -293,9 +299,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-bunching" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-bunching" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -313,13 +319,13 @@ window.Quarto = {
 
 
 <p>This chapter is about the ‘Repeated Values’ analysis in the ‘Data Auditing’ section of the module.</p>
-<section id="purpose-of-the-analysis" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">7.1</span> Purpose of the analysis</h2>
+<section id="purpose-of-the-analysis" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">8.1</span> Purpose of the analysis</h2>
 <p>The repeated values analysis examines the frequency of value repetitions within a dataset (referred to as “number-bunching”) to statistically determine if the data were likely tampered with <span class="citation" data-cites="Simohnsohn2019">(<a href="references.html#ref-Simohnsohn2019" role="doc-biblioref">Simohnsohn, 2019</a>)</span>. This can be tested statistically. The null hypothesis H<span class="math inline">\(_0\)</span> posits that the data do not contain an unexpected amount of repeated values, while the alternative hypothesis H<span class="math inline">\(_1\)</span> suggests they do. Unlike Benford’s law, this approach analyzes the entire number at once, not just the first or last digit.</p>
 <p>The purpose of the analysis in JASP is to identify whether the data exhibit excessive repeated values. In auditing, this could indicate that certain items or transactions within a population may require further investigation.</p>
 </section>
-<section id="practical-example" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">7.2</span> Practical example</h2>
+<section id="practical-example" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">8.2</span> Practical example</h2>
 <p>Let’s explore an example analysis of repeated values. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -332,8 +338,8 @@ window.Quarto = {
 <p><img src="img/bunching/bunching-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<section id="main-settings" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">7.2.1</span> Main settings</h3>
+<section id="main-settings" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">8.2.1</span> Main settings</h3>
 <p>In this example, we will test whether the values in the ‘value’ column show an excessive amount of repeated values. To test this, we open the ‘Repeated Values’ analysis from the Audit module. The interface of the repeated values analysis is shown below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -350,8 +356,8 @@ window.Quarto = {
 <li><strong>Display: Confidence:</strong> Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.</li>
 </ul>
 </section>
-<section id="main-output" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">7.2.2</span> Main output</h3>
+<section id="main-output" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">8.2.2</span> Main output</h3>
 <p>The main table in the output below displays the sample size (n), the average frequency of 1.324, and the p-value for the test. This indicates that each unique value in the data occurs, on average, 1.324 times. The p-value is smaller than the significance level of 5%, leading us to reject the null hypothesis and conclude that there is an excessive amount of repeated values in the data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -360,8 +366,8 @@ window.Quarto = {
 </div>
 <p>Note that rejecting the null hypothesis does not necessarily indicate fraud. A repeated values analysis should therefore only be used to acquire insight into whether a population might need further investigation.</p>
 </section>
-<section id="report" class="level3" data-number="7.2.3">
-<h3 data-number="7.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">7.2.3</span> Report</h3>
+<section id="report" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">8.2.3</span> Report</h3>
 <p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -395,8 +401,8 @@ window.Quarto = {
 </div></li>
 </ul>
 </section>
-<section id="advanced" class="level3" data-number="7.2.4">
-<h3 data-number="7.2.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">7.2.4</span> Advanced</h3>
+<section id="advanced" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">8.2.4</span> Advanced</h3>
 <p>The following advanced settings enable you to customize the statistical computations according to your preferences.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -891,7 +897,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./chap-benford.html" class="pagination-link" aria-label="Benford's Law">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

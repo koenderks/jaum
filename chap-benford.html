@@ -8,7 +8,7 @@
 
 <meta name="author" content="Statistical Auditing Group">
 
-<title>6&nbsp; Benford’s Law – JASP for Audit</title>
+<title>7&nbsp; Benford’s Law – JASP for Audit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./chap-bunching.html" rel="next">
-<link href="./chap-estimation.html" rel="prev">
+<link href="./chap-howto-sampling.html" rel="prev">
 <link href="./front-page.png" rel="icon" type="image/png">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -120,13 +120,13 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="6&nbsp; Benford’s Law – JASP for Audit">
+<meta property="og:title" content="7&nbsp; Benford’s Law – JASP for Audit">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://github.com/koenderks/jaum/img/benford/benford-1.png">
 <meta property="og:site_name" content="JASP for Audit">
 <meta property="og:image:height" content="692">
 <meta property="og:image:width" content="1078">
-<meta name="twitter:title" content="6&nbsp; Benford’s Law – JASP for Audit">
+<meta name="twitter:title" content="7&nbsp; Benford’s Law – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -141,7 +141,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-benford.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-benford.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -218,6 +218,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">True Value Estimation</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chap-howto-sampling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">How-to’s</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,13 +238,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap-benford.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chap-bunching.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,13 +265,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">6.1</span> Purpose of the analysis</a></li>
-  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">6.2</span> Practical example</a>
+  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">7.1</span> Purpose of the analysis</a></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">7.2</span> Practical example</a>
   <ul class="collapse">
-  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">6.2.1</span> Main settings</a></li>
-  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">6.2.2</span> Main output</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">6.2.3</span> Report</a></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">6.2.4</span> Advanced</a></li>
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">7.2.1</span> Main settings</a></li>
+  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">7.2.2</span> Main output</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">7.2.3</span> Report</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">7.2.4</span> Advanced</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -273,9 +279,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-benford.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-benford.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-benford" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-benford" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -293,8 +299,8 @@ window.Quarto = {
 
 
 <p>This chapter is about the ‘Benford’s Law’ analysis in the ‘Data Auditing’ section of the module.</p>
-<section id="purpose-of-the-analysis" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">6.1</span> Purpose of the analysis</h2>
+<section id="purpose-of-the-analysis" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">7.1</span> Purpose of the analysis</h2>
 <p>Benford’s law states that the distribution of leading digits in a population naturally follows a certain distribution. Specifically, the frequencies of each leading digit <em>d</em> are defined by <em>p(d)</em> = log<span class="math inline">\(_{10}\)</span>(1 + <span class="math inline">\(\frac{1}{d}\)</span>), see the figure below. For instance, the probablity of observing a 1 as a leading digit is 0.301, or 30.1%. This can be tested in a statistical manner. That is, the null hypothesis, H<span class="math inline">\(_0\)</span>, states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, H<span class="math inline">\(_1\)</span>, states that it does not.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -303,8 +309,8 @@ window.Quarto = {
 </div>
 <p>The purpose of the analysis in JASP is to investigate whether the distribution of first, second, or last digits in a set of numbers follows Benford’s law. In auditing, this may provide evidence that certain items or transactions in a population might warrant further investigation.</p>
 </section>
-<section id="practical-example" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">6.2</span> Practical example</h2>
+<section id="practical-example" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">7.2</span> Practical example</h2>
 <p>Let’s explore an example analysis of Benford’s law. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -317,8 +323,8 @@ window.Quarto = {
 <p><img src="img/benford/benford-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<section id="main-settings" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">6.2.1</span> Main settings</h3>
+<section id="main-settings" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">7.2.1</span> Main settings</h3>
 <p>In this example, we will investigate whether the distribution of first digits in the variable ‘value’, which represents the recorded values of transactions in a financial population, adheres to Benford’s law. That is, the null hypothesis, H<span class="math inline">\(_0\)</span>, states that the distribution of first digits follows Benford’s law, while the alternative hypothesis, H<span class="math inline">\(_1\)</span>, states that it does not. To test this, we open the ‘Benford’s Law’ analysis from the Audit module. The interface of the Benford’s law analysis is shown below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -335,8 +341,8 @@ window.Quarto = {
 <li><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</li>
 </ul>
 </section>
-<section id="main-output" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">6.2.2</span> Main output</h3>
+<section id="main-output" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">7.2.2</span> Main output</h3>
 <p>The main table in the output, shown below, shows the sample size (<em>n</em>), the mean absolute deviation (MAD), the chi-square value (<span class="math inline">\(X^2\)</span>) and its degrees of freedom (<em>df</em>). The table shows a p-value of 0.478, indicating that H<span class="math inline">\(_0\)</span> should not be rejected at a significance level of 5%. Furthermore, the table presents the Bayes factor in favor of the null hypothesis, BF<span class="math inline">\(_{01}\)</span>, which is 6.9x10<span class="math inline">\(^6\)</span>. This suggests that the data provide very strong evidence supporting H<span class="math inline">\(_0\)</span> over H<span class="math inline">\(_1\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -345,8 +351,8 @@ window.Quarto = {
 </div>
 <p>Note that non-conformity to Benford’s law does not necessarily indicate fraud. A Benford’s law analysis should therefore only be used to acquire insight into whether a population might need further investigation.</p>
 </section>
-<section id="report" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">6.2.3</span> Report</h3>
+<section id="report" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">7.2.3</span> Report</h3>
 <p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -391,8 +397,8 @@ window.Quarto = {
 </div></li>
 </ul>
 </section>
-<section id="advanced" class="level3" data-number="6.2.4">
-<h3 data-number="6.2.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">6.2.4</span> Advanced</h3>
+<section id="advanced" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">7.2.4</span> Advanced</h3>
 <p>The following advanced settings enable you to customize the statistical computations according to your preferences.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -880,13 +886,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chap-estimation.html" class="pagination-link" aria-label="True Value Estimation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">True Value Estimation</span></span>
+      <a href="./chap-howto-sampling.html" class="pagination-link" aria-label="How-to's">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">How-to’s</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./chap-bunching.html" class="pagination-link" aria-label="Repeated Values">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Repeated Values</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
