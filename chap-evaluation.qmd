@@ -110,3 +110,4 @@ The following advanced settings enable you to customize the statistical computat
 
 - **Algorithm: Partial projection:** Check this box to separate the observed misstatement from the unobserved misstatement during evaluation, projecting the uncertainty only onto the unobserved portion of the population.
 - **Algorithm: Share information:** Check this box to apply a hierarchical model when analyzing a stratified sample. To enable this option, you must specify a variable in the 'Stratum' box.
+- **Algorithm: Hurdle model:** Select this option to apply the hurdle model, an alternative evaluation method. This approach is a Bayesian alternative to the Stringer bound because it properly accounts for the partial misstatements in the items.
