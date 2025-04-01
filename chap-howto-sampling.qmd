@@ -57,4 +57,4 @@ To load this config file into JASP, go to 'Preferences' in the left menu, then '
 
 When you start the planning analysis, the options under advanced settings will be set to the corresponding defaults and cannot be changed by the user.
 
-![](img/howto/sampling/howto-4.png){fig-align="center" width=75%}
+![](img/howto/sampling/howto-5.png){fig-align="center" width=75%}
