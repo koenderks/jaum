@@ -194,11 +194,11 @@
     ]
   },
   {
-    "objectID": "chap-howto-sampling.html#customizing-default-options-for-your-organization",
-    "href": "chap-howto-sampling.html#customizing-default-options-for-your-organization",
+    "objectID": "chap-howto-sampling.html#configurating-and-locking-default-options",
+    "href": "chap-howto-sampling.html#configurating-and-locking-default-options",
     "title": "6  How-to’s",
-    "section": "6.2 Customizing default options for your organization",
-    "text": "6.2 Customizing default options for your organization\nJASP can be launched with an init file, allowing you to set configurations that restrict, disable, or hide certain options from users. This is particularly useful when deploying JASP for Audit within your organization, while ensuring control over the options available to less statistically experienced users.\nIn the near future, this section will contain instructions on how to use an init file.",
+    "section": "6.2 Configurating and locking default options",
+    "text": "6.2 Configurating and locking default options\nYou can launch JASP with a configuration file to set restrictions, disable, or hide certain options from users. This is particularly useful for deploying JASP for Audit within your organization, ensuring control over the options available to less statistically experienced users.\nThe configuration file type is .toml. The example .toml file below sets the likelihood in the classical planning analysis to the Poisson distribution and locks the option, preventing it from being changed. Additionally, it specifies the increment (the option name in the QML file is ‘by’) as 1 and the maximum sample size (the option name in the QML file is ‘max’) as 2,000 instead of the default 5,000.\nFormat = \"0.1.0\"\nJASPVersion = \"0.19.3\"\n\nEnabledModules = [\"jaspAudit\"]\n\n[Modules.jaspAudit.Analyses.auditClassicalPlanning.Options]\nlikelihood = {Value = \"poisson\", Lock = true}\nby = {Value = 1, Lock = true}\nmax = {Value = 2000, Lock = true}\nTo load this config file into JASP, go to ‘Preferences’ in the left menu, then ‘Advanced’, and click ‘Use a configuration file’ in the ‘Configuration File Options’ box. Select the location of your config file and restart JASP for the changes to take effect.\n\n\n\n\n\nWhen you start the planning analysis, the options under advanced settings will be set to the corresponding defaults and cannot be changed by the user.",
     "crumbs": [
       "Audit Sampling",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>How-to's</span>"
