@@ -98,15 +98,19 @@ The following settings enable you to expand the report in the Bayesian evaluatio
 
   ![](img/evaluation/evaluation-13.png){fig-align="center" width=75%}
 
-- **Plots: Prior and posterior:** Check this box to generate a figure displaying the prior and posterior distribution. If the box for additional information distribution is also checked, the figure will include information about the posterior distribution and the Bayes factor.
+- **Plots: Sequential analysis:** Check this box to produce a figure showing the Bayes factor as a function of the sample size.
 
   ![](img/evaluation/evaluation-14.png){fig-align="center" width=75%}
+
+- **Plots: Prior and posterior:** Check this box to generate a figure displaying the prior and posterior distribution. If the box for additional information distribution is also checked, the figure will include information about the posterior distribution and the Bayes factor.
+
+  ![](img/evaluation/evaluation-15.png){fig-align="center" width=75%}
 
 ### Advanced
 
 The following advanced settings enable you to customize the statistical computations in the Bayesian evaluation analysis according to your preferences.
 
-![](img/evaluation/evaluation-15.png){fig-align="center" width=75%}
+![](img/evaluation/evaluation-16.png){fig-align="center" width=75%}
 
 - **Algorithm: Partial projection:** Check this box to separate the observed misstatement from the unobserved misstatement during evaluation, projecting the uncertainty only onto the unobserved portion of the population.
 - **Algorithm: Share information:** Check this box to apply a hierarchical model when analyzing a stratified sample. To enable this option, you must specify a variable in the 'Stratum' box.
