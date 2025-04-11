@@ -58,3 +58,95 @@ To load this config file into JASP, go to 'Preferences' in the left menu, then '
 When you start the planning analysis, the options under advanced settings will be set to the corresponding defaults and cannot be changed by the user.
 
 ![](img/howto/sampling/howto-5.png){fig-align="center" width=75%}
+
+
+## Bayesian Optional Stopping 
+
+The goal of Bayesian optional stopping is to monitor the evidence as it comes in and decide whether or not to continue data collection based on the evidence that has been observed. Instead of specifying a fixed sample size in advance, the auditor can monitor the evidence as it comes in. 
+This means that you can sequentially expand and evaluate your sample, until you have sufficient evidence to draw a conclusion or until you are out of resources. 
+
+Let's explore an example on how to perform Bayesian optional stopping in JASP. To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (do not click the green JASP-icon).
+
+### Settings
+
+First, you are going to select the maximum sample that you can afford to check based on your resources. Note that it is unlikely that you will need to check the entire sample. To select the sample, use the 'Selection' analysis from the 'Audit Sampling' menu. 
+
+![](img/bos/bos-1.png){fig-align="center" width=75%}
+
+The following settings are required: 
+
+1. **Indicate the variables:** First, enter the variable indicating the identification numbers of the items in the corresponding box. Optionally, if you have access to the book values of the items, you can enter this variable as well.
+
+2. **Specify maximum sample size:** Specify the number of sampling units you want to select from the population. Make sure to check the box for 'Randomize item order' as well to mitigate any biases that might arise from the original order of the data. 
+
+3. **Sampling units:** Specify the sampling units for the selection process. In this example, we are dealing with book values, so we choose 'Monetary Units'. 
+
+4. **Selection method:** Choose a selection algorithm. In this example, we choose 'Fixed Interval' with a random starting point. 
+
+Now, we need to export the sample to a separate file. This way, we can fill in the true audit values for the sample one by one. The following settings enable you to isolate and export the selected items to a .csv file.
+
+![](img/selection/selection-9.png){fig-align="center" width=75%}
+
+- **Column name selection result:** Enter the name of the column that will be added to the population file. This column will contain the results of the selection procedure, indicating whether the item is selected for the sample and how many times it is included.
+- **File name:** Click 'Browse' to choose a location on your computer where you want to save the sample list.
+- **Enable synchronization:** Finally, click on this setting to create the .csv file on your computer. When this setting is enabled, any changes you make to the sample by adjusting settings in the interface will be immediately reflected in the .csv file. If you prefer not to have this automatic update, uncheck this box after enabling it initially.
+
+After applying these settings, you should find the resulting .csv file saved on your computer.
+
+Now, you can start filling in the audit values that correspond to the bookvalues selected in your sample. Load the exported sample file by navigating to 'File' > 'Open' and selecting the .csv file you saved on your computer. This should look as follows: 
+
+![](img/bos/bos-2.png){fig-align="center" width=75%}
+
+The data shows all the selected transactions in the sample, including their row numbers, IDs and bookvalues. The column for auditResult is still empty. This column is to be filled by the auditor. To start filling in this column, you can click on 'Edit Data'. This brings you into the following panel. 
+
+![](img/bos/bos-3.png){fig-align="center" width=75%}
+
+In this panel, you can manually fill in the correct audit value. Bayesian optional stopping allows you to decide, at any moment, whether to continue or stop filling in correct audit values. To make this decision, you can use the 'Bayesian Evaluation' section:
+
+![](img/bos/bos-4.png){fig-align="center" width=75%}
+
+The following settings are required: 
+
+1. **Variables**: Begin by entering the variable that contains the identification numbers for the items into the ‘Item ID’ field. Then, input the variables that hold the book values and audit (true) values of the items into their respective fields.
+
+2. **Performance materiality**: Input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). For this example, we choose a performance materiality of 5\%
+
+3. **Data type**: Indicate the type of data you are working with. Here, we are working with sample data.
+
+Furthermore, the prior needs to be specified:
+
+![](img/bos/bos-5.png){fig-align="center" width=75%}
+
+- **Impartial prior:** Select the impartial prior as a prior for the evaluation by expanding the 'Prior' section and selecting 'Impartial' under 'Elicitation method'. 
+
+- **Expected misstatement rate:** Specify the expected misstatement rate to underlying the impartial prior distribution. For this example, we assume that the expected misstatement rate is 1\%. 
+
+Finally, we want the output to show the sequantial analysis plot: 
+
+![](img/bos/bos-6.png){fig-align="center" width=75%}
+
+**Sequential analysis:** Expand the 'Report' section and select the checkbox for sequential analysis. This will produce a figure showing the Bayes factor as a function of the sample size in the output.
+
+### Output
+
+The output shows the results of the audit values you have filled out so far. Hence, we see that the sample size is 2, and no misstatements were found in this sample. The Bayes factor provides an indication of the amount of evidence has been observed. A $BF_{-+}$ of 1.194 indicates that the data are 1.194 times more likely under $H_-$ (the misstatement in the population is lower than the performance materiality) than under $H_+$ (the misstatement in the population is higher than the performance materiality). 
+
+![](img/bos/bos-7.png){fig-align="center" width=40%}
+
+Furthermore, the output shows a figure that depicts the Bayes factor ($BF_{-+}$) as a function of the sample size ($n$). This figure illustrates how the evidence for the hypothesis $H_-$ versus the hypothesis $H_+$ accumulates. Here, we see that over the course of the small sample that we have collected, the Bayes factor has increased slightly. 
+
+![](img/bos/bos-8.png){fig-align="center" width=75%}
+
+Based on the output of the Bayesian evaluation, you can decide whether you want to continue or terminate data collection. @Mensink2024 describe an approach to formulate Bayes factor thresholds for terminating data collection. For example, if you use an impartial prior and your allowable risk of incorrect acceptance is 5\%, this leads to a Bayes factor threshold of 19. As soon as the Bayes factor exceeds 19, you can approve the population of book values, with no more than 5\% risk that this conclusion is incorrect. As this threshold is not yet reached for our example, we need to continue data collection. 
+
+To continue data collection, go back to the 'Edit Data' menu, check more items and fill out more audit values. You can switch between checking items and evaluating your sample as often as you like. When you have sufficient evidence to support your conclusion, you can terminate data collection.   
+
+In this example, after checking 45 book values that were selected in the sample and filling in their corresponding audit values (all were correct, except for the 13th invoice which contained a small taint) the output looks as follows.  
+
+![](img/bos/bos-9.png){fig-align="center" width=40%}
+
+![](img/bos/bos-10.png){fig-align="center" width=75%}
+
+The Bayes factor is higher than 19, which means we can approve the population of book values with no more than 5\% risk that this conclusion is incorrect. 
+
+
