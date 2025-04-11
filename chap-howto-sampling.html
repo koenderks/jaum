@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -90,6 +110,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="6&nbsp; How-to’s – JASP for Audit">
 <meta property="og:description" content="">
@@ -238,6 +287,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#extending-a-sample-selected-with-a-fixed-interval" id="toc-extending-a-sample-selected-with-a-fixed-interval" class="nav-link active" data-scroll-target="#extending-a-sample-selected-with-a-fixed-interval"><span class="header-section-number">6.1</span> Extending a sample selected with a fixed interval</a></li>
   <li><a href="#configurating-and-locking-default-options" id="toc-configurating-and-locking-default-options" class="nav-link" data-scroll-target="#configurating-and-locking-default-options"><span class="header-section-number">6.2</span> Configurating and locking default options</a></li>
+  <li><a href="#bayesian-optional-stopping" id="toc-bayesian-optional-stopping" class="nav-link" data-scroll-target="#bayesian-optional-stopping"><span class="header-section-number">6.3</span> Bayesian Optional Stopping</a>
+  <ul class="collapse">
+  <li><a href="#settings" id="toc-settings" class="nav-link" data-scroll-target="#settings"><span class="header-section-number">6.3.1</span> Settings</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">6.3.2</span> Output</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -322,10 +376,118 @@ max = {Value = 2000, Lock = true}</code></pre>
 <p><img src="img/howto/sampling/howto-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
+</section>
+<section id="bayesian-optional-stopping" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="bayesian-optional-stopping"><span class="header-section-number">6.3</span> Bayesian Optional Stopping</h2>
+<p>The goal of Bayesian optional stopping is to monitor the evidence as it comes in and decide whether or not to continue data collection based on the evidence that has been observed. Instead of specifying a fixed sample size in advance, the auditor can monitor the evidence as it comes in. This means that you can sequentially expand and evaluate your sample, until you have sufficient evidence to draw a conclusion or until you are out of resources.</p>
+<p>Let’s explore an example on how to perform Bayesian optional stopping in JASP. To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (do not click the green JASP-icon).</p>
+<section id="settings" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="settings"><span class="header-section-number">6.3.1</span> Settings</h3>
+<p>First, you are going to select the maximum sample that you can afford to check based on your resources. Note that it is unlikely that you will need to check the entire sample. To select the sample, use the ‘Selection’ analysis from the ‘Audit Sampling’ menu.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>The following settings are required:</p>
+<ol type="1">
+<li><p><strong>Indicate the variables:</strong> First, enter the variable indicating the identification numbers of the items in the corresponding box. Optionally, if you have access to the book values of the items, you can enter this variable as well.</p></li>
+<li><p><strong>Specify maximum sample size:</strong> Specify the number of sampling units you want to select from the population. Make sure to check the box for ‘Randomize item order’ as well to mitigate any biases that might arise from the original order of the data.</p></li>
+<li><p><strong>Sampling units:</strong> Specify the sampling units for the selection process. In this example, we are dealing with book values, so we choose ‘Monetary Units’.</p></li>
+<li><p><strong>Selection method:</strong> Choose a selection algorithm. In this example, we choose ‘Fixed Interval’ with a random starting point.</p></li>
+</ol>
+<p>Now, we need to export the sample to a separate file. This way, we can fill in the true audit values for the sample one by one. The following settings enable you to isolate and export the selected items to a .csv file.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/selection/selection-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<ul>
+<li><strong>Column name selection result:</strong> Enter the name of the column that will be added to the population file. This column will contain the results of the selection procedure, indicating whether the item is selected for the sample and how many times it is included.</li>
+<li><strong>File name:</strong> Click ‘Browse’ to choose a location on your computer where you want to save the sample list.</li>
+<li><strong>Enable synchronization:</strong> Finally, click on this setting to create the .csv file on your computer. When this setting is enabled, any changes you make to the sample by adjusting settings in the interface will be immediately reflected in the .csv file. If you prefer not to have this automatic update, uncheck this box after enabling it initially.</li>
+</ul>
+<p>After applying these settings, you should find the resulting .csv file saved on your computer.</p>
+<p>Now, you can start filling in the audit values that correspond to the bookvalues selected in your sample. Load the exported sample file by navigating to ‘File’ &gt; ‘Open’ and selecting the .csv file you saved on your computer. This should look as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>The data shows all the selected transactions in the sample, including their row numbers, IDs and bookvalues. The column for auditResult is still empty. This column is to be filled by the auditor. To start filling in this column, you can click on ‘Edit Data’. This brings you into the following panel.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>In this panel, you can manually fill in the correct audit value. Bayesian optional stopping allows you to decide, at any moment, whether to continue or stop filling in correct audit values. To make this decision, you can use the ‘Bayesian Evaluation’ section:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>The following settings are required:</p>
+<ol type="1">
+<li><p><strong>Variables</strong>: Begin by entering the variable that contains the identification numbers for the items into the ‘Item ID’ field. Then, input the variables that hold the book values and audit (true) values of the items into their respective fields.</p></li>
+<li><p><strong>Performance materiality</strong>: Input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). For this example, we choose a performance materiality of 5%</p></li>
+<li><p><strong>Data type</strong>: Indicate the type of data you are working with. Here, we are working with sample data.</p></li>
+</ol>
+<p>Furthermore, the prior needs to be specified:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p><strong>Impartial prior:</strong> Select the impartial prior as a prior for the evaluation by expanding the ‘Prior’ section and selecting ‘Impartial’ under ‘Elicitation method’.</p></li>
+<li><p><strong>Expected misstatement rate:</strong> Specify the expected misstatement rate to underlying the impartial prior distribution. For this example, we assume that the expected misstatement rate is 1%.</p></li>
+</ul>
+<p>Finally, we want the output to show the sequantial analysis plot:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p><strong>Sequential analysis:</strong> Expand the ‘Report’ section and select the checkbox for sequential analysis. This will produce a figure showing the Bayes factor as a function of the sample size in the output.</p>
+</section>
+<section id="output" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="output"><span class="header-section-number">6.3.2</span> Output</h3>
+<p>The output shows the results of the audit values you have filled out so far. Hence, we see that the sample size is 2, and no misstatements were found in this sample. The Bayes factor provides an indication of the amount of evidence has been observed. A <span class="math inline">\(BF_{-+}\)</span> of 1.194 indicates that the data are 1.194 times more likely under <span class="math inline">\(H_-\)</span> (the misstatement in the population is lower than the performance materiality) than under <span class="math inline">\(H_+\)</span> (the misstatement in the population is higher than the performance materiality).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Furthermore, the output shows a figure that depicts the Bayes factor (<span class="math inline">\(BF_{-+}\)</span>) as a function of the sample size (<span class="math inline">\(n\)</span>). This figure illustrates how the evidence for the hypothesis <span class="math inline">\(H_-\)</span> versus the hypothesis <span class="math inline">\(H_+\)</span> accumulates. Here, we see that over the course of the small sample that we have collected, the Bayes factor has increased slightly.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>Based on the output of the Bayesian evaluation, you can decide whether you want to continue or terminate data collection. <span class="citation" data-cites="Mensink2024">Mensink et al. (<a href="references.html#ref-Mensink2024" role="doc-biblioref">2024</a>)</span> describe an approach to formulate Bayes factor thresholds for terminating data collection. For example, if you use an impartial prior and your allowable risk of incorrect acceptance is 5%, this leads to a Bayes factor threshold of 19. As soon as the Bayes factor exceeds 19, you can approve the population of book values, with no more than 5% risk that this conclusion is incorrect. As this threshold is not yet reached for our example, we need to continue data collection.</p>
+<p>To continue data collection, go back to the ‘Edit Data’ menu, check more items and fill out more audit values. You can switch between checking items and evaluating your sample as often as you like. When you have sufficient evidence to support your conclusion, you can terminate data collection.</p>
+<p>In this example, after checking 45 book values that were selected in the sample and filling in their corresponding audit values (all were correct, except for the 13th invoice which contained a small taint) the output looks as follows.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bos/bos-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<p>The Bayes factor is higher than 19, which means we can approve the population of book values with no more than 5% risk that this conclusion is incorrect.</p>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Mensink2024" class="csl-entry" role="listitem">
+Mensink, L., de Swart, J., Derks, K., &amp; Wetzels, R. (2024). Enhaning efficiency and flexibility in audits through <span>B</span>ayesian optional stopping. <em>PsyArXiv Preprints</em>. <a href="https://doi.org/10.31234/osf.io/axwvu">https://doi.org/10.31234/osf.io/axwvu</a>
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -868,7 +1030,98 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>When you start the planning analysis, the options under advanced settings will be set to the corresponding defaults and cannot be changed by the user.</span>
 <span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/howto/sampling/howto-5.png)</span>{fig-align="center" width=75%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/howto/sampling/howto-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bayesian Optional Stopping </span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>The goal of Bayesian optional stopping is to monitor the evidence as it comes in and decide whether or not to continue data collection based on the evidence that has been observed. Instead of specifying a fixed sample size in advance, the auditor can monitor the evidence as it comes in. </span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>This means that you can sequentially expand and evaluate your sample, until you have sufficient evidence to draw a conclusion or until you are out of resources. </span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>Let's explore an example on how to perform Bayesian optional stopping in JASP. To follow along, open the ‘Testing for Overstatements’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Testing for Overstatements’ (do not click the green JASP-icon).</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### Settings</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>First, you are going to select the maximum sample that you can afford to check based on your resources. Note that it is unlikely that you will need to check the entire sample. To select the sample, use the 'Selection' analysis from the 'Audit Sampling' menu. </span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-1.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>The following settings are required: </span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Indicate the variables:** First, enter the variable indicating the identification numbers of the items in the corresponding box. Optionally, if you have access to the book values of the items, you can enter this variable as well.</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Specify maximum sample size:** Specify the number of sampling units you want to select from the population. Make sure to check the box for 'Randomize item order' as well to mitigate any biases that might arise from the original order of the data. </span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Sampling units:** Specify the sampling units for the selection process. In this example, we are dealing with book values, so we choose 'Monetary Units'. </span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Selection method:** Choose a selection algorithm. In this example, we choose 'Fixed Interval' with a random starting point. </span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Now, we need to export the sample to a separate file. This way, we can fill in the true audit values for the sample one by one. The following settings enable you to isolate and export the selected items to a .csv file.</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/selection/selection-9.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Column name selection result:** Enter the name of the column that will be added to the population file. This column will contain the results of the selection procedure, indicating whether the item is selected for the sample and how many times it is included.</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**File name:** Click 'Browse' to choose a location on your computer where you want to save the sample list.</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Enable synchronization:** Finally, click on this setting to create the .csv file on your computer. When this setting is enabled, any changes you make to the sample by adjusting settings in the interface will be immediately reflected in the .csv file. If you prefer not to have this automatic update, uncheck this box after enabling it initially.</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>After applying these settings, you should find the resulting .csv file saved on your computer.</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>Now, you can start filling in the audit values that correspond to the bookvalues selected in your sample. Load the exported sample file by navigating to 'File' &gt; 'Open' and selecting the .csv file you saved on your computer. This should look as follows: </span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-2.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>The data shows all the selected transactions in the sample, including their row numbers, IDs and bookvalues. The column for auditResult is still empty. This column is to be filled by the auditor. To start filling in this column, you can click on 'Edit Data'. This brings you into the following panel. </span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>In this panel, you can manually fill in the correct audit value. Bayesian optional stopping allows you to decide, at any moment, whether to continue or stop filling in correct audit values. To make this decision, you can use the 'Bayesian Evaluation' section:</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>The following settings are required: </span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Variables**: Begin by entering the variable that contains the identification numbers for the items into the ‘Item ID’ field. Then, input the variables that hold the book values and audit (true) values of the items into their respective fields.</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Performance materiality**: Input the performance materiality either as a percentage (relative) or as a monetary amount (absolute). For this example, we choose a performance materiality of 5\%</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Data type**: Indicate the type of data you are working with. Here, we are working with sample data.</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>Furthermore, the prior needs to be specified:</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Impartial prior:** Select the impartial prior as a prior for the evaluation by expanding the 'Prior' section and selecting 'Impartial' under 'Elicitation method'. </span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Expected misstatement rate:** Specify the expected misstatement rate to underlying the impartial prior distribution. For this example, we assume that the expected misstatement rate is 1\%. </span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>Finally, we want the output to show the sequantial analysis plot: </span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>**Sequential analysis:** Expand the 'Report' section and select the checkbox for sequential analysis. This will produce a figure showing the Bayes factor as a function of the sample size in the output.</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="fu">### Output</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>The output shows the results of the audit values you have filled out so far. Hence, we see that the sample size is 2, and no misstatements were found in this sample. The Bayes factor provides an indication of the amount of evidence has been observed. A $BF_{-+}$ of 1.194 indicates that the data are 1.194 times more likely under $H_-$ (the misstatement in the population is lower than the performance materiality) than under $H_+$ (the misstatement in the population is higher than the performance materiality). </span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-7.png)</span>{fig-align="center" width=40%}</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>Furthermore, the output shows a figure that depicts the Bayes factor ($BF_{-+}$) as a function of the sample size ($n$). This figure illustrates how the evidence for the hypothesis $H_-$ versus the hypothesis $H_+$ accumulates. Here, we see that over the course of the small sample that we have collected, the Bayes factor has increased slightly. </span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-8.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>Based on the output of the Bayesian evaluation, you can decide whether you want to continue or terminate data collection. @Mensink2024 describe an approach to formulate Bayes factor thresholds for terminating data collection. For example, if you use an impartial prior and your allowable risk of incorrect acceptance is 5\%, this leads to a Bayes factor threshold of 19. As soon as the Bayes factor exceeds 19, you can approve the population of book values, with no more than 5\% risk that this conclusion is incorrect. As this threshold is not yet reached for our example, we need to continue data collection. </span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>To continue data collection, go back to the 'Edit Data' menu, check more items and fill out more audit values. You can switch between checking items and evaluating your sample as often as you like. When you have sufficient evidence to support your conclusion, you can terminate data collection.   </span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>In this example, after checking 45 book values that were selected in the sample and filling in their corresponding audit values (all were correct, except for the 13th invoice which contained a small taint) the output looks as follows.  </span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-9.png)</span>{fig-align="center" width=40%}</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bos/bos-10.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>The Bayes factor is higher than 19, which means we can approve the population of book values with no more than 5\% risk that this conclusion is incorrect. </span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
