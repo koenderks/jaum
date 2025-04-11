@@ -60,7 +60,7 @@ When you start the planning analysis, the options under advanced settings will b
 ![](img/howto/sampling/howto-5.png){fig-align="center" width=75%}
 
 
-## Bayesian Optional Stopping 
+## Bayesian optional stopping 
 
 The goal of Bayesian optional stopping is to monitor the evidence as it comes in and decide whether or not to continue data collection based on the evidence that has been observed. Instead of specifying a fixed sample size in advance, the auditor can monitor the evidence as it comes in. 
 This means that you can sequentially expand and evaluate your sample, until you have sufficient evidence to draw a conclusion or until you are out of resources. 
