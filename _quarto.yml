@@ -19,7 +19,7 @@ book:
   site-url: https://github.com/koenderks/jaum
   repo-url: https://github.com/koenderks/jaum
   repo-branch: master
-  downloads: [pdf]
+  #downloads: [pdf]
   open-graph: true
   page-navigation: true
   reader-mode: true
