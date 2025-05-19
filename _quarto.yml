@@ -41,10 +41,10 @@ book:
       chapters:
       - chap-benford.qmd
       - chap-bunching.qmd
-    # - part: Algorithm Auditing
-    #   chapters:
+    - part: Algorithm Auditing
+      chapters:
     #   - chap-fairness-workflow.qmd
-    #   - chap-fairness.qmd
+      - chap-fairness.qmd
     - references.qmd
 format:
   html:
