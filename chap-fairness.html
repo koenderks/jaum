@@ -8,7 +8,7 @@
 
 <meta name="author" content="Statistical Auditing Group">
 
-<title>8&nbsp; Repeated Values – JASP for Audit</title>
+<title>9&nbsp; Evaluation – JASP for Audit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,33 +56,13 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./chap-fairness.html" rel="next">
-<link href="./chap-benford.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./chap-bunching.html" rel="prev">
 <link href="./front-page.png" rel="icon" type="image/png">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -142,13 +122,13 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="8&nbsp; Repeated Values – JASP for Audit">
+<meta property="og:title" content="9&nbsp; Evaluation – JASP for Audit">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://github.com/koenderks/jaum/img/bunching/bunching-1.png">
+<meta property="og:image" content="https://github.com/koenderks/jaum/img/fairness-evaluation/fairness-evaluation-1.png">
 <meta property="og:site_name" content="JASP for Audit">
-<meta property="og:image:height" content="1210">
-<meta property="og:image:width" content="3024">
-<meta name="twitter:title" content="8&nbsp; Repeated Values – JASP for Audit">
+<meta property="og:image:height" content="938">
+<meta property="og:image:width" content="1568">
+<meta name="twitter:title" content="9&nbsp; Evaluation – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -163,7 +143,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -264,7 +244,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chap-bunching.html" class="sidebar-item-text sidebar-link active">
+  <a href="./chap-bunching.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></a>
   </div>
 </li>
@@ -281,7 +261,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chap-fairness.html" class="sidebar-item-text sidebar-link">
+  <a href="./chap-fairness.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
   </div>
 </li>
@@ -303,13 +283,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">8.1</span> Purpose of the analysis</a></li>
-  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">8.2</span> Practical example</a>
+  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">9.1</span> Purpose of the analysis</a></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">9.2</span> Practical example</a>
   <ul class="collapse">
-  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">8.2.1</span> Main settings</a></li>
-  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">8.2.2</span> Main output</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">8.2.3</span> Report</a></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced"><span class="header-section-number">8.2.4</span> Advanced</a></li>
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">9.2.1</span> Main settings</a></li>
+  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">9.2.2</span> Main output</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">9.2.3</span> Report</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -317,9 +296,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-benford.html">Data Auditing</a></li><li class="breadcrumb-item"><a href="./chap-bunching.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-bunching" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-fairness" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -336,110 +315,96 @@ window.Quarto = {
 </header>
 
 
-<p>This chapter is about the ‘Repeated Values’ analysis in the ‘Data Auditing’ section of the module.</p>
-<section id="purpose-of-the-analysis" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">8.1</span> Purpose of the analysis</h2>
-<p>The repeated values analysis examines the frequency of value repetitions within a dataset (referred to as “number-bunching”) to statistically determine if the data were likely tampered with <span class="citation" data-cites="Simohnsohn2019">(<a href="references.html#ref-Simohnsohn2019" role="doc-biblioref">Simohnsohn, 2019</a>)</span>. This can be tested statistically. The null hypothesis H<span class="math inline">\(_0\)</span> posits that the data do not contain an unexpected amount of repeated values, while the alternative hypothesis H<span class="math inline">\(_1\)</span> suggests they do. Unlike Benford’s law, this approach analyzes the entire number at once, not just the first or last digit.</p>
-<p>The purpose of the analysis in JASP is to identify whether the data exhibit excessive repeated values. In auditing, this could indicate that certain items or transactions within a population may require further investigation.</p>
+<p>This chapter is about the ‘Evaluation’ analysis in the ‘Algorithm Auditing’ section of the module.</p>
+<section id="purpose-of-the-analysis" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">9.1</span> Purpose of the analysis</h2>
+<p>The goal of this procedure is to assess the extent to which an algorithm’s predictions are fair toward protected groups based on a sensitive attribute and to test this fairness with a type I error rate corresponding to a chosen significance level. This allows auditors to determine, with a certain level of assurance, whether the use of the audited algorithm results in discriminatory acts.</p>
 </section>
-<section id="practical-example" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">8.2</span> Practical example</h2>
-<p>Let’s explore an example analysis of repeated values. To follow along, open the ‘Assessing Benford’s Law’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Assessing Benford’s Law’ (not the green JASP-icon button).</p>
+<section id="practical-example" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">9.2</span> Practical example</h2>
+<p>Let’s explore an example of an evaluation analysis. To follow along, open the ‘Fairness Evaluation’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Fairness Evaluation’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>This will open a dataset with 772 rows and two columns: ‘ID’ and ‘value’. The ‘ID’ column represents the identification number of the items in the population. The ‘value’ column shows the recorded values of the items.</p>
+<p>This will open a dataset with 6,172 rows and seven columns. The ‘TwoYrRecidivism’ column indicates whether the offender committed a crime within two years of being released and, therefore, provides the ground truth information on the offenders’ recidivism. The ‘Predicted’ column indicates whether the COMPAS algorithm classifies the offender as low or high risk of committing another crime after being released. The ‘Ethnicity’ column indicates the offender’s ethnicity (African-American, Asian, Caucasian, Hispanic, Native American, or Other). This column represents the so-called senstitive attribute. In this example, we seek to determine, with 95% confidence, whether the COMPAS algorithm discriminates against offenders based on their ethnicity.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<section id="main-settings" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">8.2.1</span> Main settings</h3>
-<p>In this example, we will test whether the values in the ‘value’ column show an excessive amount of repeated values. To test this, we open the ‘Repeated Values’ analysis from the Audit module. The interface of the repeated values analysis is shown below.</p>
+<section id="main-settings" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">9.2.1</span> Main settings</h3>
+<p>To evaluate the fairness of the algorithm, we open the ‘Evaluation’ analysis within the section ‘Algorithm Auditing’ within the Audit module. The interface for the evaluation analysis is displayed below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>These are the main settings for the analysis:</p>
 <ul>
-<li><strong>Variable:</strong> Start by entering the variable whose digits should be analyzed for repeated values in the designated box. In this example, the variable is ‘value’, so we drag this variable to the field on the right.</li>
-<li><strong>Tests: Average frequency</strong> Check this box to test if the average frequency of values differs from what is expected. In this example, we only examine the average frequency, so we check this box.</li>
-<li><strong>Tests: Entropy</strong> Check this box to test if the entropy of values differs from what is expected. In this example, we do not check this box as we are only looking at the average frequency.</li>
-<li><strong>Shuffle decimal digits:</strong> This setting determines which decimal digits are shuffled in the analysis. In this example, we select all decimal digits to be shuffled.</li>
+<li><strong>Variables:</strong> Begin by entering the variable that contains the ground truth information into the ‘Ground Truth Information’ field. Then, input the variables that hold the predictions of the algorithm values and the sensitive attribute into their respective fields.</li>
+<li><strong>Confidence:</strong> Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and the amount of work needed to determine the fairness of the algorithm. A higher confidence level requires more audit evidence to conclude that the algorithm is not discriminating against certain social groups. In this example, we use a confidence level of 95%.</li>
+<li><strong>Fairness measure:</strong> Specify the fairness measure for your analysis. The possible options are: ‘Predictive rate parity’, ‘Negative predictive rate parity’, ‘False positive rate parity’, ‘False negative rate parity’, ‘Equal opportunity, ’Specificity parity’, ‘Disparate impact’, ‘Equalized odds’, and ‘Accuracy parity’. In this example, we use the ‘False positive rate parity’. Note that the ‘Fairness Workflow’ analysis in this module section guides you in choosing a fairness measure.</li>
+<li><strong>Levels: Privileged group:</strong> Select which group, identified by the sensitive attribute’s values, is the privileged one (i.e., which group is advantaged by the algorithm’s outcome). In this example, the privileged group is ‘Caucasian’.</li>
+<li><strong>Levels: Positive class:</strong> Select which class of the algorithm’s predictions is the favorable outcome. This refers to the outcome that is beneficial to those who receive it. In this example, the positive class is ‘yes’.</li>
+<li><strong>Alt. Hypothesis:</strong> Choose whether to calculate a two-sided test or a one-sided test to evaluate the algorithm’s fairness. In this example, we select the two-sided option ‘Unprivileged <span class="math inline">\(\neq\)</span> privileged’.</li>
 <li><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</li>
-<li><strong>Display: Confidence:</strong> Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.</li>
 </ul>
 </section>
-<section id="main-output" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">8.2.2</span> Main output</h3>
-<p>The main table in the output below displays the sample size (n), the average frequency of 1.324, and the p-value for the test. This indicates that each unique value in the data occurs, on average, 1.324 times. The p-value is smaller than the significance level of 5%, leading us to reject the null hypothesis and conclude that there is an excessive amount of repeated values in the data.</p>
+<section id="main-output" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">9.2.2</span> Main output</h3>
+<p>The main table in the output below shows the omnibus test (Pearson’s chi-square test), which compares all the groups identified by the values of the sensitive attribute, based on the direction of the alternative hypothesis. The first column specifies the total number of items in the dataset. The column ‘<span class="math inline">\(\chi^2\)</span>’ column displays the value of the test statistic for the overall test. The ‘df’ column indicates the degrees of freedom, which is the parameter for the chi-square distribution. The ‘p’ column shows the p-value of the omnibus test, based on which the null hypothesis is either rejected or not.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
-<p>Note that rejecting the null hypothesis does not necessarily indicate fraud. A repeated values analysis should therefore only be used to acquire insight into whether a population might need further investigation.</p>
+<p>In this example, the offenders’ ethnicity is the sensitive attribute. As previously mentioned, the total number of rows is 6,127. The value of the test statistic is 179.8, and the degrees of freedom for the chi-square distribution are 5. The p-value associated with the omnibus test is less than 0.001, which is below the significance level (0.05). Therefore, we reject the hypothesis of equal false positive rates across the groups, concluding that the algorithm is unfair toward at least one of the groups.</p>
 </section>
-<section id="report" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">8.2.3</span> Report</h3>
+<section id="report" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">9.2.3</span> Report</h3>
 <p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <ul>
-<li><p><strong>Tables: Assumption checks:</strong> To quantify expectations, this test assumes that the integer portions of the numbers are not correlated with their decimal portions. The table below tests this assumption and confirms it holds, as indicated by the non-significant p-value of 0.461.</p>
+<li><p><strong>Tables: Individual comparisons:</strong> Check this box to generate a table showing the individual comparisons between the privileged group and each of the different unprivileged groups. This allows you, when the p-value from the overall test leads to rejection of the null hypothesis, to identify which specific group is being discriminated against by the algorithm. To determine which group is being unfairly treated by the algorithm, you can focus on the last column, which shows statistical significance for the individual comparisons. In this example, the first three columns show the false positive rate by offenders’ ethnicity, along with their respective 95% confidence intervals. The fourth and sixth columns display the false positive rate by offenders’ ethnicity relative to the group of Caucasian offenders, again with corresponding confidence intervals. In the last columm, when the p-value is lower than the significance level (0.05), the false positive rate is significantly different between the unprivileged group and the privileged group, indicating that the unprivileged group is being discriminated against.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div></li>
-<li><p><strong>Tables: Frequency table:</strong> The frequency table displays the occurrence of each unique value in the data, ordered from highest to lowest frequency. For example, it shows that the value 87,670 appeared five times, representing 0.6% of the total values.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/bunching/bunching-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
-</figure>
-</div></li>
-<li><p><strong>Plots: Observed vs.&nbsp;expected:</strong> Check this box to generate a histogram of the expected distribution of the average frequency or entropy, assuming the decimal portions of the numbers are random and not associated with their integer portions. The observed average frequency will be indicated in the figure.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/bunching/bunching-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
-</div></li>
-<li><p><strong>Plots: Histogram:</strong> The histogram visualizes the frequency table using bars to represent the values. Similar to the frequency table, the histogram indicates that the most frequently occurring value is 87,670, which appears five times.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/bunching/bunching-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
-</figure>
-</div></li>
+<li><p><strong>Tables: Model performance:</strong> Check this box to generate a table showing the model performance metric values for each group identified by the sensitive attribute — both privileged and unprivileged — in order to evaluate the algorithm’s performance within each group.</p></li>
 </ul>
-</section>
-<section id="advanced" class="level3" data-number="8.2.4">
-<h3 data-number="8.2.4" class="anchored" data-anchor-id="advanced"><span class="header-section-number">8.2.4</span> Advanced</h3>
-<p>The following advanced settings enable you to customize the statistical computations according to your preferences.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/bunching/bunching-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="img/fairness-evaluation/fairness-evaluation-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <ul>
-<li><strong>Bootstrap: Number of samples:</strong> This setting specifies the number of bootstratp samples used to compute the expected distribution of the average frequency or the entropy. The default value for this setting is 500.</li>
-<li><strong>Bootstrap: Seed:</strong> A seed in computing is a starting point for generating random numbers. By setting a seed, you ensure that the results of the analysis can be reproduced across computers, which is useful for sharing your analysis.</li>
+<li><strong>Tables: Confusion matrix:</strong> Check this box to generate a table showing the confusion matrix, obtained by comparing the predicted values of the algorithm with the true values for each group identified by the sensitive attribute, along with the value of the model evaluation metric on which the selected fairness measure is based (in this example, the false positive rate). It is also possible to display the numbers as proportions or transpose the matrix.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fairness-evaluation/fairness-evaluation-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<ul>
+<li><strong>Plots: Parity estimates:</strong> Check this box to generate a figure displaying the ratio between the model evaluation metric on which the selected fairness measure is based (in this example, the false positive rate) for each unprivileged group compared to the privileged group. Blue is used to represent the privileged group. Grey indicates that the ratio does not differ significantly from 1, meaning there is no significant difference in treatment between the unprivileged group and the privileged group. Red indicates that the ratio differs significantly from 1, suggesting a difference in treatment between the unprivileged group and the privileged group.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/fairness-evaluation/fairness-evaluation-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
 
 
 <!-- -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-Simohnsohn2019" class="csl-entry" role="listitem">
-Simohnsohn, U. (2019). <em>Number-bunching: A new tool for forensic data analysis</em>. <a href="http://datacolada.org/77">http://datacolada.org/77</a>
-</div>
-</div>
 </section>
 </section>
 
@@ -896,89 +861,79 @@ Simohnsohn, U. (2019). <em>Number-bunching: A new tool for forensic data analysi
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chap-benford.html" class="pagination-link" aria-label="Benford's Law">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Benford’s Law</span></span>
+      <a href="./chap-bunching.html" class="pagination-link" aria-label="Repeated Values">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chap-fairness.html" class="pagination-link" aria-label="Evaluation">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Repeated Values {#sec-bunching}</span></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Evaluation {#sec-fairness}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This chapter is about the 'Repeated Values' analysis in the 'Data Auditing' section of the module.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>This chapter is about the 'Evaluation' analysis in the 'Algorithm Auditing' section of the module.</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of the analysis</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The repeated values analysis examines the frequency of value repetitions within a dataset (referred to as "number-bunching") to statistically determine if the data were likely tampered with <span class="co">[</span><span class="ot">@Simohnsohn2019</span><span class="co">]</span>. This can be tested statistically. The null hypothesis H$_0$ posits that the data do not contain an unexpected amount of repeated values, while the alternative hypothesis H$_1$ suggests they do. Unlike Benford’s law, this approach analyzes the entire number at once, not just the first or last digit.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>The goal of this procedure is to assess the extent to which an algorithm's predictions are fair toward protected groups based on a sensitive attribute and to test this fairness with a type I error rate corresponding to a chosen significance level. This allows auditors to determine, with a certain level of assurance, whether the use of the audited algorithm results in discriminatory acts. </span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>The purpose of the analysis in JASP is to identify whether the data exhibit excessive repeated values. In auditing, this could indicate that certain items or transactions within a population may require further investigation.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical example</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Let's explore an example of an evaluation analysis. To follow along, open the 'Fairness Evaluation' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Fairness Evaluation' (not the green JASP-icon button). </span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Let's explore an example analysis of repeated values. To follow along, open the 'Assessing Benford's Law' dataset from the Data Library. Navigate to the top-left menu, click 'Open', then 'Data Library', select '7. Audit', and finally click on the text 'Assessing Benford's Law' (not the green JASP-icon button).</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-1.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-1.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 6,172 rows and seven columns. The 'TwoYrRecidivism' column indicates whether the offender committed a crime within two years of being released and, therefore, provides the ground truth information on the offenders' recidivism. The 'Predicted' column indicates whether the COMPAS algorithm classifies the offender as low or high risk of committing another crime after being released. The 'Ethnicity' column indicates the offender's ethnicity (African-American, Asian, Caucasian, Hispanic, Native American, or Other). This column represents the so-called senstitive attribute. In this example, we seek to determine, with 95% confidence, whether the COMPAS algorithm discriminates against offenders based on their ethnicity.</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>This will open a dataset with 772 rows and two columns: 'ID' and 'value'. The 'ID' column represents the identification number of the items in the population. The 'value' column shows the recorded values of the items.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-2.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-2.png)</span>{fig-align="center" width=100%}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main settings</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>To evaluate the fairness of the algorithm, we open the 'Evaluation' analysis within the section 'Algorithm Auditing' within the Audit module. The interface for the evaluation analysis is displayed below.</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>In this example, we will test whether the values in the 'value' column show an excessive amount of repeated values. To test this, we open the 'Repeated Values' analysis from the Audit module. The interface of the repeated values analysis is shown below.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-3.png)</span>{fig-align="center" width=100%}</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-3.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis: </span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>These are the main settings for the analysis:</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable:** Start by entering the variable whose digits should be analyzed for repeated values in the designated box. In this example, the variable is 'value', so we drag this variable to the field on the right.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests: Average frequency** Check this box to test if the average frequency of values differs from what is expected. In this example, we only examine the average frequency, so we check this box.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests: Entropy** Check this box to test if the entropy of values differs from what is expected. In this example, we do not check this box as we are only looking at the average frequency.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Shuffle decimal digits:** This setting determines which decimal digits are shuffled in the analysis. In this example, we select all decimal digits to be shuffled.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variables:** Begin by entering the variable that contains the ground truth information into the 'Ground Truth Information' field. Then, input the variables that hold the predictions of the algorithm values and the sensitive attribute into their respective fields. </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and the amount of work needed to determine the fairness of the algorithm. A higher confidence level requires more audit evidence to conclude that the algorithm is not discriminating against certain social groups. In this example, we use a confidence level of 95%.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fairness measure:** Specify the fairness measure for your analysis. The possible options are: 'Predictive rate parity', 'Negative predictive rate parity', 'False positive rate parity', 'False negative rate parity', 'Equal opportunity, 'Specificity parity', 'Disparate impact', 'Equalized odds', and 'Accuracy parity'. In this example, we use the 'False positive rate parity'. Note that the 'Fairness Workflow' analysis in this module section guides you in choosing a fairness measure.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Levels: Privileged group:** Select which group, identified by the sensitive attribute's values, is the privileged one (i.e., which group is advantaged by the algorithm's outcome). In this example, the privileged group is 'Caucasian'.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Levels: Positive class:** Select which class of the algorithm’s predictions is the favorable outcome. This refers to the outcome that is beneficial to those who receive it. In this example, the positive class is 'yes'.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Alt. Hypothesis:** Choose whether to calculate a two-sided test or a one-sided test to evaluate the algorithm's fairness. In this example, we select the two-sided option 'Unprivileged $\neq$ privileged'. </span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Explanatory text:** Finally, select whether to show explanatory text in the output.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Display: Confidence:** Set the confidence level used in the explanatory text. In this example, we use a confidence level of 95%.</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>The main table in the output below displays the sample size (n), the average frequency of 1.324, and the p-value for the test. This indicates that each unique value in the data occurs, on average, 1.324 times. The p-value is smaller than the significance level of 5%, leading us to reject the null hypothesis and conclude that there is an excessive amount of repeated values in the data.</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-4.png)</span>{fig-align="center" width=40%}</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Note that rejecting the null hypothesis does not necessarily indicate fraud. A repeated values analysis should therefore only be used to acquire insight into whether a population might need further investigation.</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-5.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Assumption checks:** To quantify expectations, this test assumes that the integer portions of the numbers are not correlated with their decimal portions. The table below tests this assumption and confirms it holds, as indicated by the non-significant p-value of 0.461.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-6.png)</span>{fig-align="center" width=100%}</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Frequency table:** The frequency table displays the occurrence of each unique value in the data, ordered from highest to lowest frequency. For example, it shows that the value 87,670 appeared five times, representing 0.6% of the total values.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-7.png)</span>{fig-align="center" width=40%}</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Observed vs. expected:** Check this box to generate a histogram of the expected distribution of the average frequency or entropy, assuming the decimal portions of the numbers are random and not associated with their integer portions. The observed average frequency will be indicated in the figure.</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-8.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Histogram:** The histogram visualizes the frequency table using bars to represent the values. Similar to the frequency table, the histogram indicates that the most frequently occurring value is 87,670, which appears five times.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/bunching/bunching-9.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### Advanced</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>The following advanced settings enable you to customize the statistical computations according to your preferences.</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/bunching/bunching-10.png)</span>{fig-align="center" width=75%}</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bootstrap: Number of samples:** This setting specifies the number of bootstratp samples used to compute the expected distribution of the average frequency or the entropy. The default value for this setting is 500.</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bootstrap: Seed:** A seed in computing is a starting point for generating random numbers. By setting a seed, you ensure that the results of the analysis can be reproduced across computers, which is useful for sharing your analysis.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Main output</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>The main table in the output below shows the omnibus test (Pearson's chi-square test), which compares all the groups identified by the values of the sensitive attribute, based on the direction of the alternative hypothesis. The first column specifies the total number of items in the dataset. The column '$\chi^2$' column displays the value of the test statistic for the overall test. The 'df' column indicates the degrees of freedom, which is the parameter for the chi-square distribution. The 'p' column shows the p-value of the omnibus test, based on which the null hypothesis is either rejected or not.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-4.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>In this example, the offenders' ethnicity is the sensitive attribute. As previously mentioned, the total number of rows is 6,127. The value of the test statistic is 179.8, and the degrees of freedom for the chi-square distribution are 5. The p-value associated with the omnibus test is less than 0.001, which is below the significance level (0.05). Therefore, we reject the hypothesis of equal false positive rates across the groups, concluding that the algorithm is unfair toward at least one of the groups.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### Report</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>The following settings enable you to expand the report with additional output, such as tables and figures.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-5.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Individual comparisons:** Check this box to generate a table showing the individual comparisons between the privileged group and each of the different unprivileged groups. This allows you, when the p-value from the overall test leads to rejection of the null hypothesis, to identify which specific group is being discriminated against by the algorithm. To determine which group is being unfairly treated by the algorithm, you can focus on the last column, which shows statistical significance for the individual comparisons. In this example, the first three columns show the false positive rate by offenders' ethnicity, along with their respective 95% confidence intervals. The fourth and sixth columns display the false positive rate by offenders' ethnicity relative to the group of Caucasian offenders, again with corresponding confidence intervals. In the last columm, when the p-value is lower than the significance level (0.05), the false positive rate is significantly different between the unprivileged group and the privileged group, indicating that the unprivileged group is being discriminated against.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="al">![](img/fairness-evaluation/fairness-evaluation-6.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Model performance:** Check this box to generate a table showing the model performance metric values for each group identified by the sensitive attribute — both privileged and unprivileged — in order to evaluate the algorithm's performance within each group.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-7.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tables: Confusion matrix:** Check this box to generate a table showing the confusion matrix, obtained by comparing the predicted values of the algorithm with the true values for each group identified by the sensitive attribute, along with the value of the model evaluation metric on which the selected fairness measure is based (in this example, the false positive rate). It is also possible to display the numbers as proportions or transpose the matrix.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-8.png)</span>{fig-align="center" width=75%}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plots: Parity estimates:** Check this box to generate a figure displaying the ratio between the model evaluation metric on which the selected fairness measure is based (in this example, the false positive rate) for each unprivileged group compared to the privileged group. Blue is used to represent the privileged group. Grey indicates that the ratio does not differ significantly from 1, meaning there is no significant difference in treatment between the unprivileged group and the privileged group. Red indicates that the ratio differs significantly from 1, suggesting a difference in treatment between the unprivileged group and the privileged group.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/fairness-evaluation/fairness-evaluation-9.png)</span>{fig-align="center" width=75%}</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
