@@ -19,7 +19,7 @@ book:
   site-url: https://github.com/koenderks/jaum
   repo-url: https://github.com/koenderks/jaum
   repo-branch: master
-  #downloads: [pdf]
+  downloads: [pdf]
   open-graph: true
   page-navigation: true
   reader-mode: true
@@ -58,65 +58,65 @@ format:
     theme:
       - cosmo
       - jaum.scss
-  # pdf:
-  #   documentclass: book
-  #   include-in-header:
-  #     text: |
-  #       \pagenumbering{arabic}
-  #       \usepackage{fvextra}
-  #       \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-  #         \usepackage{tikz}
-  #         \renewcommand{\frontmatter}{%
-  #             \thispagestyle{empty}%
-  #             \begin{tikzpicture}[remember picture,overlay]
-  #             \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{front-page.pdf}};
-  #             \end{tikzpicture}%
-  #             \newpage
-  #             \vspace*{5cm}
-  #             \begin{center}
-  #             \textit{``The best things in life are free."}
-  #             \end{center}
-  #             \vspace*{\fill}
-  #         }
-  #         \renewcommand{\backmatter}{%
-  #             \thispagestyle{empty}%
-  #             \begin{tikzpicture}[remember picture,overlay]
-  #             \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{back-page.pdf}};
-  #             \end{tikzpicture}%
-  #         }
-  #         \renewcommand{\mainmatter}{\clearpage}
-  #         \renewcommand{\maketitle}{}
-  #         \usepackage{fancyhdr}
-  #         \pagestyle{fancy}
-  #         \fancyhead{}
-  #         \fancyhead[RO,LE]{\nouppercase{\leftmark}}
-  #         \fancyfoot{}
-  #         \fancyfoot[C]{\thepage}
-  #         \renewcommand{\chaptermark}[1]{\markboth{\thechapter\ | #1}{}}
-  #         \setkeys{Gin}{width=0.65\textwidth}
-  #         \usepackage[labelsep=period, labelfont=bf]{caption}
-  #         \usepackage{newunicodechar}
-  #         \newunicodechar{α}{$\alpha$}
-  #         \newunicodechar{β}{$\beta$}
-  #         \newunicodechar{Θ}{$\theta$}
-  #         \newunicodechar{μ}{$\mu$}
-  #         \newunicodechar{σ}{$\sigma$}
-  #         \newunicodechar{≠}{$\neq$}
-  #   keep-tex: false
-  #   classoption: [10pt,twoside]
-  #   pagestyle: headings
-  #   geometry:
-  #     - twoside
-  #     - left=25mm
-  #     - right=25mm
-  #     - bottom=19.05mm
-  #     - top=12.7mm
-  #     - paperwidth=180mm
-  #     - paperheight=254mm
-  #     - includehead
-  #     - includefoot
-  #   # fontfamily: libertinus
-  #   toc-title: Contents
-  #   toc-depth: 2
-  #   toc: true
-  #   number-sections: true
+  pdf:
+    documentclass: book
+    include-in-header:
+      text: |
+        \pagenumbering{arabic}
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+          \usepackage{tikz}
+          \renewcommand{\frontmatter}{%
+              \thispagestyle{empty}%
+              \begin{tikzpicture}[remember picture,overlay]
+              \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{front-page.pdf}};
+              \end{tikzpicture}%
+              \newpage
+              \vspace*{5cm}
+              \begin{center}
+              \textit{``The best things in life are free."}
+              \end{center}
+              \vspace*{\fill}
+          }
+          \renewcommand{\backmatter}{%
+              \thispagestyle{empty}%
+              \begin{tikzpicture}[remember picture,overlay]
+              \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{back-page.pdf}};
+              \end{tikzpicture}%
+          }
+          \renewcommand{\mainmatter}{\clearpage}
+          \renewcommand{\maketitle}{}
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhead{}
+          \fancyhead[RO,LE]{\nouppercase{\leftmark}}
+          \fancyfoot{}
+          \fancyfoot[C]{\thepage}
+          \renewcommand{\chaptermark}[1]{\markboth{\thechapter\ | #1}{}}
+          \setkeys{Gin}{width=0.65\textwidth}
+          \usepackage[labelsep=period, labelfont=bf]{caption}
+          \usepackage{newunicodechar}
+          \newunicodechar{α}{$\alpha$}
+          \newunicodechar{β}{$\beta$}
+          \newunicodechar{Θ}{$\theta$}
+          \newunicodechar{μ}{$\mu$}
+          \newunicodechar{σ}{$\sigma$}
+          \newunicodechar{≠}{$\neq$}
+    keep-tex: false
+    classoption: [10pt,twoside]
+    pagestyle: headings
+    geometry:
+      - twoside
+      - left=25mm
+      - right=25mm
+      - bottom=19.05mm
+      - top=12.7mm
+      - paperwidth=180mm
+      - paperheight=254mm
+      - includehead
+      - includefoot
+    # fontfamily: libertinus
+    toc-title: Contents
+    toc-depth: 2
+    toc: true
+    number-sections: true
