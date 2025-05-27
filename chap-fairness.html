@@ -8,7 +8,7 @@
 
 <meta name="author" content="Statistical Auditing Group">
 
-<title>9&nbsp; Evaluation – JASP for Audit</title>
+<title>10&nbsp; Evaluation – JASP for Audit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,7 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./references.html" rel="next">
-<link href="./chap-bunching.html" rel="prev">
+<link href="./chap-fairness-workflow.html" rel="prev">
 <link href="./front-page.png" rel="icon" type="image/png">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -122,13 +122,13 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="9&nbsp; Evaluation – JASP for Audit">
+<meta property="og:title" content="10&nbsp; Evaluation – JASP for Audit">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://github.com/koenderks/jaum/img/fairness-evaluation/fairness-evaluation-1.png">
 <meta property="og:site_name" content="JASP for Audit">
 <meta property="og:image:height" content="938">
 <meta property="og:image:width" content="1568">
-<meta name="twitter:title" content="9&nbsp; Evaluation – JASP for Audit">
+<meta name="twitter:title" content="10&nbsp; Evaluation – JASP for Audit">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://github.com/koenderks/jaum/front-page.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -143,7 +143,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness-workflow.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -262,8 +262,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./chap-fairness-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Fairness Workflow</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./chap-fairness.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,12 +290,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">9.1</span> Purpose of the analysis</a></li>
-  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">9.2</span> Practical example</a>
+  <li><a href="#purpose-of-the-analysis" id="toc-purpose-of-the-analysis" class="nav-link active" data-scroll-target="#purpose-of-the-analysis"><span class="header-section-number">10.1</span> Purpose of the analysis</a></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">10.2</span> Practical example</a>
   <ul class="collapse">
-  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">9.2.1</span> Main settings</a></li>
-  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">9.2.2</span> Main output</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">9.2.3</span> Report</a></li>
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings"><span class="header-section-number">10.2.1</span> Main settings</a></li>
+  <li><a href="#main-output" id="toc-main-output" class="nav-link" data-scroll-target="#main-output"><span class="header-section-number">10.2.2</span> Main output</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">10.2.3</span> Report</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -297,9 +303,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chap-fairness-workflow.html">Algorithm Auditing</a></li><li class="breadcrumb-item"><a href="./chap-fairness.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Evaluation</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-fairness" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Evaluation</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-fairness" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Evaluation</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -317,12 +323,12 @@ window.Quarto = {
 
 
 <p>This chapter is about the ‘Evaluation’ analysis in the ‘Algorithm Auditing’ section of the module.</p>
-<section id="purpose-of-the-analysis" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">9.1</span> Purpose of the analysis</h2>
+<section id="purpose-of-the-analysis" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="purpose-of-the-analysis"><span class="header-section-number">10.1</span> Purpose of the analysis</h2>
 <p>The goal of this procedure is to assess the extent to which an algorithm’s predictions are fair toward protected groups based on a sensitive attribute and to test this fairness with a type I error rate corresponding to a chosen significance level. This allows auditors to determine, with a certain level of assurance, whether the use of the audited algorithm results in discriminatory acts.</p>
 </section>
-<section id="practical-example" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">9.2</span> Practical example</h2>
+<section id="practical-example" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">10.2</span> Practical example</h2>
 <p>Let’s explore an example of an evaluation analysis. To follow along, open the ‘Fairness Evaluation’ dataset from the Data Library. Navigate to the top-left menu, click ‘Open’, then ‘Data Library’, select ‘7. Audit’, and finally click on the text ‘Fairness Evaluation’ (not the green JASP-icon button).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -335,8 +341,8 @@ window.Quarto = {
 <p><img src="img/fairness-evaluation/fairness-evaluation-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<section id="main-settings" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">9.2.1</span> Main settings</h3>
+<section id="main-settings" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="main-settings"><span class="header-section-number">10.2.1</span> Main settings</h3>
 <p>To evaluate the fairness of the algorithm, we open the ‘Evaluation’ analysis within the section ‘Algorithm Auditing’ within the Audit module. The interface for the evaluation analysis is displayed below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -354,8 +360,8 @@ window.Quarto = {
 <li><strong>Display: Explanatory text:</strong> Finally, select whether to show explanatory text in the output.</li>
 </ul>
 </section>
-<section id="main-output" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">9.2.2</span> Main output</h3>
+<section id="main-output" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="main-output"><span class="header-section-number">10.2.2</span> Main output</h3>
 <p>The main table in the output below shows the omnibus test (Pearson’s chi-square test), which compares all the groups identified by the values of the sensitive attribute, based on the direction of the alternative hypothesis. The first column specifies the total number of items in the dataset. The column ‘<span class="math inline">\(\chi^2\)</span>’ column displays the value of the test statistic for the overall test. The ‘df’ column indicates the degrees of freedom, which is the parameter for the chi-square distribution. The ‘p’ column shows the p-value of the omnibus test, based on which the null hypothesis is either rejected or not.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -364,8 +370,8 @@ window.Quarto = {
 </div>
 <p>In this example, the offenders’ ethnicity is the sensitive attribute. As previously mentioned, the total number of rows is 6,127. The value of the test statistic is 179.8, and the degrees of freedom for the chi-square distribution are 5. The p-value associated with the omnibus test is less than 0.001, which is below the significance level (0.05). Therefore, we reject the hypothesis of equal false positive rates across the groups, concluding that the algorithm is unfair toward at least one of the groups.</p>
 </section>
-<section id="report" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">9.2.3</span> Report</h3>
+<section id="report" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="report"><span class="header-section-number">10.2.3</span> Report</h3>
 <p>The following settings enable you to expand the report with additional output, such as tables and figures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -862,8 +868,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chap-bunching.html" class="pagination-link" aria-label="Repeated Values">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Repeated Values</span></span>
+      <a href="./chap-fairness-workflow.html" class="pagination-link" aria-label="Fairness Workflow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Fairness Workflow</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
