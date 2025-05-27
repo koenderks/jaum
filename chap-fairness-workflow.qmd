@@ -22,7 +22,7 @@ Let's explore an example of the audit fairness workflow. To follow along, open t
 
 ![](img/fairness-workflow/fairness-workflow-2.png){fig-align="center" width=100%}
 
-This will open a dataset with 6172 rows and seven columns: 'TwoYrRecidivism', 'AgeAboveFoutryFive', 'AgeBelowTwentyFive', 'Gender', 'Misdemeanor', 'Ethnicity', 'Predicted'. The 'TwoYrRecidivism' column indicates whether the offender committed a crime within two years of being released and, therefore, provides the ground truth information on the offenders' recidivism. The 'AgeAboveFoutryFive' and 'AgeAboveFoutryFive' columns indicate whether the offender is over the age of 45 and whether the offender is under the age of 25, respectively. The 'Gender' column indicates whether the offender is a female or a male. The 'Misdemeanor' column indicates whether the crime commited is a misdemeanor (i.e., a minor wrongdoing, less serious than a felony). The 'Ethnicity' column indicates the offender's ethnicity (African-American, Asian, Caucasian, Hispanic, Native American, or Other). The 'Predicted' column indicates whether the COMPAS algorithm classifies the offender as low or high risk of committing another crime after being released. This is the focus of the audit, that is, where we want to detect if there is any unfairness.
+This will open a dataset with 6,172 rows and seven columns. The 'TwoYrRecidivism' column indicates whether the offender committed a crime within two years of being released and, therefore, provides the ground truth information on the offenders' recidivism. The 'Predicted' column indicates whether the COMPAS algorithm classifies the offender as low or high risk of committing another crime after being released. The 'Ethnicity' column indicates the offender's ethnicity (African-American, Asian, Caucasian, Hispanic, Native American, or Other). This column represents the so-called senstitive attribute. In this example, we seek to determine, with 95% confidence, whether the COMPAS algorithm discriminates against offenders based on their ethnicity.
 
 ![](img/fairness-workflow/fairness-workflow-3.png){fig-align="center" width=100%}
 
@@ -32,7 +32,7 @@ To start the fairness workflow, click on the Audit module icon and select 'Fairn
 
 ![](img/fairness-workflow/fairness-workflow-4.png){fig-align="center" width=75%}
 
-As you change the default answer to this first question (answer 'no'), the next question and its possible answers will appear. This happens for each question in the decision-making workflow.
+As you change the default answer to this first question (answer 'no'), the next question appears. This happens for each question in the decision-making workflow.
 
 In this example, the following answers are provided to the input questions, and the following specific options are then selected to generate both a textual and graphical output.
 
@@ -42,29 +42,29 @@ The primary output from the selection stage, shown below, identifies false posit
 
 ![](img/fairness-workflow/fairness-workflow-6.png){fig-align="center" width=75%}
 
-1. **Graphical Output:** By selecting this option, you will see a graphical representation of the decision path: the questions you answered are shown in white, while the questions and answers that were skipped (because not relevant to your path) are shown in grey.
+1. **Decision-making workflow:** By selecting this option, you will see a graphical representation of the decision path: the questions you answered are shown in white, while the questions and answers that were skipped (because not relevant to your path) are shown in grey.
 
 ![](img/fairness-workflow/fairness-workflow-7.png){fig-align="center" width=75%}
 
-2. **Next stage:** Finally, progress to the evaluation stage by clicking the 'To Evaluation' button.
+2. **Next stage:** Next, progress to the evaluation stage by clicking the 'To Evaluation' button.
 
 ### Stage 2: Evaluation
 
-In the evaluation stage, you assess the fairness in the algorithm's outcome (the 'Predicted' column in the dataset). Once you press the 'To Evaluation' button, the interface for the evaluation stage will open.
+In the evaluation stage, you assess the fairness in the algorithm's outcome (the 'Predicted' column in the dataset).
 
 ![](img/fairness-workflow/fairness-workflow-8.png){fig-align="center" width=75%}
 
-The following setting is required: 
+The following settings are required: 
 
-1. **Indicate the variables:**First, enter the variable indicating the true recidivism values of the offenders into the 'Ground Truth Information' field. Then, input the variables that hold the predicted recidivism values (the algorithm's outcome to be audited) and the offenders' ethnicity into their respective fields. 
+1. **Indicate the variables:** First, enter the variable indicating the true recidivism values of the offenders into the 'Ground Truth Information' field. Then, input the variables that hold the predicted recidivism values (the algorithm's outcome to be audited) and the offenders' ethnicity into their respective fields. 
 
-2. **Confidence level:**Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and the amount of work needed to approve the fairness of the algorithm.
+2. **Confidence level:** Specify the confidence level for your analysis. This level, which complements the significance level, dictates when to reject the null hypothesis and the amount of work needed to approve the fairness of the algorithm.
 
-3. **Context details:**Select which group, identified by the sensitive attribute's values, is the privileged one (i.e., which group is advantaged by the algorithm's outcome), and which class of the algorithm’s predictions is the favorable outcome.
+3. **Levels:** Select which group, identified by the sensitive attribute's values, is the privileged one (i.e., which group is advantaged by the algorithm's outcome), and which class of the algorithm’s predictions is the favorable outcome.
 
-4. **Test direction:**Choose whether to calculate a two-sided test or a one-sided test to evaluate the algorithm's fairness.
+4. **Alt. Hypothesis:** Choose whether to calculate a two-sided test or a one-sided test to evaluate the algorithm's fairness.
 
-5. **Identify the discriminated group(s):**In the case of multiple unprivileged groups, it is possible to identify which specific group is being discriminated against if the algorithm is found to be unfair toward at least one group.
+5. **Individual comparisons:** In the case of multiple unprivileged groups, it is possible to identify which specific group is being discriminated against if the algorithm is found to be unfair toward at least one group.
 
 For a more detailed explanation of the settings and output in the evaluation stage, see @sec-fairness-evaluation.
 

@@ -43,7 +43,7 @@ book:
       - chap-bunching.qmd
     - part: Algorithm Auditing
       chapters:
-    #   - chap-fairness-workflow.qmd
+      - chap-fairness-workflow.qmd
       - chap-fairness.qmd
     - references.qmd
 format:
