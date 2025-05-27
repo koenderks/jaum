@@ -66,7 +66,7 @@ The following settings are required:
 
 5. **Individual comparisons:** In the case of multiple unprivileged groups, it is possible to identify which specific group is being discriminated against if the algorithm is found to be unfair toward at least one group.
 
-For a more detailed explanation of the settings and output in the evaluation stage, see @sec-fairness-evaluation.
+For a more detailed explanation of the settings and output in the evaluation stage, see @sec-fairness.
 
 The primary output from the evaluation stage, as shown in the first table below, reveals that the false positive rates across the groups—comparing all unprivileged groups to the privileged one—are not equal. Therefore, the algorithm is unfair toward at least one unprivileged group.The second table provides details on which specific group, among all the unprivileged groups, is being discriminated against. This is determined by comparing the algorithm’s outcomes for each unprivileged group with those for the privileged group. A group is considered discriminated against if the p-value for its corresponding row is below 0.05.
 
